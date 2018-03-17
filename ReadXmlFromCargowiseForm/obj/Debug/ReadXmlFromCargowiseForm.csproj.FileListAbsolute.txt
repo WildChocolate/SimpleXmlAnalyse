@@ -1,0 +1,11 @@
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\bin\Debug\ReadXmlFromCargowiseForm.exe.config
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\bin\Debug\ReadXmlFromCargowiseForm.exe
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\bin\Debug\ReadXmlFromCargowiseForm.pdb
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.dll
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.pdb
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.csprojResolveAssemblyReference.cache
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Form1.resources
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Properties.Resources.resources
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.csproj.GenerateResource.Cache
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.exe
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.pdb

@@ -1,0 +1,1057 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UniversalShipment>
+  <Shipment>
+    <DataContext>
+      <DataSourceCollection>
+        <DataSource>
+          <Type>ForwardingShipment</Type>
+          <Key>S00001079</Key>
+        </DataSource>
+        <DataSource>
+          <Type>CustomsDeclaration</Type>
+          <Key>S000010791</Key>
+        </DataSource>
+      </DataSourceCollection>
+      <Company>
+        <Code>HKG</Code>
+        <Country>
+          <Code>HK</Code>
+          <Name>Hong Kong</Name>
+        </Country>
+        <Name>Cohesion Air Freight (HK) Limited</Name>
+      </Company>
+      <DataProvider>COHTRNHKG</DataProvider>
+      <EnterpriseID>COH</EnterpriseID>
+      <EventBranch>
+        <Code>HKG</Code>
+        <Name>COHESION Air Freight (HK) Limited</Name>
+      </EventBranch>
+      <EventDepartment>
+        <Code>BRN</Code>
+        <Name>Branch</Name>
+      </EventDepartment>
+      <EventType>
+        <Code />
+      </EventType>
+      <EventUser>
+        <Code>BN</Code>
+        <Name>Brian Ng</Name>
+      </EventUser>
+      <ServerID>TRN</ServerID>
+      <TriggerCount>1</TriggerCount>
+      <TriggerDate>2017-11-08T14:31:27.39</TriggerDate>
+      <TriggerDescription />
+      <TriggerType>Manual</TriggerType>
+      <RecipientRoleCollection>
+        <RecipientRole>
+          <Code>ORP</Code>
+          <Description>Organisation Proxy</Description>
+        </RecipientRole>
+      </RecipientRoleCollection>
+    </DataContext>
+    <ActualChargeable>1324.000</ActualChargeable>
+    <AdditionalTerms />
+    <AgentsReference />
+    <BookingConfirmationReference />
+    <Branch>
+      <Code>HKG</Code>
+      <Name>COHESION Air Freight (HK) Limited</Name>
+    </Branch>
+    <CartageWaybillNumber />
+    <CFSReference />
+    <CommercialInfo>
+      <Name>All Invoices</Name>
+    </CommercialInfo>
+    <ConsolidatedCargoStatus>
+      <Code />
+      <Description />
+    </ConsolidatedCargoStatus>
+    <ContainerCount>0</ContainerCount>
+    <ContainerMode>
+      <Code>LSE</Code>
+      <Description>Loose</Description>
+    </ContainerMode>
+    <CustomsContainerMode>
+      <Code>AIR</Code>
+      <Description />
+    </CustomsContainerMode>
+    <CustomsOffice>
+      <Code />
+      <Description />
+    </CustomsOffice>
+    <DocumentedChargeable>1324.000</DocumentedChargeable>
+    <DocumentedVolume>1.345</DocumentedVolume>
+    <DocumentedWeight>1324.000</DocumentedWeight>
+    <EFTMode>
+      <Code>1</Code>
+      <Description />
+    </EFTMode>
+    <EntryStatus>
+      <Code>1</Code>
+      <Description />
+    </EntryStatus>
+    <ExportGoodsType>
+      <Code>1</Code>
+      <Description />
+    </ExportGoodsType>
+    <Folio>1</Folio>
+    <FreightRate>0.0000</FreightRate>
+    <FreightRateCurrency>
+      <Code>1</Code>
+      <Description />
+    </FreightRateCurrency>
+    <GoodsDescription>1</GoodsDescription>
+    <GoodsOrigin>
+      <Code>1</Code>
+      <Name />
+    </GoodsOrigin>
+    <GoodsValue>0.0000</GoodsValue>
+    <GoodsValueCurrency>
+      <Code>HKD</Code>
+      <Description>Hong Kong Dollar</Description>
+    </GoodsValueCurrency>
+    <HBLAWBChargesDisplay>
+      <Code>1</Code>
+      <Description />
+    </HBLAWBChargesDisplay>
+    <HBLContainerPackModeOverride>1</HBLContainerPackModeOverride>
+    <InsuranceValue>0.0000</InsuranceValue>
+    <InsuranceValueCurrency>
+      <Code>HKD</Code>
+      <Description>Hong Kong Dollar</Description>
+    </InsuranceValueCurrency>
+    <InterimReceiptNumber>1</InterimReceiptNumber>
+    <IsBooking>true</IsBooking>
+    <IsCancelled>false</IsCancelled>
+    <IsCFSRegistered>false</IsCFSRegistered>
+    <IsDirectBooking>false</IsDirectBooking>
+    <IsForwardRegistered>true</IsForwardRegistered>
+    <IsNeutralMaster>false</IsNeutralMaster>
+    <IsPersonalEffects>false</IsPersonalEffects>
+    <IsShipping>false</IsShipping>
+    <IsSplitShipment>false</IsSplitShipment>
+    <JobCosting>
+      <AccrualNotRecognized>0</AccrualNotRecognized>
+      <AccrualRecognized>0</AccrualRecognized>
+      <AgentRevenue>0</AgentRevenue>
+      <Branch>
+        <Code>HKG</Code>
+        <Name>COHESION Air Freight (HK) Limited</Name>
+      </Branch>
+      <Currency>
+        <Code>HKD</Code>
+        <Description>Hong Kong Dollar</Description>
+      </Currency>
+      <Department>
+        <Code>FIA</Code>
+        <Name>Forwarding Import Air</Name>
+      </Department>
+      <HomeBranch>
+        <Code>HKG</Code>
+        <Name>COHESION Air Freight (HK) Limited</Name>
+      </HomeBranch>
+      <LocalClientRevenue>0</LocalClientRevenue>
+      <OperationsStaff>
+        <Code>BN</Code>
+        <Name>Brian Ng</Name>
+      </OperationsStaff>
+      <OtherDebtorRevenue>0</OtherDebtorRevenue>
+      <TotalAccrual>0</TotalAccrual>
+      <TotalCost>0</TotalCost>
+      <TotalJobProfit>0</TotalJobProfit>
+      <TotalRevenue>0</TotalRevenue>
+      <TotalWIP>0</TotalWIP>
+      <WIPNotRecognized>0</WIPNotRecognized>
+      <WIPRecognized>0</WIPRecognized>
+    </JobCosting>
+    <LloydsIMO />
+    <LocationAtClearance>
+      <Code>0</Code>
+      <Description>0</Description>
+    </LocationAtClearance>
+    <ManifestedChargeable>1324.000</ManifestedChargeable>
+    <ManifestedVolume>0.000</ManifestedVolume>
+    <ManifestedWeight>1324.000</ManifestedWeight>
+    <MergeBy>
+      <Code>NON</Code>
+      <Description>No Merge</Description>
+    </MergeBy>
+    <MessageStatus>
+      <Code>0</Code>
+      <Description>Not Sent</Description>
+    </MessageStatus>
+    <MessageSubType>
+      <Code>0</Code>
+      <Description />
+    </MessageSubType>
+    <MessageType>
+      <Code>EXP</Code>
+      <Description>Export</Description>
+    </MessageType>
+    <NoCopyBills>3</NoCopyBills>
+    <NoOriginalBills>3</NoOriginalBills>
+    <OperationalStatus>
+      <Code>0</Code>
+      <Description />
+    </OperationalStatus>
+    <OuterPacks>0</OuterPacks>
+    <OuterPacksPackageType>
+      <Code>PLT</Code>
+      <Description>Pallet</Description>
+    </OuterPacksPackageType>
+    <OwnerRef>0</OwnerRef>
+    <PackingOrder>0</PackingOrder>
+    <PaymentMethod>
+      <Code>DEF</Code>
+      <Description>Default</Description>
+    </PaymentMethod>
+    <PortOfDestination>
+      <Code>BRXQI</Code>
+      <Name>Xique-Xique</Name>
+    </PortOfDestination>
+    <PortOfDischarge>
+      <Code>BRXQI</Code>
+      <Name />
+    </PortOfDischarge>
+    <PortOfFirstArrival>
+      <Code>0</Code>
+    </PortOfFirstArrival>
+    <PortOfLoading>
+      <Code>CNSHA</Code>
+      <Name>Shanghai Hongqiao International Apt</Name>
+    </PortOfLoading>
+    <PortOfOrigin>
+      <Code>CNSHA</Code>
+      <Name />
+    </PortOfOrigin>
+    <ReleaseType>
+      <Code>0</Code>
+      <Description />
+    </ReleaseType>
+    <ScreeningStatus>
+      <Code>UNK</Code>
+      <Description>Unknown</Description>
+    </ScreeningStatus>
+    <ServiceLevel>
+      <Code>STD</Code>
+      <Description>Standard</Description>
+    </ServiceLevel>
+    <ShipmentIncoTerm>
+      <Code>FOB</Code>
+      <Description>Free On Board</Description>
+    </ShipmentIncoTerm>
+    <ShipmentType>
+      <Code>STD</Code>
+      <Description>Standard House</Description>
+    </ShipmentType>
+    <ShippedOnBoard>
+      <Code>SHP</Code>
+      <Description>Shipped</Description>
+    </ShippedOnBoard>
+    <ShipperCODAmount>0.0000</ShipperCODAmount>
+    <ShipperCODPayMethod>
+      <Code>0</Code>
+      <Description />
+    </ShipperCODPayMethod>
+    <SubLocationAtClearance>
+      <Code>0</Code>
+      <Description>0</Description>
+    </SubLocationAtClearance>
+    <TotalNoOfPacks>0</TotalNoOfPacks>
+    <TotalNoOfPacksDecimal>0.0000</TotalNoOfPacksDecimal>
+    <TotalNoOfPacksPackageType>
+      <Code>CTN</Code>
+      <Description>Carton</Description>
+    </TotalNoOfPacksPackageType>
+    <TotalNoOfPieces>0</TotalNoOfPieces>
+    <TotalVolume>0.000</TotalVolume>
+    <TotalVolumeUnit>
+      <Code>M3</Code>
+      <Description>Cubic Metres</Description>
+    </TotalVolumeUnit>
+    <TotalWeight>1324.000</TotalWeight>
+    <TotalWeightUnit>
+      <Code>KG</Code>
+      <Description>Kilograms</Description>
+    </TotalWeightUnit>
+    <TranshipToOtherCFS>false</TranshipToOtherCFS>
+    <TransportMode>
+      <Code>AIR</Code>
+      <Description>Air Freight</Description>
+    </TransportMode>
+    <TransportNationality>
+      <Code>0</Code>
+      <Name />
+    </TransportNationality>
+    <VesselName>0</VesselName>
+    <VoyageFlightNo>0</VoyageFlightNo>
+    <WarehouseLocation>0</WarehouseLocation>
+    <WarehouseReleaseStatus>
+      <Code>0</Code>
+      <Description />
+    </WarehouseReleaseStatus>
+    <WayBillNumber>TEST1324956</WayBillNumber>
+    <WayBillType>
+      <Code>HWB</Code>
+      <Description>House Waybill</Description>
+    </WayBillType>
+    <CarrierDocumentsOverride>
+      <AWBHeader>
+        <AgentAccountNo>0</AgentAccountNo>
+        <AgentIATACode>0</AgentIATACode>
+        <AgentName>0</AgentName>
+        <AgentPlace>0</AgentPlace>
+        <AirportOfDepartureAndRequestRouteText>Shanghai Hongqiao International Apt</AirportOfDepartureAndRequestRouteText>
+        <AirportOfDestinationCode>XQI</AirportOfDestinationCode>
+        <AirportOfDestinationText>Xique-Xique</AirportOfDestinationText>
+        <AlsoNotify>
+          <AddressLine1>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS S</AddressLine1>
+          <AddressLine2 />
+          <City>HKG</City>
+          <ContactDetail>+12015555555</ContactDetail>
+          <ContactType>
+            <Code>TE</Code>
+            <Description>Telephone</Description>
+          </ContactType>
+          <Country>
+            <Code>BR</Code>
+            <Name>Brazil</Name>
+          </Country>
+          <IsAddressOverriddenForPaperWaybill>false</IsAddressOverriddenForPaperWaybill>
+          <Name>OCEANAIR INC</Name>
+          <PaperOverrideLine1>OCEANAIR INC</PaperOverrideLine1>
+          <PaperOverrideLine2>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS</PaperOverrideLine2>
+          <PaperOverrideLine3>STREET SALES CORP.TEST</PaperOverrideLine3>
+          <PaperOverrideLine4>HKG MA BR</PaperOverrideLine4>
+          <PaperOverrideLine5>TELEPHONE: +12015555555</PaperOverrideLine5>
+          <PostCode>23231</PostCode>
+          <State>MA</State>
+        </AlsoNotify>
+        <AmountOfInsurance>0</AmountOfInsurance>
+        <AsAgreedOn1stAWBSet>false</AsAgreedOn1stAWBSet>
+        <AsAgreedOn2ndAWBSet>false</AsAgreedOn2ndAWBSet>
+        <AsAgreedTypeOn1stAWBSet>NON</AsAgreedTypeOn1stAWBSet>
+        <AsAgreedTypeOn2ndAWBSet>NON</AsAgreedTypeOn2ndAWBSet>
+        <AWBIssueDate>2017-11-08T00:00:00</AWBIssueDate>
+        <AWBIssuePlace>Hong Kong</AWBIssuePlace>
+        <AWBIssuerApprovedExporterNumber />
+        <AWBIssuerExtraInfo />
+        <AWBIssuerSignature>Brian Ng</AWBIssuerSignature>
+        <AWBNumber />
+        <AWBType>
+          <Code />
+          <Description />
+        </AWBType>
+        <CargoSecurityDeclaration>
+          <AdditionalScreeningMethods />
+          <AgentApprovalCategory>
+            <Code />
+            <Description />
+          </AgentApprovalCategory>
+          <AgentApprovalCountry>
+            <Code>CN</Code>
+            <Name>China</Name>
+          </AgentApprovalCountry>
+          <AgentApprovalExpiryDate />
+          <AgentApprovalNumber />
+          <SecurityStatusIssueDate />
+          <SecurityStatusIssuedBy />
+          <TSASecurityStatement />
+        </CargoSecurityDeclaration>
+        <ChargesPayment>
+          <Code>CP</Code>
+          <Description>Destination Collect Cash</Description>
+        </ChargesPayment>
+        <Consignee>
+          <AccountCode>OCEANAXQI</AccountCode>
+          <AddressLine1>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS</AddressLine1>
+          <AddressLine2>STREET SALES CORP.TEST</AddressLine2>
+          <City>HKG</City>
+          <ContactDetail>+12015555555</ContactDetail>
+          <ContactType>
+            <Code>TE</Code>
+            <Description>Telephone</Description>
+          </ContactType>
+          <Country>
+            <Code>BR</Code>
+            <Name>Brazil</Name>
+          </Country>
+          <IsAddressOverriddenForPaperWaybill>false</IsAddressOverriddenForPaperWaybill>
+          <Name>OCEANAIR INC</Name>
+          <PaperOverrideLine1>OCEANAIR INC</PaperOverrideLine1>
+          <PaperOverrideLine2>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS</PaperOverrideLine2>
+          <PaperOverrideLine3>STREET SALES CORP.TEST</PaperOverrideLine3>
+          <PaperOverrideLine4>HKG MA BR</PaperOverrideLine4>
+          <PaperOverrideLine5>TELEPHONE: +12015555555</PaperOverrideLine5>
+          <PostCode>23231</PostCode>
+          <State>MA</State>
+        </Consignee>
+        <Currency>
+          <Code>HKD</Code>
+          <Description>Hong Kong Dollar</Description>
+        </Currency>
+        <ForwardingAgentReference>HAWB No: TEST1324956</ForwardingAgentReference>
+        <HandlingInformation />
+        <IssuedByAddress1>UNIT A2, 8/F, SUNSHINE KOWLOON BAY CARGO</IssuedByAddress1>
+        <IssuedByAddress2>59 TAI YIP ST, KOWLOON BAY, KOWLOON, HONG KONG</IssuedByAddress2>
+        <IssuedByName>COHESION AIR FREIGHT (HK) LIMITED</IssuedByName>
+        <NetRateCode />
+        <OptionalShippingInformation1>TERMS: FOB</OptionalShippingInformation1>
+        <OptionalShippingInformation2 />
+        <OriginCode>SHA</OriginCode>
+        <OtherChargesPayment>
+          <Code>P</Code>
+          <Description>Prepaid</Description>
+        </OtherChargesPayment>
+        <Requested1stCarrier />
+        <Requested1stFlight />
+        <Requested1stFlightDate />
+        <Requested2ndCarrier />
+        <Requested2ndFlight />
+        <Requested2ndFlightDate />
+        <Routing1stBy />
+        <Routing1stTo />
+        <Routing2ndBy />
+        <Routing2ndTo />
+        <Routing3rdBy />
+        <Routing3rdTo />
+        <Shipper>
+          <AccountCode>CM50COSHA</AccountCode>
+          <AddressLine1>2F BLOG D#4,50 MOGANSHANG ROAD</AddressLine1>
+          <AddressLine2 />
+          <City>SHA</City>
+          <ContactDetail>+862162771212</ContactDetail>
+          <ContactType>
+            <Code>TE</Code>
+            <Description>Telephone</Description>
+          </ContactType>
+          <Country>
+            <Code>CN</Code>
+            <Name>China</Name>
+          </Country>
+          <IsAddressOverriddenForPaperWaybill>false</IsAddressOverriddenForPaperWaybill>
+          <Name>CM 50 COMPTERTER CORPRATION</Name>
+          <PaperOverrideLine1>CM 50 COMPTERTER CORPRATION</PaperOverrideLine1>
+          <PaperOverrideLine2>2F BLOG D#4,50 MOGANSHANG ROAD</PaperOverrideLine2>
+          <PaperOverrideLine3 />
+          <PaperOverrideLine4>SHA  CN</PaperOverrideLine4>
+          <PaperOverrideLine5>TELEPHONE: +862162771212</PaperOverrideLine5>
+          <PostCode>200000</PostCode>
+          <State />
+        </Shipper>
+        <ShipperExtraInfoLine1 />
+        <ShipperExtraInfoLine2 />
+        <ShippersLoadAndCount>0</ShippersLoadAndCount>
+        <ShippersSignature />
+        <SpecialHandlingCode />
+        <TotalTaxesCollect>0</TotalTaxesCollect>
+        <TotalTaxesPrepaid>0</TotalTaxesPrepaid>
+        <TotalValuationCollect>0</TotalValuationCollect>
+        <TotalValuationPrepaid>0</TotalValuationPrepaid>
+        <ValueForCarriage>0</ValueForCarriage>
+        <ValueForCustoms>0</ValueForCustoms>
+        <WeightChargesPayment>
+          <Code>C</Code>
+          <Description>Collect</Description>
+        </WeightChargesPayment>
+        <RateLineCollection>
+          <RateLine>
+            <ChargeableWeight>1324.000</ChargeableWeight>
+            <CommodityItem />
+            <GoodsDescription>No Dimensions Available</GoodsDescription>
+            <GrossWeight>1324</GrossWeight>
+            <LineNumber>1</LineNumber>
+            <NatureAndQtyOfGoodsType>
+              <Code>G</Code>
+              <Description>Goods Description</Description>
+            </NatureAndQtyOfGoodsType>
+            <NoOfPiecesOrRCP>0</NoOfPiecesOrRCP>
+            <RateChargeOrDiscount>0</RateChargeOrDiscount>
+            <RateClass>
+              <Code>Q</Code>
+              <Description>Quantity Rate</Description>
+            </RateClass>
+            <TotalCharge>0</TotalCharge>
+            <WeightUnit>
+              <Code>K</Code>
+              <Description>Kilograms</Description>
+            </WeightUnit>
+          </RateLine>
+        </RateLineCollection>
+      </AWBHeader>
+    </CarrierDocumentsOverride>
+    <LocalProcessing>
+      <ArrivalCartageRef />
+      <DeliveryCartageAdvised />
+      <DeliveryCartageCompleted />
+      <DeliveryLabourCharge>0.0000</DeliveryLabourCharge>
+      <DeliveryLabourTime />
+      <DeliveryRequiredBy />
+      <DemurrageOnDeliveryCharge>0.0000</DemurrageOnDeliveryCharge>
+      <DemurrageOnDeliveryTime />
+      <DemurrageOnPickupCharge>0.0000</DemurrageOnPickupCharge>
+      <DemurrageOnPickupTime />
+      <EstimatedDelivery />
+      <EstimatedPickup />
+      <ExportStatement>
+        <Code />
+      </ExportStatement>
+      <FCLAvailable />
+      <FCLDeliveryEquipmentNeeded>
+        <Code>PSL</Code>
+        <Description>Premise Supplies Lift</Description>
+      </FCLDeliveryEquipmentNeeded>
+      <FCLPickupEquipmentNeeded>
+        <Code>PSL</Code>
+        <Description>Premise Supplies Lift</Description>
+      </FCLPickupEquipmentNeeded>
+      <FCLStorageCommences />
+      <HasProhibitedPackaging>false</HasProhibitedPackaging>
+      <InsuranceRequired>false</InsuranceRequired>
+      <IsContingencyRelease>false</IsContingencyRelease>
+      <LCLAirStorageCharge>0.0000</LCLAirStorageCharge>
+      <LCLAirStorageDaysOrHours>0</LCLAirStorageDaysOrHours>
+      <LCLAvailable />
+      <LCLDatesOverrideConsol>false</LCLDatesOverrideConsol>
+      <LCLStorageCommences />
+      <PickupCartageAdvised />
+      <PickupCartageCompleted />
+      <PickupLabourCharge>0.0000</PickupLabourCharge>
+      <PickupLabourTime />
+      <PickupRequiredBy />
+      <PrintOptionForPackagesOnAWB>
+        <Code>DEF</Code>
+        <Description>Default (Dims, fallback to Vol)</Description>
+      </PrintOptionForPackagesOnAWB>
+      <OrderNumberCollection />
+      <AdditionalServiceCollection>
+        <AdditionalService>
+          <ServiceCode>
+            <Code>QIN</Code>
+            <Description>Quarantine Inspection</Description>
+          </ServiceCode>
+          <Booked>2017-11-13T10:59:00</Booked>
+          <Completed>2017-11-22T10:59:00</Completed>
+          <Contractor>
+            <AddressType>Contractor</AddressType>
+            <Address1>SDFSDOFS</Address1>
+            <Address2>SDFKSDS</Address2>
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>SDFSDOFS</AddressShortCode>
+            <City />
+            <CompanyName>ALLLINK</CompanyName>
+            <Country>
+              <Code>AL</Code>
+              <Name>Albania</Name>
+            </Country>
+            <Email />
+            <Fax />
+            <OrganizationCode>ALLLIN_WW</OrganizationCode>
+            <Phone />
+            <Port>
+              <Code>ALKKU</Code>
+              <Name>Kukes</Name>
+            </Port>
+            <Postcode />
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State />
+          </Contractor>
+          <Duration />
+          <References />
+          <ServiceCount>210.000</ServiceCount>
+          <ServiceNote />
+        </AdditionalService>
+        <AdditionalService>
+          <ServiceCode>
+            <Code>QUP</Code>
+            <Description>Quarantine Unpack</Description>
+          </ServiceCode>
+          <Booked>2017-11-12T11:01:00</Booked>
+          <Completed>2017-11-28T11:01:00</Completed>
+          <Contractor>
+            <AddressType>Contractor</AddressType>
+            <Address1>UNIT A1/2, 5/F, SUNSHINE KOWLOON BAY CARGO CENTRE,</Address1>
+            <Address2>59 TAI YIP STREET, KOWLOON BAY, KOWLOON</Address2>
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>UNIT A1/2, 5/F, SUNSHINE</AddressShortCode>
+            <City>HONG KONG</City>
+            <CompanyName>CONSOLIDATED POWERS LTD.</CompanyName>
+            <Country>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </Country>
+            <Email>cplhkg@cplhkg.com.hk</Email>
+            <Fax />
+            <OrganizationCode>CONPOWHKG</OrganizationCode>
+            <Phone>+85227958728</Phone>
+            <Port>
+              <Code>HKHKG</Code>
+              <Name>Hong Kong</Name>
+            </Port>
+            <Postcode />
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State />
+          </Contractor>
+          <Duration />
+          <References />
+          <ServiceCount>5.000</ServiceCount>
+          <ServiceNote />
+        </AdditionalService>
+      </AdditionalServiceCollection>
+    </LocalProcessing>
+    <AdditionalBillCollection>
+      <AdditionalBill>
+        <BillNumber>TEST1324956</BillNumber>
+        <BillType>
+          <Code>HWB</Code>
+          <Description>House Waybill</Description>
+        </BillType>
+        <IssueDate />
+        <MessageStatus>
+          <Code />
+        </MessageStatus>
+        <NoOfPacks>0.0000</NoOfPacks>
+        <PackType>
+          <Code>PLT</Code>
+          <Description>Pallet</Description>
+        </PackType>
+      </AdditionalBill>
+    </AdditionalBillCollection>
+    <AdditionalReferenceCollection>
+      <AdditionalReference>
+        <Type>
+          <Code>COC</Code>
+          <Description>Customs Office Code (Override)</Description>
+        </Type>
+        <ReferenceNumber>test</ReferenceNumber>
+        <ContextInformation />
+        <IssueDate>2017-11-24T00:00:00</IssueDate>
+      </AdditionalReference>
+      <AdditionalReference>
+        <Type>
+          <Code>LCR</Code>
+          <Description>Letter Of Credit Number</Description>
+        </Type>
+        <ReferenceNumber>res343</ReferenceNumber>
+        <ContextInformation />
+        <IssueDate>2017-11-24T00:00:00</IssueDate>
+      </AdditionalReference>
+    </AdditionalReferenceCollection>
+    <ContainerCollection />
+    <CustomizedFieldCollection>
+      <CustomizedField>
+        <Key>OEC Cnee</Key>
+        <DataType>String</DataType>
+        <Value>OEC65432</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Shpr</Key>
+        <DataType>String</DataType>
+        <Value>OEC23456</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxText1</Key>
+        <DataType>String</DataType>
+        <Value />
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxxDate1</Key>
+        <DataType>DateTime</DataType>
+        <Value />
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxxDecimalNo1</Key>
+        <DataType>Decimal</DataType>
+        <Value>0.000</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxFlag1</Key>
+        <DataType>Boolean</DataType>
+        <Value>false</Value>
+      </CustomizedField>
+    </CustomizedFieldCollection>
+    <DateCollection>
+      <Date>
+        <Type>Departure</Type>
+        <IsEstimate>true</IsEstimate>
+        <Value>2017-11-05T10:12:00</Value>
+      </Date>
+      <Date>
+        <Type>LoadingDate</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value>2017-11-05T10:12:00</Value>
+      </Date>
+      <Date>
+        <Type>FirstArrivalInCountry</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+      <Date>
+        <Type>DischargeDate</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value>2017-11-24T10:12:00</Value>
+      </Date>
+      <Date>
+        <Type>Arrival</Type>
+        <IsEstimate>true</IsEstimate>
+        <Value>2017-11-24T10:12:00</Value>
+      </Date>
+      <Date>
+        <Type>EntrySubmitted</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+      <Date>
+        <Type>EntryAuthorisation</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+      <Date>
+        <Type>WarehouseRelease</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+      <Date>
+        <Type>EntryDate</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+      <Date>
+        <Type>BookingConfirmed</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value>2017-10-18T17:27:00</Value>
+      </Date>
+      <Date>
+        <Type>Received</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+      <Date>
+        <Type>ShippedOnBoard</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+      <Date>
+        <Type>BillIssued</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value />
+      </Date>
+    </DateCollection>
+    <MilestoneCollection>
+      <Milestone>
+        <Description>test</Description>
+        <EventCode>AED</EventCode>
+        <Sequence>1</Sequence>
+        <ActualDate />
+        <ConditionReference />
+        <ConditionType />
+        <EstimatedDate />
+      </Milestone>
+    </MilestoneCollection>
+    <OrganizationAddressCollection>
+      <OrganizationAddress>
+        <AddressType>ImporterDocumentaryAddress</AddressType>
+        <Address1>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS</Address1>
+        <Address2>STREET SALES CORP.TEST</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>186A LEE BURBANK HIGHWAY</AddressShortCode>
+        <City>HKG</City>
+        <CompanyName>OCEANAIR INC</CompanyName>
+        <Country>
+          <Code>BR</Code>
+          <Name>Brazil</Name>
+        </Country>
+        <Email>232114@163.com</Email>
+        <Fax />
+        <OrganizationCode>OCEANAXQI</OrganizationCode>
+        <Phone>+12015555555</Phone>
+        <Port>
+          <Code>BRXQI</Code>
+          <Name>Xique-Xique</Name>
+        </Port>
+        <Postcode>23231</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>MA</State>
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>SupplierDocumentaryAddress</AddressType>
+        <Address1>2F BLOG D#4,50 MOGANSHANG ROAD</Address1>
+        <Address2 />
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>2F BLOG D#4,50 MOGANSHANG</AddressShortCode>
+        <City>SHA</City>
+        <CompanyName>CM 50 COMPTERTER CORPRATION</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email />
+        <Fax>+862162771213</Fax>
+        <OrganizationCode>CM50COSHA</OrganizationCode>
+        <Phone>+862162771212</Phone>
+        <Port>
+          <Code>CNSHA</Code>
+          <Name>Shanghai Hongqiao International Apt</Name>
+        </Port>
+        <Postcode>200000</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State />
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsignorDocumentaryAddress</AddressType>
+        <Address1>2F BLOG D#4,50 MOGANSHANG ROAD</Address1>
+        <Address2 />
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>2F BLOG D#4,50 MOGANSHANG</AddressShortCode>
+        <City>SHA</City>
+        <CompanyName>CM 50 COMPTERTER CORPRATION</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email />
+        <Fax>+862162771213</Fax>
+        <OrganizationCode>CM50COSHA</OrganizationCode>
+        <Phone>+862162771212</Phone>
+        <Port>
+          <Code>CNSHA</Code>
+          <Name>Shanghai Hongqiao International Apt</Name>
+        </Port>
+        <Postcode>200000</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State />
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsignorPickupDeliveryAddress</AddressType>
+        <Address1>2F BLOG D#4,50 MOGANSHANG ROAD</Address1>
+        <Address2 />
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>2F BLOG D#4,50 MOGANSHANG</AddressShortCode>
+        <City>SHA</City>
+        <CompanyName>CM 50 COMPTERTER CORPRATION</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email />
+        <Fax>+862162771213</Fax>
+        <OrganizationCode>CM50COSHA</OrganizationCode>
+        <Phone>+862162771212</Phone>
+        <Port>
+          <Code>CNSHA</Code>
+          <Name>Shanghai Hongqiao International Apt</Name>
+        </Port>
+        <Postcode>200000</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State />
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsigneeDocumentaryAddress</AddressType>
+        <Address1>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS</Address1>
+        <Address2>STREET SALES CORP.TEST</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>186A LEE BURBANK HIGHWAY</AddressShortCode>
+        <City>HKG</City>
+        <CompanyName>OCEANAIR INC</CompanyName>
+        <Country>
+          <Code>BR</Code>
+          <Name>Brazil</Name>
+        </Country>
+        <Email>232114@163.com</Email>
+        <Fax />
+        <OrganizationCode>OCEANAXQI</OrganizationCode>
+        <Phone>+12015555555</Phone>
+        <Port>
+          <Code>BRXQI</Code>
+          <Name>Xique-Xique</Name>
+        </Port>
+        <Postcode>23231</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>MA</State>
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsigneePickupDeliveryAddress</AddressType>
+        <Address1>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS</Address1>
+        <Address2>STREET SALES CORP.TEST</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>186A LEE BURBANK HIGHWAY</AddressShortCode>
+        <City>HKG</City>
+        <CompanyName>OCEANAIR INC</CompanyName>
+        <Country>
+          <Code>BR</Code>
+          <Name>Brazil</Name>
+        </Country>
+        <Email>232114@163.com</Email>
+        <Fax />
+        <OrganizationCode>OCEANAXQI</OrganizationCode>
+        <Phone>+12015555555</Phone>
+        <Port>
+          <Code>BRXQI</Code>
+          <Name>Xique-Xique</Name>
+        </Port>
+        <Postcode>23231</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>MA</State>
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>NotifyParty</AddressType>
+        <Address1>186A LEE BURBANK HIGHWAY REVERE,MA  02151 (2)EAS</Address1>
+        <Address2>STREET SALES CORP.TEST</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>186A LEE BURBANK HIGHWAY</AddressShortCode>
+        <City>HKG</City>
+        <CompanyName>OCEANAIR INC</CompanyName>
+        <Country>
+          <Code>BR</Code>
+          <Name>Brazil</Name>
+        </Country>
+        <Email>232114@163.com</Email>
+        <Fax />
+        <OrganizationCode>OCEANAXQI</OrganizationCode>
+        <Phone>+12015555555</Phone>
+        <Port>
+          <Code>BRXQI</Code>
+          <Name>Xique-Xique</Name>
+        </Port>
+        <Postcode>23231</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>MA</State>
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>SendersLocalClient</AddressType>
+        <Address1>2F BLOG D#4,50 MOGANSHANG ROAD</Address1>
+        <Address2 />
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>2F BLOG D#4,50 MOGANSHANG</AddressShortCode>
+        <City>SHA</City>
+        <CompanyName>CM 50 COMPTERTER CORPRATION</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email />
+        <Fax>+862162771213</Fax>
+        <OrganizationCode>CM50COSHA</OrganizationCode>
+        <Phone>+862162771212</Phone>
+        <Port>
+          <Code>CNSHA</Code>
+          <Name>Shanghai Hongqiao International Apt</Name>
+        </Port>
+        <Postcode>200000</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State />
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+    </OrganizationAddressCollection>
+    <PackingLineCollection>
+      <PackingLine>
+        <Commodity>
+          <Code>GEN</Code>
+          <Description>General</Description>
+        </Commodity>
+        <ContainerPackingOrder>0</ContainerPackingOrder>
+        <CountryOfOrigin>
+          <Code />
+        </CountryOfOrigin>
+        <DetailedDescription />
+        <EndItemNo>0</EndItemNo>
+        <ExportReferenceNumber />
+        <GoodsDescription />
+        <HarmonisedCode />
+        <Height>0.000</Height>
+        <ImportReferenceNumber />
+        <ItemNo>0</ItemNo>
+        <Length>0.000</Length>
+        <LengthUnit>
+          <Code>M</Code>
+          <Description>Metres</Description>
+        </LengthUnit>
+        <LinePrice>0.0000</LinePrice>
+        <Link>1</Link>
+        <LoadingMeters>0.000</LoadingMeters>
+        <MarksAndNos />
+        <OutturnComment />
+        <OutturnDamagedQty>0</OutturnDamagedQty>
+        <OutturnedHeight>0.000</OutturnedHeight>
+        <OutturnedLength>0.000</OutturnedLength>
+        <OutturnedVolume>0.000</OutturnedVolume>
+        <OutturnedWeight>0.000</OutturnedWeight>
+        <OutturnedWidth>0.000</OutturnedWidth>
+        <OutturnPillagedQty>0</OutturnPillagedQty>
+        <OutturnQty>0</OutturnQty>
+        <PackQty>0</PackQty>
+        <PackType>
+          <Code>PLT</Code>
+          <Description>Pallet</Description>
+        </PackType>
+        <ReferenceNumber />
+        <Volume>0.000</Volume>
+        <VolumeUnit>
+          <Code>M3</Code>
+          <Description>Cubic Metres</Description>
+        </VolumeUnit>
+        <Weight>1324.000</Weight>
+        <WeightUnit>
+          <Code>KG</Code>
+          <Description>Kilograms</Description>
+        </WeightUnit>
+        <Width>0.000</Width>
+        <CustomizedFieldCollection>
+          <CustomizedField>
+            <Key>xxx</Key>
+            <DataType>String</DataType>
+            <Value />
+          </CustomizedField>
+          <CustomizedField>
+            <Key>yyy</Key>
+            <DataType>String</DataType>
+            <Value />
+          </CustomizedField>
+          <CustomizedField>
+            <Key>zzz</Key>
+            <DataType>DateTime</DataType>
+            <Value />
+          </CustomizedField>
+        </CustomizedFieldCollection>
+        <PackedItemCollection />
+      </PackingLine>
+    </PackingLineCollection>
+  </Shipment>
+</UniversalShipment>

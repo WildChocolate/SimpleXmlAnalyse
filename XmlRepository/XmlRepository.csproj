@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFB5BABB-C9B5-4EBD-B906-850C8F41A891}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XmlRepository</RootNamespace>
+    <AssemblyName>XmlRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookingFolder\Body.cs" />
+    <Compile Include="BookingFolder\Commodity.cs" />
+    <Compile Include="BookingFolder\CountryOfIssue.cs" />
+    <Compile Include="BookingFolder\CountryOfOrigin.cs" />
+    <Compile Include="BookingFolder\LengthUnit.cs" />
+    <Compile Include="BookingFolder\PackedItem.cs" />
+    <Compile Include="BookingFolder\PackingLine.cs" />
+    <Compile Include="BookingFolder\PackType.cs" />
+    <Compile Include="BookingFolder\RegistrationNumber.cs" />
+    <Compile Include="BookingFolder\SType.cs" />
+    <Compile Include="BookingFolder\UnitOfQuantity.cs" />
+    <Compile Include="BookingFolder\UniversalBooking.cs" />
+    <Compile Include="BookingFolder\ContainerMode.cs" />
+    <Compile Include="BookingFolder\FreightRateCurrency.cs" />
+    <Compile Include="BookingFolder\OrderedQtyUnit.cs" />
+    <Compile Include="BookingFolder\PackageLengthUnit.cs" />
+    <Compile Include="BookingFolder\PackageQtyUnit.cs" />
+    <Compile Include="BookingFolder\Product.cs" />
+    <Compile Include="BookingFolder\VolumeUnit.cs" />
+    <Compile Include="BookingFolder\WeightUnit.cs" />
+    <Compile Include="BookingFolder\AdditionalBill.cs" />
+    <Compile Include="BookingFolder\BillType.cs" />
+    <Compile Include="BookingFolder\Date.cs" />
+    <Compile Include="BookingFolder\Milestone.cs" />
+    <Compile Include="BookingFolder\Country.cs" />
+    <Compile Include="BookingFolder\DataSource.cs" />
+    <Compile Include="BookingFolder\CommercialInfo.cs" />
+    <Compile Include="BookingFolder\CommercialInvoice.cs" />
+    <Compile Include="BookingFolder\ShippedOnBoard.cs" />
+    <Compile Include="BookingFolder\TotalVolumeUnit.cs" />
+    <Compile Include="BookingFolder\TotalWeightUnit.cs" />
+    <Compile Include="BookingFolder\TransportMode.cs" />
+    <Compile Include="BookingFolder\WayBillType.cs" />
+    <Compile Include="BookingFolder\LocalProcessing.cs" />
+    <Compile Include="BookingFolder\FCLDeliveryEquipmentNeeded.cs" />
+    <Compile Include="BookingFolder\FCLPickupEquipmentNeeded.cs" />
+    <Compile Include="BookingFolder\CustomizedField.cs" />
+    <Compile Include="BookingFolder\OrganizationAddress.cs" />
+    <Compile Include="BookingFolder\Port.cs" />
+    <Compile Include="BookingFolder\ScreeningStatus.cs" />
+    <Compile Include="BookingFolder\RelatedShipment.cs" />
+    <Compile Include="BookingFolder\Order.cs" />
+    <Compile Include="BookingFolder\Status.cs" />
+    <Compile Include="BookingFolder\OrderLineCollection.cs" />
+    <Compile Include="BookingFolder\OrderLine.cs" />
+    <Compile Include="BookingFolder\IncoTerm.cs" />
+    <Compile Include="BookingFolder\InnerPacksQtyUnit.cs" />
+    <Compile Include="BookingFolder\RecipientRole.cs" />
+    <Compile Include="BookingFolder\AWBServiceLevel.cs" />
+    <Compile Include="BookingFolder\GoodsValueCurrency.cs" />
+    <Compile Include="BookingFolder\HBLAWBChargesDisplay.cs" />
+    <Compile Include="BookingFolder\InsuranceValueCurrency.cs" />
+    <Compile Include="BookingFolder\OuterPacksPackageType.cs" />
+    <Compile Include="BookingFolder\PortOfDestination.cs" />
+    <Compile Include="BookingFolder\PortOfDischarge.cs" />
+    <Compile Include="BookingFolder\PortOfLoading.cs" />
+    <Compile Include="BookingFolder\PortOfOrigin.cs" />
+    <Compile Include="BookingFolder\ReleaseType.cs" />
+    <Compile Include="BookingFolder\ServiceLevel.cs" />
+    <Compile Include="BookingFolder\ShipmentIncoTerm.cs" />
+    <Compile Include="BookingFolder\EventUser.cs" />
+    <Compile Include="BookingFolder\EventType.cs" />
+    <Compile Include="BookingFolder\EventDepartment.cs" />
+    <Compile Include="BookingFolder\EventBranch.cs" />
+    <Compile Include="BookingFolder\Company.cs" />
+    <Compile Include="BookingFolder\DataContext.cs" />
+    <Compile Include="BookingFolder\Header.cs" />
+    <Compile Include="BookingFolder\Shipment.cs" />
+    <Compile Include="BookingFolder\UniversalShipment.cs" />
+    <Compile Include="CodeDescriptionPair.cs" />
+    <Compile Include="ConsolFolder\AdditionalBill.cs" />
+    <Compile Include="ConsolFolder\AirVentFlowRateUnit.cs" />
+    <Compile Include="ConsolFolder\AWBServiceLevel.cs" />
+    <Compile Include="ConsolFolder\BillType.cs" />
+    <Compile Include="ConsolFolder\Body.cs" />
+    <Compile Include="ConsolFolder\Carrier.cs" />
+    <Compile Include="ConsolFolder\CarrierServiceLevel.cs" />
+    <Compile Include="ConsolFolder\Category.cs" />
+    <Compile Include="ConsolFolder\CommercialInfo.cs" />
+    <Compile Include="ConsolFolder\CommercialInvoice.cs" />
+    <Compile Include="ConsolFolder\Commodity.cs" />
+    <Compile Include="ConsolFolder\Company.cs" />
+    <Compile Include="ConsolFolder\Container.cs" />
+    <Compile Include="ConsolFolder\ContainerMode.cs" />
+    <Compile Include="ConsolFolder\ContainerQuality.cs" />
+    <Compile Include="ConsolFolder\ContainerStatus.cs" />
+    <Compile Include="ConsolFolder\ContainerType.cs" />
+    <Compile Include="ConsolFolder\Country.cs" />
+    <Compile Include="ConsolFolder\CountryOfIssue.cs" />
+    <Compile Include="ConsolFolder\CountryOfOrigin.cs" />
+    <Compile Include="ConsolFolder\CType.cs" />
+    <Compile Include="ConsolFolder\CustomizedField.cs" />
+    <Compile Include="ConsolFolder\DataContext.cs" />
+    <Compile Include="ConsolFolder\DataSource.cs" />
+    <Compile Include="ConsolFolder\Date.cs" />
+    <Compile Include="ConsolFolder\EventBranch.cs" />
+    <Compile Include="ConsolFolder\EventDepartment.cs" />
+    <Compile Include="ConsolFolder\EventType.cs" />
+    <Compile Include="ConsolFolder\EventUser.cs" />
+    <Compile Include="ConsolFolder\ExportStatement.cs" />
+    <Compile Include="ConsolFolder\FCLDeliveryEquipmentNeeded.cs" />
+    <Compile Include="ConsolFolder\FCLPickupEquipmentNeeded.cs" />
+    <Compile Include="ConsolFolder\FCL_LCL_AIR.cs" />
+    <Compile Include="ConsolFolder\FreightRateCurrency.cs" />
+    <Compile Include="ConsolFolder\GoodsValueCurrency.cs" />
+    <Compile Include="ConsolFolder\GrossWeightVerificationType.cs" />
+    <Compile Include="ConsolFolder\HBLAWBChargesDisplay.cs" />
+    <Compile Include="ConsolFolder\Header.cs" />
+    <Compile Include="ConsolFolder\InsuranceValueCurrency.cs" />
+    <Compile Include="ConsolFolder\LengthUnit.cs" />
+    <Compile Include="ConsolFolder\LocalProcessing.cs" />
+    <Compile Include="ConsolFolder\Milestone.cs" />
+    <Compile Include="ConsolFolder\Note.cs" />
+    <Compile Include="ConsolFolder\NoteCollection.cs" />
+    <Compile Include="ConsolFolder\NoteContext.cs" />
+    <Compile Include="ConsolFolder\Order.cs" />
+    <Compile Include="ConsolFolder\OrderNumber.cs" />
+    <Compile Include="ConsolFolder\OrganizationAddress.cs" />
+    <Compile Include="ConsolFolder\OuterPacksPackageType.cs" />
+    <Compile Include="ConsolFolder\PackageType.cs" />
+    <Compile Include="ConsolFolder\PackedItem.cs" />
+    <Compile Include="ConsolFolder\PackingLine.cs" />
+    <Compile Include="ConsolFolder\PackType.cs" />
+    <Compile Include="ConsolFolder\PaymentMethod.cs" />
+    <Compile Include="ConsolFolder\PlaceOfDelivery.cs" />
+    <Compile Include="ConsolFolder\PlaceOfIssue.cs" />
+    <Compile Include="ConsolFolder\PlaceOfReceipt.cs" />
+    <Compile Include="ConsolFolder\Port.cs" />
+    <Compile Include="ConsolFolder\PortFirstForeign.cs" />
+    <Compile Include="ConsolFolder\PortLastForeign.cs" />
+    <Compile Include="ConsolFolder\PortOfDestination.cs" />
+    <Compile Include="ConsolFolder\PortOfDischarge.cs" />
+    <Compile Include="ConsolFolder\PortOfFirstArrival.cs" />
+    <Compile Include="ConsolFolder\PortOfLoading.cs" />
+    <Compile Include="ConsolFolder\PortOfOrigin.cs" />
+    <Compile Include="ConsolFolder\PrintOptionForPackagesOnAWB.cs" />
+    <Compile Include="ConsolFolder\Product.cs" />
+    <Compile Include="ConsolFolder\RecipientRole.cs" />
+    <Compile Include="ConsolFolder\RegistrationNumber.cs" />
+    <Compile Include="ConsolFolder\RelatedShipment.cs" />
+    <Compile Include="ConsolFolder\ReleaseType.cs" />
+    <Compile Include="ConsolFolder\ScreeningStatus.cs" />
+    <Compile Include="ConsolFolder\SealPartyType.cs" />
+    <Compile Include="ConsolFolder\SecondSealPartyType.cs" />
+    <Compile Include="ConsolFolder\ServiceLevel.cs" />
+    <Compile Include="ConsolFolder\Shipment.cs" />
+    <Compile Include="ConsolFolder\ShipmentIncoTerm.cs" />
+    <Compile Include="ConsolFolder\ShipmentType.cs" />
+    <Compile Include="ConsolFolder\ShippedOnBoard.cs" />
+    <Compile Include="ConsolFolder\ShipperCODPayMethod.cs" />
+    <Compile Include="ConsolFolder\Status.cs" />
+    <Compile Include="ConsolFolder\SubShipment.cs" />
+    <Compile Include="ConsolFolder\ThirdSealPartyType.cs" />
+    <Compile Include="ConsolFolder\TotalNoOfPacksPackageType.cs" />
+    <Compile Include="ConsolFolder\TotalPreallocatedVolumeUnit.cs" />
+    <Compile Include="ConsolFolder\TotalPreallocatedWeightUnit.cs" />
+    <Compile Include="ConsolFolder\TotalVolumeUnit.cs" />
+    <Compile Include="ConsolFolder\TotalWeightUnit.cs" />
+    <Compile Include="ConsolFolder\TransportLeg.cs" />
+    <Compile Include="ConsolFolder\TransportMode.cs" />
+    <Compile Include="ConsolFolder\UnitOfWeight.cs" />
+    <Compile Include="ConsolFolder\UniversalShipment.cs" />
+    <Compile Include="ConsolFolder\Visibility.cs" />
+    <Compile Include="ConsolFolder\VolumeUnit.cs" />
+    <Compile Include="ConsolFolder\WayBillType.cs" />
+    <Compile Include="ConsolFolder\WeightUnit.cs" />
+    <Compile Include="ExtractXMLDynamic.cs" />
+    <Compile Include="CodeNamePair.cs" />
+    <Compile Include="ShipmentFolder\AdditionalBill.cs" />
+    <Compile Include="ShipmentFolder\AdditionalReference.cs" />
+    <Compile Include="ShipmentFolder\AdditionalService.cs" />
+    <Compile Include="ShipmentFolder\AgentApprovalCategory.cs" />
+    <Compile Include="ShipmentFolder\AlsoNotify.cs" />
+    <Compile Include="ShipmentFolder\AWBHeader.cs" />
+    <Compile Include="ShipmentFolder\AWBType.cs" />
+    <Compile Include="ShipmentFolder\BillType.cs" />
+    <Compile Include="ShipmentFolder\Body.cs" />
+    <Compile Include="ShipmentFolder\Branch.cs" />
+    <Compile Include="ShipmentFolder\CargoSecurityDeclaration.cs" />
+    <Compile Include="ShipmentFolder\CarrierDocumentsOverride.cs" />
+    <Compile Include="ShipmentFolder\ChargesPayment.cs" />
+    <Compile Include="ShipmentFolder\CommercialInfo.cs" />
+    <Compile Include="ShipmentFolder\Commodity.cs" />
+    <Compile Include="ShipmentFolder\Company.cs" />
+    <Compile Include="ShipmentFolder\Consignee.cs" />
+    <Compile Include="ShipmentFolder\ConsolidatedCargoStatus.cs" />
+    <Compile Include="ShipmentFolder\ContactType.cs" />
+    <Compile Include="ShipmentFolder\ContainerMode.cs" />
+    <Compile Include="ShipmentFolder\Contractor.cs" />
+    <Compile Include="ShipmentFolder\Country.cs" />
+    <Compile Include="ShipmentFolder\CountryOfIssue.cs" />
+    <Compile Include="ShipmentFolder\CountryOfOrigin.cs" />
+    <Compile Include="ShipmentFolder\Currency.cs" />
+    <Compile Include="ShipmentFolder\CustomizedField.cs" />
+    <Compile Include="ShipmentFolder\CustomsContainerMode.cs" />
+    <Compile Include="ShipmentFolder\CustomsOffice.cs" />
+    <Compile Include="ShipmentFolder\DataContext.cs" />
+    <Compile Include="ShipmentFolder\DataSource.cs" />
+    <Compile Include="ShipmentFolder\Date.cs" />
+    <Compile Include="ShipmentFolder\Department.cs" />
+    <Compile Include="ShipmentFolder\EFTMode.cs" />
+    <Compile Include="ShipmentFolder\EntryStatus.cs" />
+    <Compile Include="ShipmentFolder\EventBranch.cs" />
+    <Compile Include="ShipmentFolder\EventDepartment.cs" />
+    <Compile Include="ShipmentFolder\EventType.cs" />
+    <Compile Include="ShipmentFolder\EventUser.cs" />
+    <Compile Include="ShipmentFolder\ExportGoodsType.cs" />
+    <Compile Include="ShipmentFolder\ExportStatement.cs" />
+    <Compile Include="ShipmentFolder\FCLDeliveryEquipmentNeeded.cs" />
+    <Compile Include="ShipmentFolder\FCLPickupEquipmentNeeded.cs" />
+    <Compile Include="ShipmentFolder\FreightRateCurrency.cs" />
+    <Compile Include="ShipmentFolder\GoodsOrigin.cs" />
+    <Compile Include="ShipmentFolder\GoodsValueCurrency.cs" />
+    <Compile Include="ShipmentFolder\HBLAWBChargesDisplay.cs" />
+    <Compile Include="ShipmentFolder\HomeBranch.cs" />
+    <Compile Include="ShipmentFolder\InsuranceValueCurrency.cs" />
+    <Compile Include="ShipmentFolder\JobCosting.cs" />
+    <Compile Include="ShipmentFolder\LengthUnit.cs" />
+    <Compile Include="ShipmentFolder\LocalProcessing.cs" />
+    <Compile Include="ShipmentFolder\LocationAtClearance.cs" />
+    <Compile Include="ShipmentFolder\MergeBy.cs" />
+    <Compile Include="ShipmentFolder\MessageStatus.cs" />
+    <Compile Include="ShipmentFolder\MessageSubType.cs" />
+    <Compile Include="ShipmentFolder\MessageType.cs" />
+    <Compile Include="ShipmentFolder\Milestone.cs" />
+    <Compile Include="ShipmentFolder\MilestoneCollection.cs" />
+    <Compile Include="ShipmentFolder\NatureAndQtyOfGoodsType.cs" />
+    <Compile Include="ShipmentFolder\OperationalStatus.cs" />
+    <Compile Include="ShipmentFolder\OperationsStaff.cs" />
+    <Compile Include="ShipmentFolder\OrderNumber.cs" />
+    <Compile Include="ShipmentFolder\OrganizationAddress.cs" />
+    <Compile Include="ShipmentFolder\OtherChargesPayment.cs" />
+    <Compile Include="ShipmentFolder\OuterPacksPackageType.cs" />
+    <Compile Include="ShipmentFolder\PackageType.cs" />
+    <Compile Include="ShipmentFolder\PackedItem.cs" />
+    <Compile Include="ShipmentFolder\PackingLine.cs" />
+    <Compile Include="ShipmentFolder\PackType.cs" />
+    <Compile Include="ShipmentFolder\PaymentMethod.cs" />
+    <Compile Include="ShipmentFolder\Port.cs" />
+    <Compile Include="ShipmentFolder\PortOfDestination.cs" />
+    <Compile Include="ShipmentFolder\PortOfDischarge.cs" />
+    <Compile Include="ShipmentFolder\PortOfFirstArrival.cs" />
+    <Compile Include="ShipmentFolder\PortOfLoading.cs" />
+    <Compile Include="ShipmentFolder\PortOfOrigin.cs" />
+    <Compile Include="ShipmentFolder\PrintOptionForPackagesOnAWB.cs" />
+    <Compile Include="ShipmentFolder\Product.cs" />
+    <Compile Include="ShipmentFolder\RateClass.cs" />
+    <Compile Include="ShipmentFolder\RateLine.cs" />
+    <Compile Include="ShipmentFolder\RecipientRole.cs" />
+    <Compile Include="ShipmentFolder\RegistrationNumber.cs" />
+    <Compile Include="ShipmentFolder\ReleaseType.cs" />
+    <Compile Include="ShipmentFolder\SalesStaff.cs" />
+    <Compile Include="ShipmentFolder\ScreeningStatus.cs" />
+    <Compile Include="ShipmentFolder\ServiceCode.cs" />
+    <Compile Include="ShipmentFolder\ServiceLevel.cs" />
+    <Compile Include="ShipmentFolder\ShipmentIncoTerm.cs" />
+    <Compile Include="ShipmentFolder\ShipmentType.cs" />
+    <Compile Include="ShipmentFolder\ShippedOnBoard.cs" />
+    <Compile Include="ShipmentFolder\Shipper.cs" />
+    <Compile Include="ShipmentFolder\ShipperCODPayMethod.cs" />
+    <Compile Include="ShipmentFolder\SType.cs" />
+    <Compile Include="ShipmentFolder\SubLocationAtClearance.cs" />
+    <Compile Include="ShipmentFolder\TotalNoOfPacksPackageType.cs" />
+    <Compile Include="ShipmentFolder\TotalVolumeUnit.cs" />
+    <Compile Include="ShipmentFolder\TotalWeightUnit.cs" />
+    <Compile Include="ShipmentFolder\TransportMode.cs" />
+    <Compile Include="ShipmentFolder\TransportNationality.cs" />
+    <Compile Include="ShipmentFolder\UnitOfWeight.cs" />
+    <Compile Include="ShipmentFolder\UniversalShipment.cs" />
+    <Compile Include="ShipmentFolder\Header.cs" />
+    <Compile Include="ShipmentFolder\UniversalInterchange.cs" />
+    <Compile Include="ShipmentFolder\Shipment.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShipmentFolder\VolumeUnit.cs" />
+    <Compile Include="ShipmentFolder\WarehouseReleaseStatus.cs" />
+    <Compile Include="ShipmentFolder\WayBillType.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ShipmentFolder\WeightChargesPayment.cs" />
+    <Compile Include="ShipmentFolder\WeightUnit.cs" />
+    <Compile Include="XmlSerializeHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UniversalInterchange xmlns="http://www.cargowise.com/Schemas/Universal/2011/11" version="1.1">
+  <Header>
+    <SenderID>COHHKGTRN</SenderID>
+    <RecipientID>COHTEST</RecipientID>
+  </Header>
+  <Body>
+    <UniversalShipment xmlns="http://www.cargowise.com/Schemas/Universal/2011/11" version="1.1">
+  <Shipment>
+    <DataContext>
+      <DataSourceCollection>
+        <DataSource>
+          <Type>ForwardingShipment</Type>
+          <Key>SCAFB01615</Key>
+        </DataSource>
+      </DataSourceCollection>
+
+      <Company>
+        <Code>HKG</Code>
+        <Country>
+          <Code>HK</Code>
+          <Name>Hong Kong</Name>
+        </Country>
+        <Name>Cohesion Air Freight (HK) Limited</Name>
+      </Company>
+      <DataProvider>COHTRNHKG</DataProvider>
+      <EnterpriseID>COH</EnterpriseID>
+      <EventBranch>
+        <Code>HKG</Code>
+        <Name>COHESION Air Freight (HK) Limited</Name>
+      </EventBranch>
+      <EventDepartment>
+        <Code>BRN</Code>
+        <Name>Branch</Name>
+      </EventDepartment>
+      <EventReference>REQUEST POM UPLOAD</EventReference>
+      <EventType>
+        <Code>Z02</Code>
+        <Description>Customisable Event 02</Description>
+      </EventType>
+      <EventUser>
+        <Code>AR4</Code>
+        <Name>Alan Ruan</Name>
+      </EventUser>
+      <ServerID>TRN</ServerID>
+      <TriggerCount>17</TriggerCount>
+      <TriggerDate>2018-02-10T16:55:05.92</TriggerDate>
+      <TriggerDescription>Upload OEC</TriggerDescription>
+      <TriggerType>Trigger</TriggerType>
+
+      <RecipientRoleCollection>
+        <RecipientRole>
+          <Code>ORP</Code>
+          <Description>Organisation Proxy</Description>
+        </RecipientRole>
+      </RecipientRoleCollection>
+    </DataContext>
+
+    <ActualChargeable>1200.000</ActualChargeable>
+    <AdditionalTerms></AdditionalTerms>
+    <BookingConfirmationReference></BookingConfirmationReference>
+    <CartageWaybillNumber></CartageWaybillNumber>
+    <CFSReference></CFSReference>
+    <ContainerCount>0</ContainerCount>
+    <ContainerMode>
+      <Code>LCL</Code>
+      <Description>Less Container Load</Description>
+    </ContainerMode>
+    <DocumentedChargeable>1200.000</DocumentedChargeable>
+    <DocumentedVolume>1200.000</DocumentedVolume>
+    <DocumentedWeight>200.000</DocumentedWeight>
+    <FreightRate>0.0000</FreightRate>
+    <FreightRateCurrency>
+      <Code></Code>
+    </FreightRateCurrency>
+    <GoodsDescription>aaa description  alan</GoodsDescription>
+    <GoodsValue>0.0000</GoodsValue>
+    <GoodsValueCurrency>
+      <Code>HKD</Code>
+      <Description>Hong Kong Dollar</Description>
+    </GoodsValueCurrency>
+    <HBLAWBChargesDisplay>
+      <Code>SHW</Code>
+      <Description>Show Collect Charges</Description>
+    </HBLAWBChargesDisplay>
+    <HBLContainerPackModeOverride>CFS/CFS</HBLContainerPackModeOverride>
+    <InsuranceValue>0.0000</InsuranceValue>
+    <InsuranceValueCurrency>
+      <Code>HKD</Code>
+      <Description>Hong Kong Dollar</Description>
+    </InsuranceValueCurrency>
+    <InterimReceiptNumber></InterimReceiptNumber>
+    <IsBooking>false</IsBooking>
+    <IsCancelled>false</IsCancelled>
+    <IsCFSRegistered>false</IsCFSRegistered>
+    <IsDirectBooking>false</IsDirectBooking>
+    <IsForwardRegistered>true</IsForwardRegistered>
+    <IsNeutralMaster>false</IsNeutralMaster>
+    <IsShipping>false</IsShipping>
+    <IsSplitShipment>false</IsSplitShipment>
+    <JobCosting>
+      <AccrualNotRecognized>0</AccrualNotRecognized>
+      <AccrualRecognized>0</AccrualRecognized>
+      <AgentRevenue>0</AgentRevenue>
+      <Branch>
+        <Code>HKG</Code>
+        <Name>COHESION Air Freight (HK) Limited</Name>
+      </Branch>
+      <Currency>
+        <Code>HKD</Code>
+        <Description>Hong Kong Dollar</Description>
+      </Currency>
+      <Department>
+        <Code>FES</Code>
+        <Name>Forwarding Export Sea</Name>
+      </Department>
+      <HomeBranch>
+        <Code>HKG</Code>
+        <Name>COHESION Air Freight (HK) Limited</Name>
+      </HomeBranch>
+      <LocalClientRevenue>0</LocalClientRevenue>
+      <OperationsStaff>
+        <Code>BN</Code>
+        <Name>Brian Ng</Name>
+      </OperationsStaff>
+      <OtherDebtorRevenue>0</OtherDebtorRevenue>
+      <SalesStaff>
+        <Code>CP</Code>
+        <Name>Poon Wai hung</Name>
+      </SalesStaff>
+      <TotalAccrual>0</TotalAccrual>
+      <TotalCost>0</TotalCost>
+      <TotalJobProfit>0</TotalJobProfit>
+      <TotalRevenue>0</TotalRevenue>
+      <TotalWIP>0</TotalWIP>
+      <WIPNotRecognized>0</WIPNotRecognized>
+      <WIPRecognized>0</WIPRecognized>
+    </JobCosting>
+    <LloydsIMO></LloydsIMO>
+    <ManifestedChargeable>1200.000</ManifestedChargeable>
+    <ManifestedVolume>1200.000</ManifestedVolume>
+    <ManifestedWeight>200.000</ManifestedWeight>
+    <NoCopyBills>3</NoCopyBills>
+    <NoOriginalBills>3</NoOriginalBills>
+    <OuterPacks>70</OuterPacks>
+    <OuterPacksPackageType>
+      <Code>CTN</Code>
+      <Description>Carton</Description>
+    </OuterPacksPackageType>
+    <PackingOrder>0</PackingOrder>
+    <PortOfDestination>
+      <Code>CAQUE</Code>
+      <Name>Quebec</Name>
+    </PortOfDestination>
+    <PortOfOrigin>
+      <Code>HKHKG</Code>
+      <Name>Hong Kong</Name>
+    </PortOfOrigin>
+    <ReleaseType>
+      <Code>OBR</Code>
+      <Description>Original Bill Required at Destination</Description>
+    </ReleaseType>
+    <ScreeningStatus>
+      <Code>UNK</Code>
+      <Description>Unknown</Description>
+    </ScreeningStatus>
+    <ServiceLevel>
+      <Code>STD</Code>
+      <Description>Standard</Description>
+    </ServiceLevel>
+    <ShipmentIncoTerm>
+      <Code>FOB</Code>
+      <Description>Free On Board</Description>
+    </ShipmentIncoTerm>
+    <ShipmentType>
+      <Code>STD</Code>
+      <Description>Standard House</Description>
+    </ShipmentType>
+    <ShippedOnBoard>
+      <Code>SHP</Code>
+      <Description>Shipped</Description>
+    </ShippedOnBoard>
+    <ShipperCODAmount>0.0000</ShipperCODAmount>
+    <ShipperCODPayMethod>
+      <Code></Code>
+    </ShipperCODPayMethod>
+    <TotalNoOfPacks>0</TotalNoOfPacks>
+    <TotalNoOfPacksPackageType>
+      <Code>CTN</Code>
+      <Description>Carton</Description>
+    </TotalNoOfPacksPackageType>
+    <TotalVolume>1200.000</TotalVolume>
+    <TotalVolumeUnit>
+      <Code>M3</Code>
+      <Description>Cubic Metres</Description>
+    </TotalVolumeUnit>
+    <TotalWeight>200.000</TotalWeight>
+    <TotalWeightUnit>
+      <Code>KG</Code>
+      <Description>Kilograms</Description>
+    </TotalWeightUnit>
+    <TranshipToOtherCFS>false</TranshipToOtherCFS>
+    <TransportMode>
+      <Code>SEA</Code>
+      <Description>Sea Freight</Description>
+    </TransportMode>
+    <VesselName>PADINA 2</VesselName>
+    <VoyageFlightNo>1234</VoyageFlightNo>
+    <WarehouseLocation></WarehouseLocation>
+    <WayBillNumber>CFBS1820120</WayBillNumber>
+    <WayBillType>
+      <Code>HWB</Code>
+      <Description>House Waybill</Description>
+    </WayBillType>
+
+    <LocalProcessing>
+      <ArrivalCartageRef></ArrivalCartageRef>
+      <DeliveryCartageAdvised></DeliveryCartageAdvised>
+      <DeliveryCartageCompleted></DeliveryCartageCompleted>
+      <DeliveryLabourCharge>0.0000</DeliveryLabourCharge>
+      <DeliveryLabourTime></DeliveryLabourTime>
+      <DeliveryRequiredBy></DeliveryRequiredBy>
+      <DemurrageOnDeliveryCharge>0.0000</DemurrageOnDeliveryCharge>
+      <DemurrageOnDeliveryTime></DemurrageOnDeliveryTime>
+      <DemurrageOnPickupCharge>0.0000</DemurrageOnPickupCharge>
+      <DemurrageOnPickupTime></DemurrageOnPickupTime>
+      <EstimatedDelivery></EstimatedDelivery>
+      <EstimatedPickup></EstimatedPickup>
+      <ExportStatement>
+        <Code></Code>
+      </ExportStatement>
+      <FCLAvailable></FCLAvailable>
+      <FCLDeliveryEquipmentNeeded>
+        <Code>PSL</Code>
+        <Description>Premise Supplies Lift</Description>
+      </FCLDeliveryEquipmentNeeded>
+      <FCLPickupEquipmentNeeded>
+        <Code>PSL</Code>
+        <Description>Premise Supplies Lift</Description>
+      </FCLPickupEquipmentNeeded>
+      <FCLStorageCommences></FCLStorageCommences>
+      <HasProhibitedPackaging>false</HasProhibitedPackaging>
+      <InsuranceRequired>false</InsuranceRequired>
+      <IsContingencyRelease>false</IsContingencyRelease>
+      <LCLAirStorageCharge>0.0000</LCLAirStorageCharge>
+      <LCLAirStorageDaysOrHours>0</LCLAirStorageDaysOrHours>
+      <LCLAvailable></LCLAvailable>
+      <LCLDatesOverrideConsol>false</LCLDatesOverrideConsol>
+      <LCLStorageCommences></LCLStorageCommences>
+      <PickupCartageAdvised></PickupCartageAdvised>
+      <PickupCartageCompleted></PickupCartageCompleted>
+      <PickupLabourCharge>0.0000</PickupLabourCharge>
+      <PickupLabourTime></PickupLabourTime>
+      <PickupRequiredBy></PickupRequiredBy>
+      <PrintOptionForPackagesOnAWB>
+        <Code>DEF</Code>
+        <Description>Default (Dims, fallback to Vol)</Description>
+      </PrintOptionForPackagesOnAWB>
+
+      <OrderNumberCollection>
+        <OrderNumber>
+          <OrderReference>LL00005</OrderReference>
+          <Sequence>1</Sequence>
+        </OrderNumber>
+      </OrderNumberCollection>
+    </LocalProcessing>
+
+    <AdditionalReferenceCollection Content="Complete">
+      <AdditionalReference>
+        <Type>
+          <Code>SLD</Code>
+          <Description>Shipping Order/Shi Lian Dan</Description>
+        </Type>
+        <ReferenceNumber>OCEAN B/L#</ReferenceNumber>
+        <ContextInformation></ContextInformation>
+        <IssueDate></IssueDate>
+      </AdditionalReference>
+    </AdditionalReferenceCollection>
+
+    <CustomizedFieldCollection>
+      <CustomizedField>
+        <Key>Cargo Ready Date</Key>
+        <DataType>DateTime</DataType>
+        <Value>2018-02-07T00:00:00</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Agent</Key>
+        <DataType>String</DataType>
+        <Value>22847</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Cnee</Key>
+        <DataType>String</DataType>
+        <Value>35568</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Managing Office</Key>
+        <DataType>String</DataType>
+        <Value>YMQ</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Shpr</Key>
+        <DataType>String</DataType>
+        <Value>52145</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Upload</Key>
+        <DataType>String</DataType>
+        <Value>1ST</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>User E-mail</Key>
+        <DataType>String</DataType>
+        <Value>alan_ruan@cohesionfreight.com.cn</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>Master to OCE/CGL</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>ACI/AMS House Bill No</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>Send ACI/AMS</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>ACI/AMS Send Date Time</Key>
+        <DataType>DateTime</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>ACI/AMS Send By</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>ACI/AMS Upload Status</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Booking No</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>Warehouse ID</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Update Status</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Upload Date Time</Key>
+        <DataType>DateTime</DataType>
+        <Value></Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Upload by</Key>
+        <DataType>String</DataType>
+        <Value></Value>
+      </CustomizedField>
+    </CustomizedFieldCollection>
+
+    <DateCollection>
+      <Date>
+        <Type>BookingConfirmed</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value></Value>
+      </Date>
+      <Date>
+        <Type>Received</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value></Value>
+      </Date>
+      <Date>
+        <Type>Departure</Type>
+        <IsEstimate>true</IsEstimate>
+        <Value>2018-02-07T00:00:00</Value>
+      </Date>
+      <Date>
+        <Type>Arrival</Type>
+        <IsEstimate>true</IsEstimate>
+        <Value>2018-02-28T00:00:00</Value>
+      </Date>
+      <Date>
+        <Type>ShippedOnBoard</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value>2018-02-06T00:00:00</Value>
+      </Date>
+      <Date>
+        <Type>BillIssued</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value>2018-02-06T00:00:00</Value>
+      </Date>
+    </DateCollection>
+
+    <MilestoneCollection>
+      <Milestone>
+        <Description>TEST</Description>
+        <EventCode>BKC</EventCode>
+        <Sequence>1</Sequence>
+        <ActualDate></ActualDate>
+        <ConditionReference></ConditionReference>
+        <ConditionType></ConditionType>
+        <EstimatedDate></EstimatedDate>
+      </Milestone>
+      <Milestone>
+        <Description>Pickup Cartage Complete/Finalised</Description>
+        <EventCode>PCF</EventCode>
+        <Sequence>2</Sequence>
+        <ActualDate></ActualDate>
+        <ConditionReference></ConditionReference>
+        <ConditionType></ConditionType>
+        <EstimatedDate></EstimatedDate>
+      </Milestone>
+      <Milestone>
+        <Description>Origin Receival from Wharf / Depot</Description>
+        <EventCode>GIN</EventCode>
+        <Sequence>3</Sequence>
+        <ActualDate></ActualDate>
+        <ConditionReference>FAC=CTO</ConditionReference>
+        <ConditionType>RFP</ConditionType>
+        <EstimatedDate></EstimatedDate>
+      </Milestone>
+      <Milestone>
+        <Description>All Export Documents Received</Description>
+        <EventCode>AED</EventCode>
+        <Sequence>4</Sequence>
+        <ActualDate></ActualDate>
+        <ConditionReference></ConditionReference>
+        <ConditionType></ConditionType>
+        <EstimatedDate></EstimatedDate>
+      </Milestone>
+      <Milestone>
+        <Description>Shipped On Board</Description>
+        <EventCode>FLO</EventCode>
+        <Sequence>6</Sequence>
+        <ActualDate>2018-02-06T00:00:00</ActualDate>
+        <ConditionReference></ConditionReference>
+        <ConditionType></ConditionType>
+        <EstimatedDate></EstimatedDate>
+      </Milestone>
+    </MilestoneCollection>
+
+    <NoteCollection Content="Partial">
+      <Note>
+        <Description>Detailed Goods Description</Description>
+        <IsCustomDescription>false</IsCustomDescription>
+        <NoteText>1TEST
+2TEST
+3TEST
+4TEST
+5TEST
+5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST
+des
+</NoteText>
+        <NoteContext>
+          <Code>AAA</Code>
+          <Description>Module: A - All, Direction: A - All, Freight: A - All</Description>
+        </NoteContext>
+        <Visibility>
+          <Code>PUB</Code>
+          <Description>CLIENT-VISIBLE</Description>
+        </Visibility>
+      </Note>
+      <Note>
+        <Description>Marks &amp; Numbers</Description>
+        <IsCustomDescription>false</IsCustomDescription>
+        <NoteText>bbb marks
+test12
+test122345667782 
+test122345667783 
+test122345667784
+test122345667785 
+test122345667786 
+test122345667787 
+test122345667788</NoteText>
+        <NoteContext>
+          <Code>AAA</Code>
+          <Description>Module: A - All, Direction: A - All, Freight: A - All</Description>
+        </NoteContext>
+        <Visibility>
+          <Code>PUB</Code>
+          <Description>CLIENT-VISIBLE</Description>
+        </Visibility>
+      </Note>
+    </NoteCollection>
+
+    <OrganizationAddressCollection>
+      <OrganizationAddress>
+        <AddressType>ConsignorDocumentaryAddress</AddressType>
+        <Address1>SUITE 1001-2 ALBION PLAZA 2-6</Address1>
+        <Address2>GRANVILLE ROAD,TSIM SHA TSUI</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>HONG KONG</City>
+        <CompanyName>GARLION TRADING LIMITED</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email>Peter_chan@Garlion.com</Email>
+        <Fax></Fax>
+        <OrganizationCode>GARTRAHKG</OrganizationCode>
+        <Phone>2777 1777</Phone>
+        <Port>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </Port>
+        <Postcode>NA</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>HK</State>
+
+        <RegistrationNumberCollection>
+          <RegistrationNumber>
+            <Type>
+              <Code>LSC</Code>
+              <Description>Legacy System Code</Description>
+            </Type>
+            <CountryOfIssue>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </CountryOfIssue>
+            <Value>52145</Value>
+          </RegistrationNumber>
+        </RegistrationNumberCollection>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsignorPickupDeliveryAddress</AddressType>
+        <Address1>SUITE 1001-2 ALBION PLAZA 2-6</Address1>
+        <Address2>GRANVILLE ROAD,TSIM SHA TSUI</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>HONG KONG</City>
+        <CompanyName>GARLION TRADING LIMITED</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email>Peter_chan@Garlion.com</Email>
+        <Fax></Fax>
+        <OrganizationCode>GARTRAHKG</OrganizationCode>
+        <Phone>2777 1777</Phone>
+        <Port>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </Port>
+        <Postcode>NA</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>HK</State>
+
+        <RegistrationNumberCollection>
+          <RegistrationNumber>
+            <Type>
+              <Code>LSC</Code>
+              <Description>Legacy System Code</Description>
+            </Type>
+            <CountryOfIssue>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </CountryOfIssue>
+            <Value>52145</Value>
+          </RegistrationNumber>
+        </RegistrationNumberCollection>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsigneeDocumentaryAddress</AddressType>
+        <Address1>20 COTE DE LA FABRIQUE</Address1>
+        <Address2></Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>QUEBEC</City>
+        <CompanyName>LA MAISON SIMONS</CompanyName>
+        <Country>
+          <Code>CA</Code>
+          <Name>Canada</Name>
+        </Country>
+        <Email></Email>
+        <Fax></Fax>
+        <OrganizationCode>LAMAISYQB</OrganizationCode>
+        <Phone></Phone>
+        <Port>
+          <Code>CAQUE</Code>
+          <Name>Quebec</Name>
+        </Port>
+        <Postcode>G1R 3V9</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>QC</State>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsigneePickupDeliveryAddress</AddressType>
+        <Address1>20 COTE DE LA FABRIQUE</Address1>
+        <Address2></Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>QUEBEC</City>
+        <CompanyName>LA MAISON SIMONS</CompanyName>
+        <Country>
+          <Code>CA</Code>
+          <Name>Canada</Name>
+        </Country>
+        <Email></Email>
+        <Fax></Fax>
+        <OrganizationCode>LAMAISYQB</OrganizationCode>
+        <Phone></Phone>
+        <Port>
+          <Code>CAQUE</Code>
+          <Name>Quebec</Name>
+        </Port>
+        <Postcode>G1R 3V9</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>QC</State>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>NotifyParty</AddressType>
+        <Address1>104 STEWART DRIVE  GREENSBORO, GA. 30642  U.S.A</Address1>
+        <Address2></Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>104 STEWART DRIVE  GREENS</AddressShortCode>
+        <City></City>
+        <CompanyName>RABCO PRODUCTS CORP</CompanyName>
+        <Country>
+          <Code>US</Code>
+          <Name>United States</Name>
+        </Country>
+        <Email></Email>
+        <Fax></Fax>
+        <OrganizationCode>RABPROSAV</OrganizationCode>
+        <Phone></Phone>
+        <Port>
+          <Code>USSAV</Code>
+          <Name>Savannah</Name>
+        </Port>
+        <Postcode></Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>GA</State>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>SendersLocalClient</AddressType>
+        <Address1>1303 ZHONGSHAN ROAD</Address1>
+        <Address2>TIANHE DISTRICT</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>ROOM 1303, HUI LONG BUILD</AddressShortCode>
+        <City>GUANGZHOU</City>
+        <CompanyName>OEC GROUP (GUANGZHOU)</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email></Email>
+        <Fax></Fax>
+        <OrganizationCode>GARTRAHKG</OrganizationCode>
+        <Phone></Phone>
+        <Port>
+          <Code></Code>
+        </Port>
+        <Postcode>5100</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>44</State>
+
+        <RegistrationNumberCollection>
+          <RegistrationNumber>
+            <Type>
+              <Code>LSC</Code>
+              <Description>Legacy System Code</Description>
+            </Type>
+            <CountryOfIssue>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </CountryOfIssue>
+            <Value>52145</Value>
+          </RegistrationNumber>
+        </RegistrationNumberCollection>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>SendersOverseasAgent</AddressType>
+        <Address1>2 CUMBERLAND ST</Address1>
+        <Address2>CHARLESTON, SOUTH CAROLINA 29401</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>2 CUMBERLAND ST</AddressShortCode>
+        <City>CHARLESTON</City>
+        <CompanyName>ROGERS &amp; BROWN CUSTOM BROKERS, INC.</CompanyName>
+        <Country>
+          <Code>US</Code>
+          <Name>United States</Name>
+        </Country>
+        <Email>OCEAN_INBOUND@ROGERS-BROWN.COM</Email>
+        <Fax>+18438537901</Fax>
+        <OrganizationCode>ROGBROCHS</OrganizationCode>
+        <Phone>+18435773630</Phone>
+        <Port>
+          <Code>USCHS</Code>
+          <Name>Charleston</Name>
+        </Port>
+        <Postcode>29401</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>SC</State>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>DepartureCFSAddress</AddressType>
+        <Address1>12 TERMINAL PORT ROAD</Address1>
+        <Address2></Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>12 TERMINAL PORT ROAD</AddressShortCode>
+        <City>SHENZHEN</City>
+        <CompanyName>NVO TERMINAL LIMITED</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email></Email>
+        <Fax></Fax>
+        <OrganizationCode>NVOTERYTN</OrganizationCode>
+        <Phone></Phone>
+        <Port>
+          <Code>CNYTN</Code>
+          <Name>Yantian Pt</Name>
+        </Port>
+        <Postcode>12345</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State></State>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>DeliveryAgent</AddressType>
+        <Address1>2 CUMBERLAND ST</Address1>
+        <Address2>CHARLESTON, SOUTH CAROLINA 29401</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>2 CUMBERLAND ST</AddressShortCode>
+        <City>CHARLESTON</City>
+        <CompanyName>ROGERS &amp; BROWN CUSTOM BROKERS, INC.</CompanyName>
+        <Country>
+          <Code>US</Code>
+          <Name>United States</Name>
+        </Country>
+        <Email>OCEAN_INBOUND@ROGERS-BROWN.COM</Email>
+        <Fax>+18438537901</Fax>
+        <OrganizationCode>ROGBROCHS</OrganizationCode>
+        <Phone>+18435773630</Phone>
+        <Port>
+          <Code>USCHS</Code>
+          <Name>Charleston</Name>
+        </Port>
+        <Postcode>29401</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>SC</State>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ArrivalCFSAddress</AddressType>
+        <Address1>59 TAI YIP STREET</Address1>
+        <Address2>KWUN TONG DISTRICT</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>A2 8/F SUNSHINE KOWLOON B</AddressShortCode>
+        <City>HONG KONG</City>
+        <CompanyName>CHRIS HK COHESION</CompanyName>
+        <Country>
+          <Code>HK</Code>
+          <Name>Hong Kong</Name>
+        </Country>
+        <Email></Email>
+        <Fax></Fax>
+        <OrganizationCode>CHRHKCHKG</OrganizationCode>
+        <Phone></Phone>
+        <Port>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </Port>
+        <Postcode></Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State></State>
+      </OrganizationAddress>
+    </OrganizationAddressCollection>
+
+    <PackingLineCollection Content="Complete">
+      <PackingLine>
+        <Commodity>
+          <Code>GEN</Code>
+          <Description>General</Description>
+        </Commodity>
+        <ContainerPackingOrder>0</ContainerPackingOrder>
+        <CountryOfOrigin>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </CountryOfOrigin>
+        <DetailedDescription>1TEST
+2TEST
+3TEST
+4TEST
+5TEST
+5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST
+</DetailedDescription>
+        <EndItemNo>0</EndItemNo>
+        <ExportReferenceNumber></ExportReferenceNumber>
+        <GoodsDescription>aaa description  alan</GoodsDescription>
+        <HarmonisedCode></HarmonisedCode>
+        <Height>1.000</Height>
+        <ImportReferenceNumber></ImportReferenceNumber>
+        <ItemNo>0</ItemNo>
+        <Length>10.000</Length>
+        <LengthUnit>
+          <Code></Code>
+        </LengthUnit>
+        <LinePrice>0.0000</LinePrice>
+        <Link>1</Link>
+        <LoadingMeters>0.000</LoadingMeters>
+        <MarksAndNos>MARKS NUMBERS1</MarksAndNos>
+        <OutturnComment></OutturnComment>
+        <OutturnDamagedQty>0</OutturnDamagedQty>
+        <OutturnedHeight>0.000</OutturnedHeight>
+        <OutturnedLength>0.000</OutturnedLength>
+        <OutturnedVolume>0.000</OutturnedVolume>
+        <OutturnedWeight>0.000</OutturnedWeight>
+        <OutturnedWidth>0.000</OutturnedWidth>
+        <OutturnPillagedQty>0</OutturnPillagedQty>
+        <OutturnQty>0</OutturnQty>
+        <PackQty>50</PackQty>
+        <PackType>
+          <Code>CTN</Code>
+          <Description>Carton</Description>
+        </PackType>
+        <ReferenceNumber></ReferenceNumber>
+        <Volume>200.000</Volume>
+        <VolumeUnit>
+          <Code></Code>
+        </VolumeUnit>
+        <Weight>100.000</Weight>
+        <WeightUnit>
+          <Code></Code>
+        </WeightUnit>
+        <Width>5.000</Width>
+
+        <CustomizedFieldCollection>
+          <CustomizedField>
+            <Key>xxx</Key>
+            <DataType>String</DataType>
+            <Value></Value>
+          </CustomizedField>
+          <CustomizedField>
+            <Key>yyy</Key>
+            <DataType>String</DataType>
+            <Value></Value>
+          </CustomizedField>
+          <CustomizedField>
+            <Key>zzz</Key>
+            <DataType>DateTime</DataType>
+            <Value></Value>
+          </CustomizedField>
+        </CustomizedFieldCollection>
+
+        <PackedItemCollection>
+          <PackedItem>
+            <OrderLineLink>1</OrderLineLink>
+            <PackedQuantity>1000.00000</PackedQuantity>
+            <Product>
+              <Code>L001</Code>
+            </Product>
+            <UnitOfQuantity>
+              <Code>UNT</Code>
+              <Description>Unit</Description>
+            </UnitOfQuantity>
+          </PackedItem>
+        </PackedItemCollection>
+      </PackingLine>
+      <PackingLine>
+        <Commodity>
+          <Code>GEN</Code>
+          <Description>General</Description>
+        </Commodity>
+        <ContainerPackingOrder>0</ContainerPackingOrder>
+        <CountryOfOrigin>
+          <Code></Code>
+        </CountryOfOrigin>
+        <DetailedDescription>1TEST
+2TEST
+3TEST
+4TEST
+5TEST
+5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST 5TEST
+des
+</DetailedDescription>
+        <EndItemNo>0</EndItemNo>
+        <ExportReferenceNumber></ExportReferenceNumber>
+        <GoodsDescription>aaa description  alan</GoodsDescription>
+        <HarmonisedCode></HarmonisedCode>
+        <Height>1.000</Height>
+        <ImportReferenceNumber></ImportReferenceNumber>
+        <ItemNo>0</ItemNo>
+        <Length>10.000</Length>
+        <LengthUnit>
+          <Code>M</Code>
+          <Description>Metres</Description>
+        </LengthUnit>
+        <LinePrice>0.0000</LinePrice>
+        <Link>2</Link>
+        <LoadingMeters>0.000</LoadingMeters>
+        <MarksAndNos>MARKS NUMBERS2</MarksAndNos>
+        <OutturnComment></OutturnComment>
+        <OutturnDamagedQty>0</OutturnDamagedQty>
+        <OutturnedHeight>0.000</OutturnedHeight>
+        <OutturnedLength>0.000</OutturnedLength>
+        <OutturnedVolume>0.000</OutturnedVolume>
+        <OutturnedWeight>0.000</OutturnedWeight>
+        <OutturnedWidth>0.000</OutturnedWidth>
+        <OutturnPillagedQty>0</OutturnPillagedQty>
+        <OutturnQty>0</OutturnQty>
+        <PackQty>20</PackQty>
+        <PackType>
+          <Code>CTN</Code>
+          <Description>Carton</Description>
+        </PackType>
+        <ReferenceNumber></ReferenceNumber>
+        <Volume>1000.000</Volume>
+        <VolumeUnit>
+          <Code>M3</Code>
+          <Description>Cubic Metres</Description>
+        </VolumeUnit>
+        <Weight>100.000</Weight>
+        <WeightUnit>
+          <Code>KG</Code>
+          <Description>Kilograms</Description>
+        </WeightUnit>
+        <Width>5.000</Width>
+
+        <CustomizedFieldCollection>
+          <CustomizedField>
+            <Key>xxx</Key>
+            <DataType>String</DataType>
+            <Value></Value>
+          </CustomizedField>
+          <CustomizedField>
+            <Key>yyy</Key>
+            <DataType>String</DataType>
+            <Value></Value>
+          </CustomizedField>
+          <CustomizedField>
+            <Key>zzz</Key>
+            <DataType>DateTime</DataType>
+            <Value></Value>
+          </CustomizedField>
+        </CustomizedFieldCollection>
+
+        <PackedItemCollection>
+        </PackedItemCollection>
+      </PackingLine>
+    </PackingLineCollection>
+
+    <RelatedShipmentCollection>
+      <RelatedShipment>
+        <DataContext>
+          <DataSourceCollection>
+            <DataSource>
+              <Type>OrderManagerOrder</Type>
+              <Key>LL00005~0~LAMAISYQB</Key>
+            </DataSource>
+          </DataSourceCollection>
+        </DataContext>
+
+        <AdditionalTerms></AdditionalTerms>
+        <BookingConfirmationReference></BookingConfirmationReference>
+        <CommercialInfo>
+          <CommercialInvoiceCollection>
+            <CommercialInvoice>
+              <InvoiceNumber></InvoiceNumber>
+              <InvoiceDate></InvoiceDate>
+            </CommercialInvoice>
+          </CommercialInvoiceCollection>
+        </CommercialInfo>
+        <ContainerMode>
+          <Code>FCL</Code>
+          <Description>Full Container Load</Description>
+        </ContainerMode>
+        <FirstBuyerContact></FirstBuyerContact>
+        <FreightRate>1.000000000</FreightRate>
+        <FreightRateCurrency>
+          <Code>HKD</Code>
+          <Description>Hong Kong Dollar</Description>
+        </FreightRateCurrency>
+        <GoodsDescription></GoodsDescription>
+        <OuterPacks>0</OuterPacks>
+        <OuterPacksPackageType>
+          <Code>PLT</Code>
+          <Description>Pallet</Description>
+        </OuterPacksPackageType>
+        <PortOfDestination>
+          <Code>CAQUE</Code>
+          <Name>Quebec</Name>
+        </PortOfDestination>
+        <PortOfDischarge>
+          <Code>CAQUE</Code>
+          <Name>Quebec</Name>
+        </PortOfDischarge>
+        <PortOfLoading>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </PortOfLoading>
+        <PortOfOrigin>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </PortOfOrigin>
+        <SecondBuyerContact></SecondBuyerContact>
+        <ServiceLevel>
+          <Code></Code>
+        </ServiceLevel>
+        <ShipmentIncoTerm>
+          <Code>FOB</Code>
+          <Description>Free On Board</Description>
+        </ShipmentIncoTerm>
+        <TotalVolume>0.000</TotalVolume>
+        <TotalVolumeUnit>
+          <Code>M3</Code>
+          <Description>Cubic Metres</Description>
+        </TotalVolumeUnit>
+        <TotalWeight>0.000</TotalWeight>
+        <TotalWeightUnit>
+          <Code>KG</Code>
+          <Description>Kilograms</Description>
+        </TotalWeightUnit>
+        <TransportMode>
+          <Code>SEA</Code>
+          <Description>Sea Freight</Description>
+        </TransportMode>
+        <WayBillNumber></WayBillNumber>
+        <WayBillType>
+          <Code>HWB</Code>
+          <Description>House Waybill</Description>
+        </WayBillType>
+
+        <LocalProcessing>
+          <DeliveryRequiredBy></DeliveryRequiredBy>
+        </LocalProcessing>
+
+        <Order>
+          <OrderNumber>LL00005</OrderNumber>
+          <ClientReference></ClientReference>
+          <OrderNumberSplit>0</OrderNumberSplit>
+          <Status>
+            <Code>INC</Code>
+            <Description>Order Incomplete</Description>
+          </Status>
+
+          <OrderLineCollection Content="Complete">
+            <OrderLine>
+              <AdditionalInformation></AdditionalInformation>
+              <AdditionalTerms></AdditionalTerms>
+              <CommercialInvoiceNumber></CommercialInvoiceNumber>
+              <ConfirmationNumber></ConfirmationNumber>
+              <ContainerNumber></ContainerNumber>
+              <ContainerPackingOrder>0</ContainerPackingOrder>
+              <CustomsData>
+              </CustomsData>
+              <ExpectedQuantity>0.00000</ExpectedQuantity>
+              <ExtendedLinePrice>0.0000</ExtendedLinePrice>
+              <IncoTerm>
+                <Code></Code>
+              </IncoTerm>
+              <InnerPacksQty>0.000</InnerPacksQty>
+              <InnerPacksQtyUnit>
+                <Code></Code>
+              </InnerPacksQtyUnit>
+              <LineNumber>1</LineNumber>
+              <LineSplitNumber>0</LineSplitNumber>
+              <Link>1</Link>
+              <OrderedQty>1000.00000</OrderedQty>
+              <OrderedQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </OrderedQtyUnit>
+              <PackageHeight>0.000</PackageHeight>
+              <PackageLength>0.000</PackageLength>
+              <PackageLengthUnit>
+                <Code></Code>
+                <Description></Description>
+              </PackageLengthUnit>
+              <PackageQty>50.000</PackageQty>
+              <PackageQtyUnit>
+                <Code>CTN</Code>
+                <Description>Carton</Description>
+              </PackageQtyUnit>
+              <PackageWidth>0.000</PackageWidth>
+              <PartAttribute1></PartAttribute1>
+              <PartAttribute2></PartAttribute2>
+              <PartAttribute3></PartAttribute3>
+              <Product>
+                <Code>L001</Code>
+                <Description></Description>
+              </Product>
+              <QuantityMet>0.00000</QuantityMet>
+              <RequiredExWorks></RequiredExWorks>
+              <RequiredInStore></RequiredInStore>
+              <SpecialInstructions></SpecialInstructions>
+              <Status>
+                <Code>PLC</Code>
+                <Description>Order Placed / finalised</Description>
+              </Status>
+              <SubLineNumber>1</SubLineNumber>
+              <SupplierConfirmedAcceptance></SupplierConfirmedAcceptance>
+              <UnitPriceRecommended>0.0000</UnitPriceRecommended>
+              <Volume>0.000</Volume>
+              <VolumeUnit>
+                <Code></Code>
+              </VolumeUnit>
+              <Weight>0.000</Weight>
+              <WeightUnit>
+                <Code></Code>
+              </WeightUnit>
+            </OrderLine>
+          </OrderLineCollection>
+        </Order>
+
+        <AdditionalBillCollection>
+          <AdditionalBill>
+            <BillNumber></BillNumber>
+            <BillType>
+              <Code>MWB</Code>
+              <Description>Master Waybill</Description>
+            </BillType>
+          </AdditionalBill>
+        </AdditionalBillCollection>
+
+        <CustomizedFieldCollection>
+          <CustomizedField>
+            <Key>OEC BK#</Key>
+            <DataType>String</DataType>
+            <Value></Value>
+          </CustomizedField>
+          <CustomizedField>
+            <Key>OEC Update Status</Key>
+            <DataType>String</DataType>
+            <Value></Value>
+          </CustomizedField>
+          <CustomizedField>
+            <Key>Warehouse ID</Key>
+            <DataType>String</DataType>
+            <Value></Value>
+          </CustomizedField>
+        </CustomizedFieldCollection>
+
+        <DateCollection>
+          <Date>
+            <Type>BookingConfirmed</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value></Value>
+          </Date>
+          <Date>
+            <Type>DepartureVesselCutoffDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value></Value>
+          </Date>
+          <Date>
+            <Type>ExWorksRequiredBy</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value></Value>
+          </Date>
+          <Date>
+            <Type>FollowUp</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value></Value>
+          </Date>
+          <Date>
+            <Type>OrderDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2018-02-01T15:35:00</Value>
+          </Date>
+        </DateCollection>
+
+        <MilestoneCollection>
+          <Milestone>
+            <Description>Order Confirmed</Description>
+            <EventCode>OCF</EventCode>
+            <Sequence>1</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference></ConditionReference>
+            <ConditionType></ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Ex Factory</Description>
+            <EventCode>EXW</EventCode>
+            <Sequence>2</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference></ConditionReference>
+            <ConditionType></ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Origin Receival at Wharf / Depot</Description>
+            <EventCode>GIN</EventCode>
+            <Sequence>3</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference>FAC=CTO</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Departure</Description>
+            <EventCode>DEP</EventCode>
+            <Sequence>4</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference>LOC=&lt;FirstLeg.Origin&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate>2018-02-08T11:02:00</EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Arrival</Description>
+            <EventCode>ARV</EventCode>
+            <Sequence>5</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference>LOC=&lt;LastLeg.Destination&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate>2018-03-01T11:02:00</EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Commenced</Description>
+            <EventCode>CCC</EventCode>
+            <Sequence>6</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference></ConditionReference>
+            <ConditionType></ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Finalized</Description>
+            <EventCode>CLR</EventCode>
+            <Sequence>7</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference></ConditionReference>
+            <ConditionType></ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Unpacked</Description>
+            <EventCode>CAV</EventCode>
+            <Sequence>8</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference></ConditionReference>
+            <ConditionType></ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Estimated Pickup</Description>
+            <EventCode>DCA</EventCode>
+            <Sequence>9</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference></ConditionReference>
+            <ConditionType></ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+          <Milestone>
+            <Description>Order Delivered</Description>
+            <EventCode>DCF</EventCode>
+            <Sequence>10</Sequence>
+            <ActualDate></ActualDate>
+            <ConditionReference></ConditionReference>
+            <ConditionType></ConditionType>
+            <EstimatedDate></EstimatedDate>
+          </Milestone>
+        </MilestoneCollection>
+
+        <OrganizationAddressCollection>
+          <OrganizationAddress>
+            <AddressType>ConsigneeDocumentaryAddress</AddressType>
+            <Address1>20 COTE DE LA FABRIQUE</Address1>
+            <Address2></Address2>
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>OECADDRESS</AddressShortCode>
+            <City>QUEBEC</City>
+            <CompanyName>LA MAISON SIMONS</CompanyName>
+            <Country>
+              <Code>CA</Code>
+              <Name>Canada</Name>
+            </Country>
+            <Email></Email>
+            <Fax></Fax>
+            <OrganizationCode>LAMAISYQB</OrganizationCode>
+            <Phone></Phone>
+            <Port>
+              <Code>CAQUE</Code>
+              <Name>Quebec</Name>
+            </Port>
+            <Postcode>G1R 3V9</Postcode>
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State>QC</State>
+          </OrganizationAddress>
+          <OrganizationAddress>
+            <AddressType>ConsignorDocumentaryAddress</AddressType>
+            <Address1>SUITE 1001-2 ALBION PLAZA 2-6</Address1>
+            <Address2>GRANVILLE ROAD,TSIM SHA TSUI</Address2>
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>OECADDRESS</AddressShortCode>
+            <City>HONG KONG</City>
+            <CompanyName>GARLION TRADING LIMITED</CompanyName>
+            <Country>
+              <Code>CN</Code>
+              <Name>China</Name>
+            </Country>
+            <Email>Peter_chan@Garlion.com</Email>
+            <Fax></Fax>
+            <OrganizationCode>GARTRAHKG</OrganizationCode>
+            <Phone>2777 1777</Phone>
+            <Port>
+              <Code>HKHKG</Code>
+              <Name>Hong Kong</Name>
+            </Port>
+            <Postcode>NA</Postcode>
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State>HK</State>
+
+            <RegistrationNumberCollection>
+              <RegistrationNumber>
+                <Type>
+                  <Code>LSC</Code>
+                  <Description>Legacy System Code</Description>
+                </Type>
+                <CountryOfIssue>
+                  <Code>HK</Code>
+                  <Name>Hong Kong</Name>
+                </CountryOfIssue>
+                <Value>52145</Value>
+              </RegistrationNumber>
+            </RegistrationNumberCollection>
+          </OrganizationAddress>
+          <OrganizationAddress>
+            <AddressType>SendingForwarderAddress</AddressType>
+            <Address1>VIA YURI GAGARIN 26</Address1>
+            <Address2>59100 PRATO, ITALY</Address2>
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>VIA YURI GAGARIN 26</AddressShortCode>
+            <City></City>
+            <CompanyName>ALISPED SPA - PRATO</CompanyName>
+            <Country>
+              <Code>AL</Code>
+              <Name>Albania</Name>
+            </Country>
+            <Email></Email>
+            <Fax>39 0574 636464</Fax>
+            <OrganizationCode>ALISPAIIT</OrganizationCode>
+            <Phone>39 0574 6391</Phone>
+            <Port>
+              <Code>ALIIT</Code>
+              <Name>PRATO</Name>
+            </Port>
+            <Postcode>59100</Postcode>
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State>PO</State>
+          </OrganizationAddress>
+        </OrganizationAddressCollection>
+      </RelatedShipment>
+    </RelatedShipmentCollection>
+
+    <TransportLegCollection>
+      <TransportLeg>
+        <PortOfDischarge>
+          <Code>CAQUE</Code>
+          <Name>Quebec</Name>
+        </PortOfDischarge>
+        <PortOfLoading>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </PortOfLoading>
+        <LegOrder>0</LegOrder>
+        <ActualArrival></ActualArrival>
+        <ActualDeparture></ActualDeparture>
+        <CarrierBookingReference></CarrierBookingReference>
+        <CarrierServiceLevel>
+          <Code></Code>
+        </CarrierServiceLevel>
+        <EstimatedArrival>2018-03-01T11:02:00</EstimatedArrival>
+        <EstimatedDeparture>2018-02-08T11:02:00</EstimatedDeparture>
+        <LegNotes></LegNotes>
+        <LegType>Main</LegType>
+        <TransportMode>Sea</TransportMode>
+        <VesselLloydsIMO></VesselLloydsIMO>
+        <VesselName>PADINA 2</VesselName>
+        <VoyageFlightNo>1234</VoyageFlightNo>
+      </TransportLeg>
+    </TransportLegCollection>
+  </Shipment>
+</UniversalShipment>
+  </Body>
+</UniversalInterchange>
