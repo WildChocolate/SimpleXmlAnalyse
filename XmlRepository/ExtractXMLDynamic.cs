@@ -57,6 +57,22 @@ namespace XmlRepository
         {
             return (PropType.IsClass && PropType != StringType);
         }
+        public static void SetInstanceByXElement<T>(T Instance, string XelementText) where T : class , new() 
+        {
+            if (string.IsNullOrEmpty(XelementText)) {
+                throw new ArgumentNullException("XML字符串不能为空");
+            }
+            try
+            {
+                XElement xelement = XElement.Parse(XelementText);
+                SetInstanceByXElement<T>(Instance, xelement);
+            }
+            catch (Exception err)
+            {
+                var msg = err.Message;
+                throw err;
+            }
+        }
         /// <summary>
         /// 通过对应的XML元素设置对应的类型实例
         /// </summary>

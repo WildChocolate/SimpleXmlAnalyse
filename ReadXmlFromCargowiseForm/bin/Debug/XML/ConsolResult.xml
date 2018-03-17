@@ -10,7 +10,10 @@
       </DataSourceCollection>
       <Company>
         <Code>CFI</Code>
-        <Country />
+        <Country>
+          <Code>HK</Code>
+          <Name>Hong Kong</Name>
+        </Country>
         <Name>COHESION Logistics (HK) Ltd.</Name>
       </Company>
       <DataProvider>COHTRNCFI</DataProvider>
@@ -190,7 +193,10 @@
         </ContainerStatus>
         <ContainerType>
           <Code>40NOR</Code>
-          <Category />
+          <Category>
+            <Code>DRY</Code>
+            <Description>Dry Storage</Description>
+          </Category>
           <Description>Forty foot non-operating reefer</Description>
           <ISOCode>42R0</ISOCode>
         </ContainerType>
@@ -696,10 +702,18 @@
           <DemurrageOnPickupTime />
           <EstimatedDelivery />
           <EstimatedPickup />
-          <ExportStatement />
+          <ExportStatement>
+            <Code />
+          </ExportStatement>
           <FCLAvailable />
-          <FCLDeliveryEquipmentNeeded />
-          <FCLPickupEquipmentNeeded />
+          <FCLDeliveryEquipmentNeeded>
+            <Code>PSL</Code>
+            <Description>Premise Supplies Lift</Description>
+          </FCLDeliveryEquipmentNeeded>
+          <FCLPickupEquipmentNeeded>
+            <Code>PSL</Code>
+            <Description>Premise Supplies Lift</Description>
+          </FCLPickupEquipmentNeeded>
           <FCLStorageCommences />
           <HasProhibitedPackaging>false</HasProhibitedPackaging>
           <InsuranceRequired>false</InsuranceRequired>
@@ -714,7 +728,10 @@
           <PickupLabourCharge>0.0000</PickupLabourCharge>
           <PickupLabourTime />
           <PickupRequiredBy />
-          <PrintOptionForPackagesOnAWB />
+          <PrintOptionForPackagesOnAWB>
+            <Code>DEF</Code>
+            <Description>Default (Dims, fallback to Vol)</Description>
+          </PrintOptionForPackagesOnAWB>
           <OrderNumberCollection>
             <OrderNumber>
               <OrderReference>HKM1802002-NL</OrderReference>
@@ -1313,10 +1330,18 @@ PO#0020961</NoteText>
           <DemurrageOnPickupTime />
           <EstimatedDelivery />
           <EstimatedPickup />
-          <ExportStatement />
+          <ExportStatement>
+            <Code />
+          </ExportStatement>
           <FCLAvailable />
-          <FCLDeliveryEquipmentNeeded />
-          <FCLPickupEquipmentNeeded />
+          <FCLDeliveryEquipmentNeeded>
+            <Code>PSL</Code>
+            <Description>Premise Supplies Lift</Description>
+          </FCLDeliveryEquipmentNeeded>
+          <FCLPickupEquipmentNeeded>
+            <Code>PSL</Code>
+            <Description>Premise Supplies Lift</Description>
+          </FCLPickupEquipmentNeeded>
           <FCLStorageCommences />
           <HasProhibitedPackaging>false</HasProhibitedPackaging>
           <InsuranceRequired>false</InsuranceRequired>
@@ -1331,7 +1356,10 @@ PO#0020961</NoteText>
           <PickupLabourCharge>0.0000</PickupLabourCharge>
           <PickupLabourTime />
           <PickupRequiredBy />
-          <PrintOptionForPackagesOnAWB />
+          <PrintOptionForPackagesOnAWB>
+            <Code>DEF</Code>
+            <Description>Default (Dims, fallback to Vol)</Description>
+          </PrintOptionForPackagesOnAWB>
           <OrderNumberCollection>
             <OrderNumber>
               <OrderReference>MPI03219</OrderReference>
@@ -1847,7 +1875,10 @@ ITEM#1600, QYT: 500 SETS</DetailedDescription>
               <OrderNumber>MPI03219</OrderNumber>
               <ClientReference />
               <OrderNumberSplit>0</OrderNumberSplit>
-              <Status />
+              <Status>
+                <Code>INC</Code>
+                <Description>Order Incomplete</Description>
+              </Status>
             </Order>
             <AdditionalBillCollection>
               <AdditionalBill>
@@ -2128,14 +2159,23 @@ ITEM#1600, QYT: 500 SETS</DetailedDescription>
           <AddressShortCode>16/F., ONE HARBOUR SQUARE</AddressShortCode>
           <City>KOWLOON</City>
           <CompanyName>ORIENT OVERSEAS CONTAINER LINE</CompanyName>
-          <Country />
+          <Country>
+            <Code>HK</Code>
+            <Name>Hong Kong</Name>
+          </Country>
           <Email>HKGOBCSV@oocl.com</Email>
           <Fax />
           <OrganizationCode>ORIOVEKTZ</OrganizationCode>
           <Phone>+85225066666</Phone>
-          <Port />
+          <Port>
+            <Code>HKKTZ</Code>
+            <Name>Kwun Tong</Name>
+          </Port>
           <Postcode />
-          <ScreeningStatus />
+          <ScreeningStatus>
+            <Code>UNK</Code>
+            <Description>Unknown</Description>
+          </ScreeningStatus>
           <State />
           <RegistrationNumberCollection>
             <RegistrationNumber>
