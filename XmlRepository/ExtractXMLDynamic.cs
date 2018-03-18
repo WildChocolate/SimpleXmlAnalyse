@@ -13,7 +13,7 @@ namespace XmlRepository
     {
         //字符串 的Type
         private static Type StringType = typeof(string);
-
+        
         //可以枚举类型Type
         private static Type EnumerableType = typeof(IEnumerable);
 
@@ -87,10 +87,6 @@ namespace XmlRepository
             //这里把Shipment 下的属性分为两种，Collection属性和普通属性，普通属性里的Collection 如  DataContext->DataSourceCollection,不算Collection属性
             foreach (var Prop in Propertys)
             {
-                if (Prop.Name == "TestCollection")
-                {
-                    var t3 = 2;
-                }
                 //if (Prop.PropertyType == typeof(string) || !Prop.Name.Contains("Collection"))
                 if (CheckIsCollection(Prop.PropertyType))
                 {
@@ -145,42 +141,55 @@ namespace XmlRepository
         {
             //此时的Prop为 XXXCollection下的list<T>属性， obj 为XXXCollection属性的 对象
             
-                if (Prop.PropertyType.IsGenericType && Array.IndexOf(Prop.PropertyType.GetInterfaces(), typeof(IEnumerable)) > -1)
+                //if (Prop.PropertyType.IsGenericType && Array.IndexOf(Prop.PropertyType.GetInterfaces(), typeof(IEnumerable)) > -1)
+            var collectionType = Prop.PropertyType;
+            if (CheckIsCollection(collectionType))
                 {
                     //先生成一个List<T>的实例
-                    var listType = Prop.PropertyType;//eg：List<OrganizationAddress>
+                    var listType = collectionType;//eg：List<OrganizationAddress>
                     //var listInstance = CreateInstance(listType);//eg：list = new List<OrganizationAddress()
                     //获取List<T>中的泛型类型T
                     var innerType = listType.GetGenericArguments()[0];//eg:OrganizationAddress
                     var innerProps = innerType.GetProperties();
-
-                    var listInCollection = CollectionElement.Elements(innerType.Name);
-                    foreach (var cElement in listInCollection)
+                    if (innerType.Equals(typeof(string)))
                     {
-                        var innerInstance = CreateInstance(innerType);//eg : organObj = new OrganizationAddress()
-                        foreach (var innerProp in innerProps)
+                        var listInCollection = CollectionElement.Elements();
+                        foreach (var cElement in listInCollection)
                         {
-                            //如果当前属性不为Collection,则提取子节点值，否则，再次递归循环
-                            
-                            if (CheckIsCollection(innerProp.PropertyType))
-                            {
-                                //当前属性为Collection属性
-                                var innerCollectionType = innerProp.PropertyType; //获取Collection属性的Type, 
-                                var innerCollectionProps = innerCollectionType.GetProperties();//获取XXXCollection属性列表
-                                var innerColletionInstance = CreateInstance(innerCollectionType);//生成当前Collection对象,eg:RegistrationNumberCollection
-                                var subCollectionElement = cElement.Element(innerProp.Name);
-                                if (subCollectionElement != null)
-                                    SetCollectionAttr(innerColletionInstance, subCollectionElement, innerProp);
-                                innerProp.SetValue(innerInstance, innerColletionInstance, null);// 设置当前属性下的 Colletion属性
-                            }
-                            else
-                            {
-                                SetNotCollectionElement(innerInstance, cElement, innerProps);
-                            }
+                            object obj = cElement.Value;
+                            listObj.Add(obj.ToString());
                         }
-                        listObj.Add(innerInstance);//把当前对象 添加到列表对象
                     }
-                    
+                    else
+                    {
+                        var listInCollection = CollectionElement.Elements(innerType.Name);
+                        foreach (var cElement in listInCollection)
+                        {
+
+                            var innerInstance = CreateInstance(innerType);//eg : organObj = new OrganizationAddress()
+                            foreach (var innerProp in innerProps)
+                            {
+                                //如果当前属性不为Collection,则提取子节点值，否则，再次递归循环
+
+                                if (CheckIsCollection(innerProp.PropertyType))
+                                {
+                                    //当前属性为Collection属性
+                                    var innerCollectionType = innerProp.PropertyType; //获取Collection属性的Type, 
+                                    var innerCollectionProps = innerCollectionType.GetProperties();//获取XXXCollection属性列表
+                                    var innerColletionInstance = CreateInstance(innerCollectionType);//生成当前Collection对象,eg:RegistrationNumberCollection
+                                    var subCollectionElement = cElement.Element(innerProp.Name);
+                                    if (subCollectionElement != null)
+                                        SetCollectionAttr(innerColletionInstance, subCollectionElement, innerProp);
+                                    innerProp.SetValue(innerInstance, innerColletionInstance, null);// 设置当前属性下的 Colletion属性
+                                }
+                                else
+                                {
+                                    SetNotCollectionElement(innerInstance, cElement, innerProps);
+                                }
+                            }
+                            listObj.Add(innerInstance);//把当前对象 添加到列表对象
+                        }
+                    }
                 }
             
         }
@@ -203,10 +212,11 @@ namespace XmlRepository
 
             foreach (var cprop in classProps)
             {
-                if (CheckIsCollection(cprop.PropertyType))
+                var currentType = cprop.PropertyType;
+                if (CheckIsCollection(currentType))
                 {
                     //若当前属性名称带有Collection ,则为一个列表属性，类型为 List<T>
-                    var classType = cprop.PropertyType;
+                    var classType = currentType;
                     var instance = CreateInstance(classType);//生成List<T> 对象
                     var collectionElement = cElement.Element(cprop.Name);
                     if (collectionElement != null)
@@ -216,13 +226,13 @@ namespace XmlRepository
                 else
                 {
                     //if (cprop.PropertyType.IsClass && cprop.PropertyType != typeof(string))
-                    if (CheckIsClassType(cprop.PropertyType))
+                    if (CheckIsClassType(currentType))
                     {
                         ///若不存在此子元素，跳过当前循环
                         var cElementChild = cElement.Element(cprop.Name);
                         if (cElementChild == null)
                             continue;
-                        var cPropType = cprop.PropertyType;
+                        var cPropType = currentType;
                         var cPropObj = CreateInstance(cPropType);
                         var cPropInfos = cPropType.GetProperties();
                         foreach (var info in cPropInfos)
@@ -231,9 +241,9 @@ namespace XmlRepository
                             if (infoElement != null)
                             {
                                 //if (info.PropertyType.IsClass && info.PropertyType.Name != "String")
-                                if (CheckIsClassType(info.PropertyType))
+                                var infoClass = info.PropertyType;
+                                if (CheckIsClassType(infoClass))
                                 {
-                                    var infoClass = info.PropertyType;
                                     var infoProps = infoClass.GetProperties();
                                     var infoInstance = CreateInstance(infoClass);
                                     //if (infoClass.Name.Contains("Collection"))
@@ -277,17 +287,24 @@ namespace XmlRepository
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static dynamic CreateInstance(Type type, string assembleName = "", string typeName = "")
+        public static dynamic CreateInstance(Type type, string assembleName = "", string typeName = "", object[] args= null)
         {
             //string path = fullName + "," + assemblyName;//命名空间.类型名,程序集
-            Type o = type;//加载类型
+            
             dynamic obj;
+            if (type.IsPrimitive || type.Equals(typeof(string))) 
+            {
+                return new object();
+            }
             if (assembleName.Length > 0 && typeName.Length > 0)
             {
                 obj = Activator.CreateInstance(assembleName, "" + typeName);
                 return obj;
             }
-            obj = Activator.CreateInstance(o, true);//根据类型创建实例
+            if (args != null)
+                obj = Activator.CreateInstance(type, true, args);//根据类型创建实例
+            else
+                obj = Activator.CreateInstance(type, true);
             return obj;//类型转换并返回
         }
     }

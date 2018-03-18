@@ -301,6 +301,8 @@
     <Compile Include="ShipmentFolder\ShipperCODPayMethod.cs" />
     <Compile Include="ShipmentFolder\SType.cs" />
     <Compile Include="ShipmentFolder\SubLocationAtClearance.cs" />
+    <Compile Include="ShipmentFolder\Test.cs" />
+    <Compile Include="ShipmentFolder\TestCollection.cs" />
     <Compile Include="ShipmentFolder\TotalNoOfPacksPackageType.cs" />
     <Compile Include="ShipmentFolder\TotalVolumeUnit.cs" />
     <Compile Include="ShipmentFolder\TotalWeightUnit.cs" />

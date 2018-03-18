@@ -57,7 +57,14 @@
         </RecipientRole>
       </RecipientRoleCollection>
     </DataContext>
-
+	<TestCollection>
+	<Test>
+		sfdsdf
+	</Test>
+	<Test>
+		dsfe
+	</Test>
+	</TestCollection>
     <ActualChargeable>1324.000</ActualChargeable>
     <AdditionalTerms></AdditionalTerms>
     <AgentsReference></AgentsReference>
@@ -972,6 +979,19 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State></State>
+		<RegistrationNumberCollection>
+			<RegistrationNumber>
+                <Type>
+                  <Code>LSC</Code>
+                  <Description>Legacy System Code</Description>
+                </Type>
+                <CountryOfIssue>
+                  <Code>HK</Code>
+                  <Name>Hong Kong</Name>
+                </CountryOfIssue>
+                <Value>52145</Value>
+              </RegistrationNumber>
+		</RegistrationNumberCollection>
       </OrganizationAddress>
     </OrganizationAddressCollection>
 
@@ -1048,17 +1068,28 @@
         </CustomizedFieldCollection>
 
         <PackedItemCollection>
+		<PackedItem>
+			<GrossWeightUnit>
+				<Code>
+					c1
+				</Code>
+				<Description>
+				sdf
+				</Description>
+			</GrossWeightUnit>
+			<NetWeightUnit>
+				<Code>
+					c2
+				</Code>
+				<Description>
+					12496
+				</Description>
+			</NetWeightUnit>
+		</PackedItem>
         </PackedItemCollection>
       </PackingLine>
     </PackingLineCollection>
-	<TestCollection>
-	<Tests>
-	sfdsdf
-	</Tests>
-	<Test>
-	dsfe
-	</Test>
-	</TestCollection>
+	
   </Shipment>
 </UniversalShipment>
   </Body>

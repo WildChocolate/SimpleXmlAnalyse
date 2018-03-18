@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace XmlRepository.ShipmentFolder
 {
-    public class EventUser:CodeNamePair
+    public class TestCollection
     {
-        //public string Code { get; set; }
-
-        //public string Name { get; set; }
-
+        public List<Test> Test { get; set; }
     }
 }

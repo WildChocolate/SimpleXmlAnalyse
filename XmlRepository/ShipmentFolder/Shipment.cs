@@ -207,6 +207,7 @@ namespace XmlRepository.ShipmentFolder
         public List<OrganizationAddress> OrganizationAddressCollection { get; set; }
 
         public List<PackingLine> PackingLineCollection { get; set; }
+        public List<String> TestCollection { get; set; }
         
     }
 

@@ -781,7 +781,6 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State>MA</State>
-        <RegistrationNumberCollection />
       </OrganizationAddress>
       <OrganizationAddress>
         <AddressType>SupplierDocumentaryAddress</AddressType>
@@ -809,7 +808,6 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State />
-        <RegistrationNumberCollection />
       </OrganizationAddress>
       <OrganizationAddress>
         <AddressType>ConsignorDocumentaryAddress</AddressType>
@@ -837,7 +835,6 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State />
-        <RegistrationNumberCollection />
       </OrganizationAddress>
       <OrganizationAddress>
         <AddressType>ConsignorPickupDeliveryAddress</AddressType>
@@ -865,7 +862,6 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State />
-        <RegistrationNumberCollection />
       </OrganizationAddress>
       <OrganizationAddress>
         <AddressType>ConsigneeDocumentaryAddress</AddressType>
@@ -893,7 +889,6 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State>MA</State>
-        <RegistrationNumberCollection />
       </OrganizationAddress>
       <OrganizationAddress>
         <AddressType>ConsigneePickupDeliveryAddress</AddressType>
@@ -921,7 +916,6 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State>MA</State>
-        <RegistrationNumberCollection />
       </OrganizationAddress>
       <OrganizationAddress>
         <AddressType>NotifyParty</AddressType>
@@ -949,7 +943,6 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State>MA</State>
-        <RegistrationNumberCollection />
       </OrganizationAddress>
       <OrganizationAddress>
         <AddressType>SendersLocalClient</AddressType>
@@ -977,7 +970,19 @@
           <Description>Unknown</Description>
         </ScreeningStatus>
         <State />
-        <RegistrationNumberCollection />
+        <RegistrationNumberCollection>
+          <RegistrationNumber>
+            <Type>
+              <Code>LSC</Code>
+              <Description>Legacy System Code</Description>
+            </Type>
+            <CountryOfIssue>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </CountryOfIssue>
+            <Value>52145</Value>
+          </RegistrationNumber>
+        </RegistrationNumberCollection>
       </OrganizationAddress>
     </OrganizationAddressCollection>
     <PackingLineCollection>
@@ -1050,8 +1055,42 @@
             <Value />
           </CustomizedField>
         </CustomizedFieldCollection>
-        <PackedItemCollection />
+        <PackedItemCollection>
+          <PackedItem>
+            <CommercialInvoiceLineLink />
+            <Description />
+            <GoodsValue />
+            <GrossWeight />
+            <GrossWeightUnit>
+              <Code>
+					c1
+				</Code>
+              <Description>
+				sdf
+				</Description>
+            </GrossWeightUnit>
+            <NetWeight />
+            <NetWeightUnit>
+              <Code>
+					c2
+				</Code>
+              <Description>
+					12496
+				</Description>
+            </NetWeightUnit>
+            <OrderLineLink />
+            <PackedQuantity />
+          </PackedItem>
+        </PackedItemCollection>
       </PackingLine>
     </PackingLineCollection>
+    <TestCollection>
+      <string>
+		sfdsdf
+	</string>
+      <string>
+		dsfe
+	</string>
+    </TestCollection>
   </Shipment>
 </UniversalShipment>

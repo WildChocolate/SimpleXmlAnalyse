@@ -43,11 +43,19 @@ namespace XmlRepository.ShipmentFolder
 
         public string State { get; set; }
 
+        private List<RegistrationNumber> registrationNumberCollection =new List<RegistrationNumber> ();
         public List<RegistrationNumber> RegistrationNumberCollection
         {
-            get;
-            set;
+            get
+            {
+                if (registrationNumberCollection.Count < 1)
+                    return null;
+                else return registrationNumberCollection;
+            }
+            set
+            {
+                registrationNumberCollection = value;
+            }
         }
-
     }
 }
