@@ -14,6 +14,14 @@ namespace ReadXmlFromCargowiseForm
 {
     public class ConsolHandler:Handler<Shipment>
     {
+        private Dictionary<string, string> specialCollection = null;
+        public ConsolHandler() {
+            specialCollection = new Dictionary<string, string>();
+        }
+        protected override Dictionary<string, string> SpecialCollection
+        {
+            get {return specialCollection; }
+        }
         public override Shipment ReadFile(string filePath)
         {
             using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read))

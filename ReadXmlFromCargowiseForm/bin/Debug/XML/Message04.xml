@@ -294,7 +294,14 @@
       <Code>HWB</Code>
       <Description>House Waybill</Description>
     </WayBillType>
-
+	<TestCollection>
+	<Test>
+		1111
+	</Test>
+	<Test>
+		2222
+	</Test>
+	</TestCollection>
     <CarrierDocumentsOverride>
       <AWBHeader>
         <AgentAccountNo>0</AgentAccountNo>

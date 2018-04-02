@@ -17,7 +17,21 @@ namespace ReadXmlFromCargowiseForm
 {
     public class ShipmentHandler:Handler<Shipment>
     {
-        
+        /// <summary>
+        /// 如果有特殊集合 像 xxCollection, 子节点直接为值的，放在这里，ConvertInstanceToFile 生成文件的时候再处理
+        /// </summary>
+        private Dictionary<string, string> specialCollection = null;
+        public ShipmentHandler(){
+            specialCollection =new Dictionary<string, string>();
+            specialCollection.Add(typeof(TestCollection).Name, typeof(TestCollection).Name.Replace("Collection",""));
+        }
+        protected override Dictionary<string, string> SpecialCollection
+        {
+            get
+            {
+                return specialCollection;
+            }
+        }
         /* 关于动态提取XML内容的通用部分，移动到---> ExtractXMLDynamic 
          *      SearchCollectionNew<T>() 和 SearchCollection<T>()由于使用了特定的类，就留下来，不过好像没什么地方用到了
          */
@@ -53,6 +67,28 @@ namespace ReadXmlFromCargowiseForm
                 uShipment.Shipment = Instance;
                 var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
                 xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s\w]*>", "<UniversalShipment>");
+                if (SpecialCollection.Count > 0)
+                {
+                    foreach (var coll in SpecialCollection)
+                    {
+                        var key = coll.Key;
+                        var patt = @"<?>[\s\S]+</?>";
+                        patt = patt.Replace("?", key);
+                        var reg = new Regex(patt, RegexOptions.IgnoreCase);
+                        var matches = reg.Matches(xShipmentString);
+                        foreach (Match m in matches)
+                        {
+                            var xcoll = XElement.Parse(m.Value);
+                            var replaceName = coll.Value;
+                            foreach (var ele in xcoll.Elements())
+                            {
+                                ele.Name = replaceName;
+                            }
+                            xShipmentString = xShipmentString.Remove(m.Index, m.Value.Length);
+                            xShipmentString = xShipmentString.Insert(m.Index, xcoll.ToString());
+                        }
+                    }
+                }
                 var fPath = "";
                 using (StreamWriter tw = new StreamWriter(@"XML\ShipmentResult.xml", false))
                 {
@@ -229,5 +265,7 @@ namespace ReadXmlFromCargowiseForm
             return obj;//类型转换并返回
         }
 
+
+        
     }
 }

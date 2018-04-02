@@ -12,6 +12,13 @@ namespace ReadXmlFromCargowiseForm
 {
     public abstract class Handler<T>:IHandler<T> where T:class,new()
     {
+        /// <summary>
+        /// 如果有特殊集合 像 xxCollection, 子节点直接为值的，放在这里，ConvertInstanceToFile 生成文件的时候再处理
+        /// </summary>
+        protected abstract Dictionary<string, string> SpecialCollection
+        {
+            get;
+        }
         public abstract T ReadFile(string filePath);
 
         public abstract void ConvertInstanceToFile(T Instance);

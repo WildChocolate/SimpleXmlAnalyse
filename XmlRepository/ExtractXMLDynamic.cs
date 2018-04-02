@@ -193,6 +193,10 @@ namespace XmlRepository
                 }
             
         }
+        public static string GetVarName(System.Linq.Expressions.Expression<Func<string, string>> exp)
+        {
+            return ((System.Linq.Expressions.MemberExpression)exp.Body).Member.Name;
+        }  
         /// <summary>
         /// 设置非Collection的属性
         /// </summary>

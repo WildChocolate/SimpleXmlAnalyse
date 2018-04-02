@@ -20,7 +20,14 @@ namespace ReadXmlFromCargowiseForm
         /* 关于动态提取XML内容的通用部分，移动到---> ExtractXMLDynamic 
          *      SearchCollectionNew<T>() 和 SearchCollection<T>()由于使用了特定的类，就留下来，不过好像没什么地方用到了
          */
-
+        private Dictionary<string, string> specialCollection = null;
+        public BookingHandler() {
+            specialCollection = new Dictionary<string, string>();
+        }
+        protected override Dictionary<string, string> SpecialCollection
+        {
+            get { return specialCollection; }
+        }
         public override Shipment ReadFile(string filePath)
         {
             using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read))

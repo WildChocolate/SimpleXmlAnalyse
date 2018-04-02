@@ -102,7 +102,7 @@ namespace ReadXmlFromCargowiseForm
                 //由于Consol的处理时间比较长，所以用异步方法
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
-                var task = consolHandler.GetShipmentAsync(@"XML\Consol02.xml");//获取Shipment
+                var task = consolHandler.GetShipmentAsync(@"XML\Consol01.xml");//获取Shipment
                 button4.Text = "Process waiting....";
                 task.ContinueWith((t) =>
                 {
@@ -165,6 +165,5 @@ namespace ReadXmlFromCargowiseForm
         {
 
         }
-        
     }
 }

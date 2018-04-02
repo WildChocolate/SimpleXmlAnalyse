@@ -8,4 +8,3 @@ G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.pdb
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.exe
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.pdb
-C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
