@@ -8,42 +8,22 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 using XmlRepository;
 using XmlRepository.ShipmentFolder;
 
 namespace ReadXmlFromCargowiseForm
 {
-    public class ShipmentHandler
+    public class ShipmentHandler:Handler<Shipment>
     {
-        static ShipmentHandler()
-        {
-            
-        }
+        
         /* 关于动态提取XML内容的通用部分，移动到---> ExtractXMLDynamic 
          *      SearchCollectionNew<T>() 和 SearchCollection<T>()由于使用了特定的类，就留下来，不过好像没什么地方用到了
          */
-
-        public static Shipment GetShipment(string filePath="")
+        public override Shipment ReadFile(string filePath)
         {
-            //var arr = new string[] { "01", "02", "03", "04" };
-            //var a = arr[new Random().Next(4)];
-            var path ="";
-            if(File.Exists(filePath))
-            {
-                path = filePath;
-            }
-            else
-            {
-                var fullpath = Path.GetFullPath(filePath);
-                if (File.Exists(fullpath))
-                {
-                    path = fullpath;
-                }
-                else
-                    throw new FileNotFoundException("不存在此文件！！！,请检查路径");
-            }
-            using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Read))
+            using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read))
             {
                 using (StreamReader sr = new StreamReader(fs))
                 {
@@ -52,42 +32,36 @@ namespace ReadXmlFromCargowiseForm
                     //var Xname = XName.Get("Header", "http://www.cargowise.com/Schemas/Universal/2011/11");
                     //var root = xdoc.Root;
                     //XNamespace xmlns = "http://www.cargowise.com/Schemas/Universal/2011/11";
-                    
                     string text = sr.ReadToEnd();
-                    var shipmentText = Regex.Match(text, @"<Shipment>[\s\S]*?</Shipment>").Value.ToString();
-                    var headerText = Regex.Match(text, @"<SenderID>(.*?)</SenderID>[\s]+?<RecipientID>(.*?)</RecipientID>").Groups;
-                    var SenderID = headerText[1].Value;
-                    var RecipientID = headerText[2].Value;
-                    
-                    var shipment = new Shipment();
-                    var Xshipment = XElement.Parse(shipmentText);
-                    ExtractXMLDynamic.SetInstanceByXElement(shipment, Xshipment);
-
-                    #region -----这是以前的做法，先给普通节点赋值，再分别取得每个集合，之后每个集合设置到Shipment，垃圾
-                    //var shipment = XmlSerializeHelper.DeSerialize<Shipment>(text);
-                    //var shipments = doc.Element("Body").Element("UniversalShipment").Elements("Shipment").ToList();
-                    //var ObjCustomizedFieldCollection = ShipmentHandler.SearchCollectionNew<CustomizedField>(Xshipment.Element(typeof(CustomizedFieldCollection).Name));
-                    //var ObjDataSourceCollection = ShipmentHandler.SearchCollectionNew<DataSource>(Xshipment.Element(typeof(DataSourceCollection).Name));
-                    //var ObjDateCollection = ShipmentHandler.SearchCollectionNew<Date>(Xshipment.Element(typeof(DateCollection).Name));
-                    //var ObjMilestoneCollection = ShipmentHandler.SearchCollectionNew<Milestone>(Xshipment.Element(typeof(MilestoneCollection).Name));
-                    //var ObjOrganizationAddressCollection = ShipmentHandler.SearchCollectionNew<OrganizationAddress>(Xshipment.Element(typeof(OrganizationAddressCollection).Name));
-                    //var ObjRecipientRoleCollection = ShipmentHandler.SearchCollectionNew<RecipientRole>(Xshipment);
-                    //var ObjRegistrationNumberCollection = ShipmentHandler.SearchCollectionNew<RegistrationNumber>(shipments[0]);
-                    //RegistrationNumberCollection是OrganizationAddressCollection子元素OrganizationAddress的子元素
-                    //现在要把RegistrationNumberCollection填入OrganizationAddressCollection里相应的OrganizationAddress
-                    //shipment.CustomizedFieldCollection.CustomizedFields.AddRange(ObjCustomizedFieldCollection);
-                    ////shipment.DataContext.RecipientRoleCollection.RecipientRoles.AddRange(ObjRecipientRoleCollection);
-                    //shipment.DataContext.DataSourceCollection.DataSources.AddRange(ObjDataSourceCollection);
-                    //shipment.DateCollection.Dates.AddRange(ObjDateCollection);
-                    //shipment.MilestoneCollection.Milestones.AddRange(ObjMilestoneCollection);
-                    //shipment.OrganizationAddressCollection.OrganizationAddresses.AddRange(ObjOrganizationAddressCollection);
-                    #endregion
-
-                    return shipment;
+                    /*
+                     *可以在这里加一些特定的操作
+                     */
+                    return GetShipmentByText(text);
                 }
             }
         }
 
+        public override void ConvertInstanceToFile(Shipment Instance)
+        {
+            if (Instance == null)
+            {
+                MessageBox.Show("请先生成Shipment实例");
+            }
+            else
+            {
+                var uShipment = new UniversalShipment();
+                uShipment.Shipment = Instance;
+                var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
+                xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s\w]*>", "<UniversalShipment>");
+                var fPath = "";
+                using (StreamWriter tw = new StreamWriter(@"XML\ShipmentResult.xml", false))
+                {
+                    tw.WriteLine(xShipmentString);
+                    fPath = Path.GetFullPath(@"XML\Result.xml");
+                    MessageBox.Show("转换成功，文件地址：" + Path.GetFullPath(@"XML\ShipmentResult.xml"));
+                }
+            }
+        }
         /// <summary>
         /// 旧方法，根据T， 在element中查找所有的 T 类型的元素（并不一定是element的直接子元素），最后返回 T的列表
         /// </summary>
@@ -254,6 +228,6 @@ namespace ReadXmlFromCargowiseForm
             obj = Activator.CreateInstance(o, true);//根据类型创建实例
             return obj;//类型转换并返回
         }
-       
+
     }
 }

@@ -64,6 +64,7 @@ namespace XmlRepository.ConsolFolder
         public string IsShipping { get; set; }
 
         public string IsSplitShipment { get; set; }
+        public JobCosting JobCosting { get; set; }
 
         public string LloydsIMO { get; set; }
 

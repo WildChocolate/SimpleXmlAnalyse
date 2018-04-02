@@ -3,9 +3,9 @@ C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConso
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.pdb
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.exe
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.pdb
-C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.exe.config
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.exe
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.pdb
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.exe
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.pdb
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache

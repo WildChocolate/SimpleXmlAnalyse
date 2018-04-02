@@ -2,7 +2,6 @@ C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConso
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\XmlRepository.pdb
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.dll
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.pdb
-C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.csprojResolveAssemblyReference.cache
 G:\Git local Repository\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\XmlRepository.dll
 G:\Git local Repository\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\XmlRepository.pdb
 G:\Git local Repository\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.dll

@@ -16,6 +16,7 @@ namespace XmlRepository.ConsolFolder
         public string BookingConfirmationReference { get; set; }
 
         public string ChargeableRate { get; set; }
+        public ConsolCosts ConsolCosts { get; set; }
 
         public string ContainerCount { get; set; }
 
