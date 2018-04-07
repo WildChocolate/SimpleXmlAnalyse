@@ -8,3 +8,8 @@ G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.pdb
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.exe
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.pdb
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.exe.config
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.exe
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseConsole.pdb
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.exe
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseConsole\obj\Debug\ReadXmlFromCargowiseConsole.pdb

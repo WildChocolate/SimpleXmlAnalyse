@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLBasicInfo.cs" />
     <Compile Include="BookingFolder\Body.cs" />
     <Compile Include="BookingFolder\Commodity.cs" />
     <Compile Include="BookingFolder\CountryOfIssue.cs" />

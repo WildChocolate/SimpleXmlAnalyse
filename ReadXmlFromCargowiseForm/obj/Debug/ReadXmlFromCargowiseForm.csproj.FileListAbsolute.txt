@@ -20,3 +20,14 @@ G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Form1.resources
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Properties.Resources.resources
 G:\Git local Repository\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.csproj.GenerateResource.Cache
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\ReadXmlFromCargowiseForm.exe.config
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.exe
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.pdb
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.csprojResolveAssemblyReference.cache
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Form1.resources
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Properties.Resources.resources
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.csproj.GenerateResource.Cache
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\ReadXmlFromCargowiseForm.exe
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\ReadXmlFromCargowiseForm.pdb
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.dll
+G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.pdb

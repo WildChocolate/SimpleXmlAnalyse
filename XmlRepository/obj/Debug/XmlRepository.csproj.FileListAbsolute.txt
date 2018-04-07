@@ -6,3 +6,7 @@ G:\Git local Repository\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\XmlR
 G:\Git local Repository\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\XmlRepository.pdb
 G:\Git local Repository\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.dll
 G:\Git local Repository\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.pdb
+G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\bin\Debug\XmlRepository.dll
+G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\bin\Debug\XmlRepository.pdb
+G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\obj\Debug\XmlRepository.dll
+G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\obj\Debug\XmlRepository.pdb

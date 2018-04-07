@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BookingHandler..cs" />
     <Compile Include="ConsolHandler.cs" />
+    <Compile Include="EventArguments.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

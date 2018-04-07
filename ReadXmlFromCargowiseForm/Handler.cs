@@ -12,6 +12,8 @@ namespace ReadXmlFromCargowiseForm
 {
     public abstract class Handler<T>:IHandler<T> where T:class,new()
     {
+        public event EventHandler<ExtractCompletedEventArgs> ExtractCompleted;
+        public event EventHandler<SaveFileCompletedEventArgs> SaveFileCompleled;
         /// <summary>
         /// 如果有特殊集合 像 xxCollection, 子节点直接为值的，放在这里，ConvertInstanceToFile 生成文件的时候再处理
         /// </summary>
@@ -19,9 +21,33 @@ namespace ReadXmlFromCargowiseForm
         {
             get;
         }
+        public void RaiseExtractCompleted(string bookingReference, string wayBillNum)
+        {
+            BLBasicInfo basicInfo = new BLBasicInfo() { BookingConfirmationReference = bookingReference, WayBillNumber = wayBillNum };
+            OnExtractCompleted(new ExtractCompletedEventArgs(basicInfo));
+        }
+        protected virtual void OnExtractCompleted(ExtractCompletedEventArgs e)
+        {
+            var tmp = ExtractCompleted;
+            if(ExtractCompleted != null){
+                ExtractCompleted(this, e);
+            }
+        }
+        public void RaiseSaveFileCompleled(string filePath)
+        {
+            OnSaveFileCompleled(filePath);
+        }
+        protected virtual void OnSaveFileCompleled(string filePath)
+        {
+            var tmp = SaveFileCompleled;
+            if (tmp != null)
+            {
+                SaveFileCompleled(this, new SaveFileCompletedEventArgs(filePath));
+            }
+        }
         public abstract T ReadFile(string filePath);
 
-        public abstract void ConvertInstanceToFile(T Instance);
+        public abstract string ConvertInstanceToFile(T Instance);
         public virtual T GetShipment(string filePath) {
             var newpath = CheckFilePath(filePath);
             if (newpath.Length > 0)

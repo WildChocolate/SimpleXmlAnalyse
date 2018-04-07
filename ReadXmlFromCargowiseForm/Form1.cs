@@ -34,6 +34,46 @@ namespace ReadXmlFromCargowiseForm
             shipmentHandler = new ShipmentHandler();
             bookingHandler = new BookingHandler();
             consolHandler = new ConsolHandler();
+            shipmentHandler.ExtractCompleted += shipmentHandler_ExtractCompleted;
+            bookingHandler.ExtractCompleted += bookingHandler_ExtractCompleted;
+            consolHandler.ExtractCompleted += consolHandler_ExtractCompleted;
+            shipmentHandler.SaveFileCompleled += shipmentHandler_SaveFileCompleled;
+            bookingHandler.SaveFileCompleled += bookingHandler_SaveFileCompleled;
+            consolHandler.SaveFileCompleled += consolHandler_SaveFileCompleled;
+        }
+        private void showPathMsg(string path)
+        {
+            MessageBox.Show("保存成功，文件路径为--> "+path);
+        }
+        void consolHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
+        {
+            showPathMsg(e.FilePath);
+        }
+
+
+        void bookingHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
+        {
+            showPathMsg(e.FilePath);
+        }
+
+        void shipmentHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
+        {
+            showPathMsg(e.FilePath);
+        }
+
+        void consolHandler_ExtractCompleted(object sender, ExtractCompletedEventArgs e)
+        {
+            //consol转换完成后的后续操作
+        }
+
+        void bookingHandler_ExtractCompleted(object sender, ExtractCompletedEventArgs e)
+        {
+            //booking转换完成后的后续操作
+        }
+
+        void shipmentHandler_ExtractCompleted(object sender, ExtractCompletedEventArgs e)
+        {
+            //shipment转换完成后的后续操作
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +92,7 @@ namespace ReadXmlFromCargowiseForm
                     string elapsedTime = String.Format("Shipment 提取完成，用时 {0}.{1:000}秒",
                     ts.Seconds, ts.Milliseconds);
                     MessageBox.Show(elapsedTime);
+                    shipmentHandler.RaiseExtractCompleted(shipment.BookingConfirmationReference, shipment.WayBillNumber);
                 });
             }
             catch (NullReferenceException err) {
@@ -77,6 +118,7 @@ namespace ReadXmlFromCargowiseForm
                     string elapsedTime = String.Format("Shipment 提取完成，用时 {0}.{1}秒",
                     ts.Seconds, ts.Milliseconds);
                     MessageBox.Show(elapsedTime);
+                    bookingHandler.RaiseExtractCompleted(Booking.BookingConfirmationReference, Booking.WayBillNumber);
                 });
             }
             catch (NullReferenceException err)
@@ -92,7 +134,9 @@ namespace ReadXmlFromCargowiseForm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            shipmentHandler.ConvertInstanceToFile(shipment);
+            var fPath = shipmentHandler.ConvertInstanceToFile(shipment);
+            if (!string.IsNullOrEmpty(fPath))
+                shipmentHandler.RaiseSaveFileCompleled(fPath);
         }
         
         private void button4_Click(object sender, EventArgs e)
@@ -121,6 +165,7 @@ namespace ReadXmlFromCargowiseForm
                     {
                         this.Invoke(fun, str);
                     }
+                    consolHandler.RaiseExtractCompleted(Consol.BookingConfirmationReference, Consol.WayBillNumber);
                 });
                 float second = 0f;
                 var fun2 = new Action(() =>
@@ -151,12 +196,18 @@ namespace ReadXmlFromCargowiseForm
 
         private void button5_Click(object sender, EventArgs e)
         {
-            consolHandler.ConvertInstanceToFile(Consol);
+            var fPath = consolHandler.ConvertInstanceToFile(Consol);
+            if (!string.IsNullOrEmpty(fPath))
+            {
+                consolHandler.RaiseSaveFileCompleled(fPath);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            bookingHandler.ConvertInstanceToFile(Booking);
+            var fPath = bookingHandler.ConvertInstanceToFile(Booking);
+            if (!string.IsNullOrEmpty(fPath))
+                shipmentHandler.RaiseSaveFileCompleled(fPath);
         }
 
        

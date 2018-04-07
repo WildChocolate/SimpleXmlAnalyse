@@ -38,8 +38,9 @@ namespace ReadXmlFromCargowiseForm
                 }
             }
         }
-        public override void ConvertInstanceToFile(Shipment Instance)
+        public override string ConvertInstanceToFile(Shipment Instance)
         {
+            var fPath = string.Empty;
             if (Instance == null)
             {
                 MessageBox.Show("请先生成Shipment实例");
@@ -53,10 +54,10 @@ namespace ReadXmlFromCargowiseForm
                 using (StreamWriter tw = new StreamWriter(@"XML\ConsolResult.xml", false))
                 {
                     tw.WriteLine(xShipmentString);
-                    //Console.WriteLine(tw.BaseStream.GetType());     //输出FileStream
-                    MessageBox.Show("转换成功，文件地址：" + Path.GetFullPath(@"XML\ConsolResult.xml"));
+                    fPath = Path.GetFullPath(@"XML\ConsolResult.xml");
                 }
             }
+            return fPath;
         }
         //public Shipment GetShipmentByText(string text)
         //{

@@ -55,8 +55,9 @@ namespace ReadXmlFromCargowiseForm
             }
         }
 
-        public override void ConvertInstanceToFile(Shipment Instance)
+        public override string ConvertInstanceToFile(Shipment Instance)
         {
+            var fPath = string.Empty;
             if (Instance == null)
             {
                 MessageBox.Show("请先生成Shipment实例");
@@ -89,14 +90,13 @@ namespace ReadXmlFromCargowiseForm
                         }
                     }
                 }
-                var fPath = "";
                 using (StreamWriter tw = new StreamWriter(@"XML\ShipmentResult.xml", false))
                 {
                     tw.WriteLine(xShipmentString);
-                    fPath = Path.GetFullPath(@"XML\Result.xml");
-                    MessageBox.Show("转换成功，文件地址：" + Path.GetFullPath(@"XML\ShipmentResult.xml"));
+                    fPath = Path.GetFullPath(@"XML\ShipmentResult.xml");
                 }
             }
+            return fPath;
         }
         /// <summary>
         /// 旧方法，根据T， 在element中查找所有的 T 类型的元素（并不一定是element的直接子元素），最后返回 T的列表

@@ -45,8 +45,9 @@ namespace ReadXmlFromCargowiseForm
                 }
             }
         }
-        public override void ConvertInstanceToFile(Shipment Instance)
+        public override string ConvertInstanceToFile(Shipment Instance)
         {
+            var fPath = string.Empty;
             if (Instance == null)
             {
                 MessageBox.Show("请先生成Shipment实例");
@@ -57,13 +58,14 @@ namespace ReadXmlFromCargowiseForm
                 uShipment.Shipment = Instance;
                 var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
                 xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s]*>", "<UniversalShipment>");
+                
                 using (StreamWriter tw = new StreamWriter(@"XML\BookingResult.xml", false))
                 {
                     tw.WriteLine(xShipmentString);
-                    //Console.WriteLine(tw.BaseStream.GetType());     //输出FileStream
-                    MessageBox.Show("转换成功，文件地址：" + Path.GetFullPath(@"XML\BookingResult.xml"));
+                    fPath = Path.GetFullPath(@"XML\BookingResult.xml");
                 }
             }
+            return fPath;
         }
         /// <summary>
         /// 旧方法，根据T， 在element中查找，T类型的节点，最后返回 T的列表
