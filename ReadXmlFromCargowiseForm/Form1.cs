@@ -82,7 +82,6 @@ namespace ReadXmlFromCargowiseForm
             stopwatch.Start();
             try
             {
-
                 var task = shipmentHandler.GetShipmentAsync(@"XML\Message04" + ".xml");//获取Shipment
                 task.ContinueWith(t =>
                 {
@@ -147,7 +146,7 @@ namespace ReadXmlFromCargowiseForm
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
                 var task = consolHandler.GetShipmentAsync(@"XML\Consol01.xml");//获取Shipment
-                button4.Text = "Process waiting....";
+                ConsolBtn.Text = "Process waiting....";
                 task.ContinueWith((t) =>
                 {
                     stopwatch.Stop();
@@ -159,7 +158,7 @@ namespace ReadXmlFromCargowiseForm
                     var str = "Consol";
                     var fun = new Action<string>((text) =>
                     {
-                        this.button4.Text = text;
+                        this.ConsolBtn.Text = text;
                     });
                     if (this.InvokeRequired)
                     {
@@ -170,16 +169,16 @@ namespace ReadXmlFromCargowiseForm
                 float second = 0f;
                 var fun2 = new Action(() =>
                 {
-                    button4.Text = "Processing " + String.Format("{0:N2} ", second) +" Seconds";
+                    ConsolBtn.Text = "Processing " + String.Format("{0:N2} ", second) +" Seconds";
                 });
                 var clockTask = Task.Run(async() => {
                     while(!task.IsCompleted)
                     {
                         await Task.Delay(100);
-                        if (this.button4.InvokeRequired)
+                        if (this.ConsolBtn.InvokeRequired)
                         {
                             second += 0.1f;
-                            this.button4.Invoke(fun2);
+                            this.ConsolBtn.Invoke(fun2);
                         }
                     }
                 });
@@ -215,6 +214,14 @@ namespace ReadXmlFromCargowiseForm
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void UploadBtn_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                FileBox.Text = openFileDialog1.FileName;
+            }
         }
     }
 }

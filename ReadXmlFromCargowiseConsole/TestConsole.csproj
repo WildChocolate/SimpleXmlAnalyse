@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,9 +45,373 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EmailService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\ReadXmlFromCargowiseForm.EmailService.FileInfoClass.datasource" />
+    <None Include="Service References\EmailService\JsonEmailService.wsdl" />
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.AddBookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.AddEMAILGROUPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.AddFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.AddPartyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.AddPARTY_CONTACTSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.APISendResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.CopyInAttaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.CopyOutAttaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DelEMAILGROUPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DeleteAttachmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DeleteDraftMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DeleteInMailToSpamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DeleteLearningSpamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DeleteSpamToInMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DelInMailFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DelOccupiedInMailMsgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DelPARTY_CONTACTSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DelSymbolInMailMsgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DelSymbolOutMailMsgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DownloadInBoxFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.DownloadOutBoxFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.ForwordEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetAllAcctByUseridResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetAllAcctMailCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetAllServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetCompanyLinksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetDraftDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetDraftList2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetDraftList3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetDraftListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetEMAIL_GROUPListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetEMAIL_GROUPTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetESIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetFolderInAcctResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetFolderInmail2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetFolderInmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetGroupNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInBoxFileName2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInBoxFileName3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInBoxFileNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInMailContent2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInMailContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInMailDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInMailInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInMailListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetInMailListToWinFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetisContentStrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetJunkMailDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetJunkMailList2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetJunkMailListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetLearningSpamListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetMailLabelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetMyInMailDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetMyInMailList2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetMyInMailListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutBoxFileName2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutBoxFileName3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutBoxFileNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutboxListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutMAILContent2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutMAILContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutMailDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutMailList2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetOutMailListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetPartyListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetPartyTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetQuotationNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetRecentInMailListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetSenderStrResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetSubjectBySenderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetUpdateFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetUseridLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetUserSign2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetUserSignResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetUserSignText2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.GetUserSignTextResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.InBoxForwardEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.InMailToFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.IsLimitSpamToInMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.lockingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.OccupiedInMailMsgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.OutBoxForwardEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.ReadInMailToRedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.ReadOutMailToRedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.ReplyEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.ResumeLearningSpamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SaveEmail2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SaveEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SearchGroupContactsList2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SearchGroupContactsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SearchGroupContactsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SearchPartyContactsList3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SearchPartyContactsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SearchPartyContactsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.Send2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SendEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SendResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SetInMailPrintResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SetReplyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SymbolInMailMsgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SymbolOutMailMsgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.SysSendResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.UnlockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.UpdatePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.UploadAttachment2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.UploadAttachmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EmailService\ReadXmlFromCargowiseConsole.EmailService.UpPARTY_CONTACTSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReadXmlFromCargowiseForm\ReadXmlFromCargowiseForm.csproj">
+      <Project>{ee33cf4d-36f2-4e18-ad43-56286f17dccc}</Project>
+      <Name>ReadXmlFromCargowiseForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EmailService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailService\JsonEmailService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

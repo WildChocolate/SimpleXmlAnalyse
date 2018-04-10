@@ -28,100 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.ShipmentBtn = new System.Windows.Forms.Button();
+            this.BookingBtn = new System.Windows.Forms.Button();
+            this.ShipmentFileBtn = new System.Windows.Forms.Button();
+            this.ConsolBtn = new System.Windows.Forms.Button();
+            this.ConsolFileBtn = new System.Windows.Forms.Button();
+            this.BookingFileBtn = new System.Windows.Forms.Button();
+            this.UploadBtn = new System.Windows.Forms.Button();
+            this.FileBox = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
-            // button1
+            // ShipmentBtn
             // 
-            this.button1.Location = new System.Drawing.Point(55, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Shipment";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ShipmentBtn.Location = new System.Drawing.Point(12, 110);
+            this.ShipmentBtn.Name = "ShipmentBtn";
+            this.ShipmentBtn.Size = new System.Drawing.Size(120, 23);
+            this.ShipmentBtn.TabIndex = 0;
+            this.ShipmentBtn.Text = "Shipment";
+            this.ShipmentBtn.UseVisualStyleBackColor = true;
+            this.ShipmentBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // BookingBtn
             // 
-            this.button2.Location = new System.Drawing.Point(234, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Booking";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BookingBtn.Location = new System.Drawing.Point(181, 110);
+            this.BookingBtn.Name = "BookingBtn";
+            this.BookingBtn.Size = new System.Drawing.Size(132, 23);
+            this.BookingBtn.TabIndex = 1;
+            this.BookingBtn.Text = "Booking";
+            this.BookingBtn.UseVisualStyleBackColor = true;
+            this.BookingBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // ShipmentFileBtn
             // 
-            this.button3.Location = new System.Drawing.Point(55, 159);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "ShipmentToFile";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.ShipmentFileBtn.Location = new System.Drawing.Point(12, 159);
+            this.ShipmentFileBtn.Name = "ShipmentFileBtn";
+            this.ShipmentFileBtn.Size = new System.Drawing.Size(120, 23);
+            this.ShipmentFileBtn.TabIndex = 2;
+            this.ShipmentFileBtn.Text = "ShipmentToFile";
+            this.ShipmentFileBtn.UseVisualStyleBackColor = true;
+            this.ShipmentFileBtn.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // ConsolBtn
             // 
-            this.button4.Location = new System.Drawing.Point(424, 109);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(204, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Consol";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.ConsolBtn.Location = new System.Drawing.Point(372, 110);
+            this.ConsolBtn.Name = "ConsolBtn";
+            this.ConsolBtn.Size = new System.Drawing.Size(204, 23);
+            this.ConsolBtn.TabIndex = 3;
+            this.ConsolBtn.Text = "Consol";
+            this.ConsolBtn.UseVisualStyleBackColor = true;
+            this.ConsolBtn.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // ConsolFileBtn
             // 
-            this.button5.Location = new System.Drawing.Point(424, 159);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(204, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ConsoleToFile";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.ConsolFileBtn.Location = new System.Drawing.Point(372, 159);
+            this.ConsolFileBtn.Name = "ConsolFileBtn";
+            this.ConsolFileBtn.Size = new System.Drawing.Size(204, 23);
+            this.ConsolFileBtn.TabIndex = 4;
+            this.ConsolFileBtn.Text = "ConsoleToFile";
+            this.ConsolFileBtn.UseVisualStyleBackColor = true;
+            this.ConsolFileBtn.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // BookingFileBtn
             // 
-            this.button6.Location = new System.Drawing.Point(234, 159);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(132, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "BookingToFile";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.BookingFileBtn.Location = new System.Drawing.Point(181, 159);
+            this.BookingFileBtn.Name = "BookingFileBtn";
+            this.BookingFileBtn.Size = new System.Drawing.Size(132, 23);
+            this.BookingFileBtn.TabIndex = 5;
+            this.BookingFileBtn.Text = "BookingToFile";
+            this.BookingFileBtn.UseVisualStyleBackColor = true;
+            this.BookingFileBtn.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // UploadBtn
+            // 
+            this.UploadBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.UploadBtn.Location = new System.Drawing.Point(498, 47);
+            this.UploadBtn.Name = "UploadBtn";
+            this.UploadBtn.Size = new System.Drawing.Size(75, 23);
+            this.UploadBtn.TabIndex = 6;
+            this.UploadBtn.Text = "Select File";
+            this.UploadBtn.UseVisualStyleBackColor = true;
+            this.UploadBtn.Click += new System.EventHandler(this.UploadBtn_Click);
+            // 
+            // FileBox
+            // 
+            this.FileBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FileBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FileBox.Location = new System.Drawing.Point(12, 49);
+            this.FileBox.Name = "FileBox";
+            this.FileBox.ReadOnly = true;
+            this.FileBox.Size = new System.Drawing.Size(472, 21);
+            this.FileBox.TabIndex = 7;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.InitialDirectory = "C:\\Users\\ekko.xu\\Documents\\visual studio 2013\\Projects\\ReadXmlFromCargowiseConsol" +
+    "e\\ReadXmlFromCargowiseForm\\bin\\Debug\\XML";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 323);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(585, 213);
+            this.Controls.Add(this.FileBox);
+            this.Controls.Add(this.UploadBtn);
+            this.Controls.Add(this.BookingFileBtn);
+            this.Controls.Add(this.ConsolFileBtn);
+            this.Controls.Add(this.ConsolBtn);
+            this.Controls.Add(this.ShipmentFileBtn);
+            this.Controls.Add(this.BookingBtn);
+            this.Controls.Add(this.ShipmentBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button ShipmentBtn;
+        private System.Windows.Forms.Button BookingBtn;
+        private System.Windows.Forms.Button ShipmentFileBtn;
+        private System.Windows.Forms.Button ConsolBtn;
+        private System.Windows.Forms.Button ConsolFileBtn;
+        private System.Windows.Forms.Button BookingFileBtn;
+        private System.Windows.Forms.Button UploadBtn;
+        private System.Windows.Forms.TextBox FileBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

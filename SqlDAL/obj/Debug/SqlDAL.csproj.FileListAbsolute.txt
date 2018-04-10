@@ -1,0 +1,11 @@
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\bin\Debug\SqlDAL.dll
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\bin\Debug\SqlDAL.pdb
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\bin\Debug\IDAL.dll
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\bin\Debug\IDAL.pdb
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\obj\Debug\SqlDAL.csprojResolveAssemblyReference.cache
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\obj\Debug\SqlDAL.DBConfig.resources
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\obj\Debug\SqlDAL.csproj.GenerateResource.Cache
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\obj\Debug\SqlDAL.dll
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\obj\Debug\SqlDAL.pdb
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\bin\Debug\Model.dll
+C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\SqlDAL\bin\Debug\Model.pdb
