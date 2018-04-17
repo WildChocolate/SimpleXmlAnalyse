@@ -15,9 +15,9 @@ namespace ReadXmlFromCargowiseConsole
             dict.Add("a", "34324");
             dict.Add("b", "34324");
             dict.Add("c", "34324");
-            Console.WriteLine(string.Join(",",dict));
-            EmailHandler handler = new EmailHandler();
-            handler.SendEmail("","","test");
+
+            Console.WriteLine(string.Join(",",new string[]{"2","23432","234"}));
+            
             Console.Read();
         }
     }

@@ -16,5 +16,5 @@ G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseConsole\obj\Debug\R
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseForm.exe
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\XmlRepository.dll
-C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseForm.pdb
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\XmlRepository.pdb
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseForm.pdb

@@ -37,13 +37,24 @@
             this.UploadBtn = new System.Windows.Forms.Button();
             this.FileBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.FileContentTV = new System.Windows.Forms.TreeView();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ShipmentBtn
             // 
-            this.ShipmentBtn.Location = new System.Drawing.Point(12, 110);
+            this.ShipmentBtn.Location = new System.Drawing.Point(3, 21);
             this.ShipmentBtn.Name = "ShipmentBtn";
-            this.ShipmentBtn.Size = new System.Drawing.Size(120, 23);
+            this.ShipmentBtn.Size = new System.Drawing.Size(180, 23);
             this.ShipmentBtn.TabIndex = 0;
             this.ShipmentBtn.Text = "Shipment";
             this.ShipmentBtn.UseVisualStyleBackColor = true;
@@ -51,9 +62,9 @@
             // 
             // BookingBtn
             // 
-            this.BookingBtn.Location = new System.Drawing.Point(181, 110);
+            this.BookingBtn.Location = new System.Drawing.Point(3, 119);
             this.BookingBtn.Name = "BookingBtn";
-            this.BookingBtn.Size = new System.Drawing.Size(132, 23);
+            this.BookingBtn.Size = new System.Drawing.Size(180, 23);
             this.BookingBtn.TabIndex = 1;
             this.BookingBtn.Text = "Booking";
             this.BookingBtn.UseVisualStyleBackColor = true;
@@ -61,9 +72,9 @@
             // 
             // ShipmentFileBtn
             // 
-            this.ShipmentFileBtn.Location = new System.Drawing.Point(12, 159);
+            this.ShipmentFileBtn.Location = new System.Drawing.Point(3, 50);
             this.ShipmentFileBtn.Name = "ShipmentFileBtn";
-            this.ShipmentFileBtn.Size = new System.Drawing.Size(120, 23);
+            this.ShipmentFileBtn.Size = new System.Drawing.Size(180, 23);
             this.ShipmentFileBtn.TabIndex = 2;
             this.ShipmentFileBtn.Text = "ShipmentToFile";
             this.ShipmentFileBtn.UseVisualStyleBackColor = true;
@@ -71,9 +82,9 @@
             // 
             // ConsolBtn
             // 
-            this.ConsolBtn.Location = new System.Drawing.Point(372, 110);
+            this.ConsolBtn.Location = new System.Drawing.Point(3, 199);
             this.ConsolBtn.Name = "ConsolBtn";
-            this.ConsolBtn.Size = new System.Drawing.Size(204, 23);
+            this.ConsolBtn.Size = new System.Drawing.Size(180, 23);
             this.ConsolBtn.TabIndex = 3;
             this.ConsolBtn.Text = "Consol";
             this.ConsolBtn.UseVisualStyleBackColor = true;
@@ -81,9 +92,9 @@
             // 
             // ConsolFileBtn
             // 
-            this.ConsolFileBtn.Location = new System.Drawing.Point(372, 159);
+            this.ConsolFileBtn.Location = new System.Drawing.Point(3, 228);
             this.ConsolFileBtn.Name = "ConsolFileBtn";
-            this.ConsolFileBtn.Size = new System.Drawing.Size(204, 23);
+            this.ConsolFileBtn.Size = new System.Drawing.Size(180, 23);
             this.ConsolFileBtn.TabIndex = 4;
             this.ConsolFileBtn.Text = "ConsoleToFile";
             this.ConsolFileBtn.UseVisualStyleBackColor = true;
@@ -91,9 +102,9 @@
             // 
             // BookingFileBtn
             // 
-            this.BookingFileBtn.Location = new System.Drawing.Point(181, 159);
+            this.BookingFileBtn.Location = new System.Drawing.Point(3, 148);
             this.BookingFileBtn.Name = "BookingFileBtn";
-            this.BookingFileBtn.Size = new System.Drawing.Size(132, 23);
+            this.BookingFileBtn.Size = new System.Drawing.Size(180, 23);
             this.BookingFileBtn.TabIndex = 5;
             this.BookingFileBtn.Text = "BookingToFile";
             this.BookingFileBtn.UseVisualStyleBackColor = true;
@@ -102,9 +113,9 @@
             // UploadBtn
             // 
             this.UploadBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.UploadBtn.Location = new System.Drawing.Point(498, 47);
+            this.UploadBtn.Location = new System.Drawing.Point(761, 18);
             this.UploadBtn.Name = "UploadBtn";
-            this.UploadBtn.Size = new System.Drawing.Size(75, 23);
+            this.UploadBtn.Size = new System.Drawing.Size(103, 23);
             this.UploadBtn.TabIndex = 6;
             this.UploadBtn.Text = "Select File";
             this.UploadBtn.UseVisualStyleBackColor = true;
@@ -114,10 +125,10 @@
             // 
             this.FileBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FileBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FileBox.Location = new System.Drawing.Point(12, 49);
+            this.FileBox.Location = new System.Drawing.Point(13, 20);
             this.FileBox.Name = "FileBox";
             this.FileBox.ReadOnly = true;
-            this.FileBox.Size = new System.Drawing.Size(472, 21);
+            this.FileBox.Size = new System.Drawing.Size(733, 21);
             this.FileBox.TabIndex = 7;
             // 
             // openFileDialog1
@@ -126,24 +137,76 @@
             this.openFileDialog1.InitialDirectory = "C:\\Users\\ekko.xu\\Documents\\visual studio 2013\\Projects\\ReadXmlFromCargowiseConsol" +
     "e\\ReadXmlFromCargowiseForm\\bin\\Debug\\XML";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.FileBox);
+            this.splitContainer1.Panel1.Controls.Add(this.UploadBtn);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(867, 578);
+            this.splitContainer1.SplitterDistance = 82;
+            this.splitContainer1.TabIndex = 8;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.BookingFileBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.ShipmentBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.ConsolBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.ShipmentFileBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.ConsolFileBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.BookingBtn);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.FileContentTV);
+            this.splitContainer2.Size = new System.Drawing.Size(867, 492);
+            this.splitContainer2.SplitterDistance = 209;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // FileContentTV
+            // 
+            this.FileContentTV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileContentTV.LabelEdit = true;
+            this.FileContentTV.Location = new System.Drawing.Point(0, 0);
+            this.FileContentTV.Name = "FileContentTV";
+            this.FileContentTV.Size = new System.Drawing.Size(654, 492);
+            this.FileContentTV.TabIndex = 0;
+            this.FileContentTV.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.FileContentTV_AfterLabelEdit);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 213);
-            this.Controls.Add(this.FileBox);
-            this.Controls.Add(this.UploadBtn);
-            this.Controls.Add(this.BookingFileBtn);
-            this.Controls.Add(this.ConsolFileBtn);
-            this.Controls.Add(this.ConsolBtn);
-            this.Controls.Add(this.ShipmentFileBtn);
-            this.Controls.Add(this.BookingBtn);
-            this.Controls.Add(this.ShipmentBtn);
+            this.ClientSize = new System.Drawing.Size(867, 578);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -158,6 +221,9 @@
         private System.Windows.Forms.Button UploadBtn;
         private System.Windows.Forms.TextBox FileBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.TreeView FileContentTV;
     }
 }
 

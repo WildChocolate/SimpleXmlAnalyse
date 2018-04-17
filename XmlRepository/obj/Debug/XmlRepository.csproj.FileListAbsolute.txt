@@ -10,4 +10,4 @@ G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\bin\Debug\XmlRepository.d
 G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\bin\Debug\XmlRepository.pdb
 G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\obj\Debug\XmlRepository.dll
 G:\Git local Repository\SimpleXmlAnalyse\XmlRepository\obj\Debug\XmlRepository.pdb
-C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.csprojResolveAssemblyReference.cache
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.csprojResolveAssemblyReference.cache

@@ -98,6 +98,7 @@ namespace ReadXmlFromCargowiseForm
             }
             return fPath;
         }
+        #region 新的关于遍历节点的方法在 XmlRepository.ExtractXMLDynamic
         /// <summary>
         /// 旧方法，根据T， 在element中查找所有的 T 类型的元素（并不一定是element的直接子元素），最后返回 T的列表
         /// </summary>
@@ -265,7 +266,7 @@ namespace ReadXmlFromCargowiseForm
             return obj;//类型转换并返回
         }
 
+        #endregion
 
-        
     }
 }

@@ -61,12 +61,13 @@ namespace ReadXmlFromCargowiseForm
                 
                 using (StreamWriter tw = new StreamWriter(@"XML\BookingResult.xml", false))
                 {
-                    tw.WriteLine(xShipmentString);
+                    tw.WriteLine(xShipmentString);                                                                          
                     fPath = Path.GetFullPath(@"XML\BookingResult.xml");
                 }
             }
             return fPath;
         }
+        #region 新的关于遍历节点的方法在 XmlRepository.ExtractXMLDynamic
         /// <summary>
         /// 旧方法，根据T， 在element中查找，T类型的节点，最后返回 T的列表
         /// </summary>
@@ -236,7 +237,7 @@ namespace ReadXmlFromCargowiseForm
             return obj;//类型转换并返回
         }
 
-
+        #endregion
 
     }
 }

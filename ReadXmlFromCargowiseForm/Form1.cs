@@ -27,6 +27,7 @@ namespace ReadXmlFromCargowiseForm
         ShipmentHandler shipmentHandler = null;
         BookingHandler bookingHandler = null;
         ConsolHandler consolHandler = null;
+        static string Bracket = " => ";
         public Form1()
         {
             InitializeComponent();
@@ -221,7 +222,140 @@ namespace ReadXmlFromCargowiseForm
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 FileBox.Text = openFileDialog1.FileName;
+                if (File.Exists(openFileDialog1.FileName) && openFileDialog1.FileName.EndsWith(".xml"))
+                {
+                    var xdoc = XDocument.Load(openFileDialog1.FileName);
+                    LoadDocIntoTreeview(FileContentTV, xdoc);
+                }
+                else
+                {
+                    MessageBox.Show("请选择XML文件");
+                }
             }
         }
+
+        private void LoadDocIntoTreeview(TreeView treeview, XDocument xdoc)
+        {
+            var root = xdoc.Root;
+            if (root.HasElements)
+            {
+                FillByXElement(treeview, root);
+            }
+            var top = treeview.TopNode;
+            var level = "Shipment";
+            if (top != null)
+            {
+                top.Expand();
+                foreach (TreeNode node in top.Nodes)
+                {
+                    ExpandShipmentNode(node, level);
+                }
+            }
+        }
+        void ExpandShipmentNode(TreeNode tnode, string level) {
+            tnode.Expand();
+            if (tnode.FullPath.Contains(level))
+            {
+                foreach (TreeNode target in tnode.Nodes)
+                {
+                    target.Expand();
+                }
+                return;
+            }
+            if (tnode.Nodes != null && tnode.Nodes.Count > 0)
+            {
+                foreach (TreeNode node in tnode.Nodes)
+                {
+                    ExpandShipmentNode(node, level);
+                }
+            }
+            else
+                return;
+        }
+
+        private void FillByXElement(TreeView treeview, XElement root)
+        {
+            TreeNode rootnode = new TreeNode();
+            var localname = root.Name.LocalName;
+            rootnode.Name = localname + string.Empty;
+            if (root.HasElements)
+            {
+                rootnode.Text = localname + string.Empty;
+                FillTnode(rootnode, root.Elements());
+            }
+            else
+            {
+                if (!string.IsNullOrWhiteSpace(root.Name + string.Empty))
+                    rootnode.Text = root.Value;
+            }
+            treeview.Nodes.Add(rootnode);
+        }
+
+        private void FillTnode(TreeNode Treenode, IEnumerable<XElement> elements)
+        {
+            foreach (var element in elements)
+            {
+                var localname = element.Name.LocalName;
+                var node = new TreeNode();
+                node.Name = localname + string.Empty;
+                Treenode.Nodes.Add(node);
+                if (element.HasElements)
+                {
+                    node.Text = localname + string.Empty;
+                }
+                else
+                {
+                    if (!string.IsNullOrWhiteSpace(element.Value + string.Empty))
+                        node.Text = localname + Form1.Bracket + element.Value;
+                    else
+                        node.Text = localname + Form1.Bracket;
+                }
+                if (element.HasElements)
+                    FillTnode(node, element.Elements());
+            }
+        }
+
+        private void FileContentTV_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+        {
+            
+            if (string.IsNullOrWhiteSpace(e.Label))
+            {
+                e.CancelEdit = true;
+            }
+            else
+            {
+                if (e.Node.Nodes.Count == 0)
+                {
+                    var idx = e.Node.Index;
+                    var name = e.Node.Name;
+                    var text = e.Node.Name + Form1.Bracket + e.Label;
+                    var newnode = new TreeNode();
+                    newnode.Name = name;
+                    newnode.Text = text;
+                    e.Node.Parent.Nodes.Insert(idx, newnode);
+                    e.Node.EndEdit(false);
+                    e.Node.Remove();
+                }
+            }
+        }
+
+        private void FileContentTV_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            
+        }
+
+        //private void FileContentTV_BeforeLabelEdit(object sender, NodeLabelEditEventArgs e)
+        //{
+        //    var newnode = new TreeNode();
+        //    var name = e.Node.Name;
+        //    var text = e.Node.Text;
+        //    var idx = e.Node.Index;
+        //    newnode.Name = name;
+        //    newnode.Text = text;
+        //    e.Node.Parent.Nodes.Insert(idx, newnode);
+        //    e.Node.Remove();
+        //}
+
+        
     }
 }
