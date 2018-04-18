@@ -1,6 +1,6 @@
 ﻿namespace ReadXmlFromCargowiseForm
 {
-    partial class Form1
+    partial class ConvertFrm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -34,12 +34,13 @@
             this.ConsolBtn = new System.Windows.Forms.Button();
             this.ConsolFileBtn = new System.Windows.Forms.Button();
             this.BookingFileBtn = new System.Windows.Forms.Button();
-            this.UploadBtn = new System.Windows.Forms.Button();
-            this.FileBox = new System.Windows.Forms.TextBox();
+            this.FilenameTxt = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.FileContentTV = new System.Windows.Forms.TreeView();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.UploadBtn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -110,26 +111,15 @@
             this.BookingFileBtn.UseVisualStyleBackColor = true;
             this.BookingFileBtn.Click += new System.EventHandler(this.button6_Click);
             // 
-            // UploadBtn
+            // FilenameTxt
             // 
-            this.UploadBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.UploadBtn.Location = new System.Drawing.Point(761, 18);
-            this.UploadBtn.Name = "UploadBtn";
-            this.UploadBtn.Size = new System.Drawing.Size(103, 23);
-            this.UploadBtn.TabIndex = 6;
-            this.UploadBtn.Text = "Select File";
-            this.UploadBtn.UseVisualStyleBackColor = true;
-            this.UploadBtn.Click += new System.EventHandler(this.UploadBtn_Click);
-            // 
-            // FileBox
-            // 
-            this.FileBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FileBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FileBox.Location = new System.Drawing.Point(13, 20);
-            this.FileBox.Name = "FileBox";
-            this.FileBox.ReadOnly = true;
-            this.FileBox.Size = new System.Drawing.Size(733, 21);
-            this.FileBox.TabIndex = 7;
+            this.FilenameTxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FilenameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FilenameTxt.Location = new System.Drawing.Point(13, 20);
+            this.FilenameTxt.Name = "FilenameTxt";
+            this.FilenameTxt.ReadOnly = true;
+            this.FilenameTxt.Size = new System.Drawing.Size(733, 21);
+            this.FilenameTxt.TabIndex = 7;
             // 
             // openFileDialog1
             // 
@@ -146,8 +136,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.FileBox);
             this.splitContainer1.Panel1.Controls.Add(this.UploadBtn);
+            this.splitContainer1.Panel1.Controls.Add(this.linkLabel1);
+            this.splitContainer1.Panel1.Controls.Add(this.FilenameTxt);
             // 
             // splitContainer1.Panel2
             // 
@@ -188,13 +179,34 @@
             this.FileContentTV.TabIndex = 0;
             this.FileContentTV.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.FileContentTV_AfterLabelEdit);
             // 
-            // Form1
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(761, 67);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(101, 12);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Open in sendForm";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // UploadBtn
+            // 
+            this.UploadBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.UploadBtn.Location = new System.Drawing.Point(752, 20);
+            this.UploadBtn.Name = "UploadBtn";
+            this.UploadBtn.Size = new System.Drawing.Size(103, 23);
+            this.UploadBtn.TabIndex = 9;
+            this.UploadBtn.Text = "选择文件";
+            this.UploadBtn.Click += new System.EventHandler(this.UploadBtn_Click);
+            // 
+            // ConvertFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 578);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form1";
+            this.Name = "ConvertFrm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -218,12 +230,13 @@
         private System.Windows.Forms.Button ConsolBtn;
         private System.Windows.Forms.Button ConsolFileBtn;
         private System.Windows.Forms.Button BookingFileBtn;
-        private System.Windows.Forms.Button UploadBtn;
-        private System.Windows.Forms.TextBox FileBox;
+        private System.Windows.Forms.TextBox FilenameTxt;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TreeView FileContentTV;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private DevExpress.XtraEditors.SimpleButton UploadBtn;
     }
 }
 

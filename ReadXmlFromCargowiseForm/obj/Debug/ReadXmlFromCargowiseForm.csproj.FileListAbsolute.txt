@@ -4,7 +4,6 @@ C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConso
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.dll
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.pdb
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.csprojResolveAssemblyReference.cache
-C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Form1.resources
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.Properties.Resources.resources
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.csproj.GenerateResource.Cache
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.exe
@@ -31,3 +30,7 @@ G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\Read
 G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\ReadXmlFromCargowiseForm.pdb
 G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.dll
 G:\Git local Repository\SimpleXmlAnalyse\ReadXmlFromCargowiseForm\bin\Debug\XmlRepository.pdb
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.exe.licenses
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.PrintRibbonControllerResources.resources
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.ConvertFrm.resources
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseForm\obj\Debug\ReadXmlFromCargowiseForm.SendFrm.resources

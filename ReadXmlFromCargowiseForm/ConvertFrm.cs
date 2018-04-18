@@ -19,7 +19,7 @@ using System.Threading;
 
 namespace ReadXmlFromCargowiseForm
 {
-    public partial class Form1 : Form
+    public partial class ConvertFrm : Form
     {
         NsShipment.Shipment shipment = null;
         NsBooking.Shipment Booking = null;
@@ -28,10 +28,13 @@ namespace ReadXmlFromCargowiseForm
         BookingHandler bookingHandler = null;
         ConsolHandler consolHandler = null;
         static string Bracket = " => ";
-        public Form1()
+        SendFrm sendFrm;
+        public ConvertFrm()
         {
             InitializeComponent();
             ///处理对象初始化
+            ///
+            sendFrm = new SendFrm();
             shipmentHandler = new ShipmentHandler();
             bookingHandler = new BookingHandler();
             consolHandler = new ConsolHandler();
@@ -214,17 +217,18 @@ namespace ReadXmlFromCargowiseForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void UploadBtn_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                FileBox.Text = openFileDialog1.FileName;
+                FilenameTxt.Text = openFileDialog1.FileName;
                 if (File.Exists(openFileDialog1.FileName) && openFileDialog1.FileName.EndsWith(".xml"))
                 {
                     var xdoc = XDocument.Load(openFileDialog1.FileName);
+                    FileContentTV.Nodes.Clear();
                     LoadDocIntoTreeview(FileContentTV, xdoc);
                 }
                 else
@@ -306,9 +310,9 @@ namespace ReadXmlFromCargowiseForm
                 else
                 {
                     if (!string.IsNullOrWhiteSpace(element.Value + string.Empty))
-                        node.Text = localname + Form1.Bracket + element.Value;
+                        node.Text = localname + ConvertFrm.Bracket + element.Value;
                     else
-                        node.Text = localname + Form1.Bracket;
+                        node.Text = localname + ConvertFrm.Bracket;
                 }
                 if (element.HasElements)
                     FillTnode(node, element.Elements());
@@ -328,7 +332,7 @@ namespace ReadXmlFromCargowiseForm
                 {
                     var idx = e.Node.Index;
                     var name = e.Node.Name;
-                    var text = e.Node.Name + Form1.Bracket + e.Label;
+                    var text = e.Node.Name + ConvertFrm.Bracket + e.Label;
                     var newnode = new TreeNode();
                     newnode.Name = name;
                     newnode.Text = text;
@@ -342,6 +346,12 @@ namespace ReadXmlFromCargowiseForm
         private void FileContentTV_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sendFrm.FilePath = FilenameTxt.Text;
+            sendFrm.ShowDialog();
         }
 
         //private void FileContentTV_BeforeLabelEdit(object sender, NodeLabelEditEventArgs e)
