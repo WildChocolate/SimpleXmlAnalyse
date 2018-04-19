@@ -28,221 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.editContentBox = new DevExpress.XtraRichEdit.RichEditControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.commonBar1 = new DevExpress.XtraRichEdit.UI.CommonBar();
-            this.undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
-            this.redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
-            this.fileNewItem1 = new DevExpress.XtraRichEdit.UI.FileNewItem();
-            this.fileOpenItem1 = new DevExpress.XtraRichEdit.UI.FileOpenItem();
-            this.fileSaveItem1 = new DevExpress.XtraRichEdit.UI.FileSaveItem();
-            this.fileSaveAsItem1 = new DevExpress.XtraRichEdit.UI.FileSaveAsItem();
-            this.quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
-            this.printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
-            this.printPreviewItem1 = new DevExpress.XtraRichEdit.UI.PrintPreviewItem();
-            this.SendToCWBtn = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SendFrm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.editContentBox = new System.Windows.Forms.RichTextBox();
             this.CompressCheckBox = new System.Windows.Forms.CheckBox();
             this.responseTxt = new System.Windows.Forms.TextBox();
-            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.打开OToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.保存SToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.剪切UToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.复制CToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.粘贴PToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.帮助LToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.SendToCWBtn = new System.Windows.Forms.ToolStripButton();
+            this.ResetBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // editContentBox
-            // 
-            this.editContentBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.editContentBox.EnableToolTips = true;
-            this.editContentBox.Location = new System.Drawing.Point(0, 0);
-            this.editContentBox.MenuManager = this.barManager1;
-            this.editContentBox.Name = "editContentBox";
-            this.editContentBox.Options.Export.PlainText.ExportFinalParagraphMark = DevExpress.XtraRichEdit.Export.PlainText.ExportFinalParagraphMark.Never;
-            this.editContentBox.Options.Fields.UpdateFieldsInTextBoxes = false;
-            this.editContentBox.Options.Printing.PrintPreviewFormKind = DevExpress.XtraRichEdit.PrintPreviewFormKind.Bars;
-            this.editContentBox.Size = new System.Drawing.Size(668, 515);
-            this.editContentBox.TabIndex = 0;
-            this.editContentBox.Text = "Loading...";
-            // 
-            // barManager1
-            // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.commonBar1});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.undoItem1,
-            this.redoItem1,
-            this.fileNewItem1,
-            this.fileOpenItem1,
-            this.fileSaveItem1,
-            this.fileSaveAsItem1,
-            this.quickPrintItem1,
-            this.printItem1,
-            this.printPreviewItem1,
-            this.barButtonItem1,
-            this.barLargeButtonItem1,
-            this.barButtonItem2,
-            this.SendToCWBtn,
-            this.barEditItem1,
-            this.barButtonItem3,
-            this.barLargeButtonItem2});
-            this.barManager1.MaxItemId = 18;
-            this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemFontEdit1});
-            // 
-            // commonBar1
-            // 
-            this.commonBar1.Control = this.editContentBox;
-            this.commonBar1.DockCol = 0;
-            this.commonBar1.DockRow = 0;
-            this.commonBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.undoItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.redoItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.fileNewItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.fileOpenItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.fileSaveItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.fileSaveAsItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.quickPrintItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.printItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.printPreviewItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.SendToCWBtn),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barEditItem1)});
-            // 
-            // undoItem1
-            // 
-            this.undoItem1.Id = 0;
-            this.undoItem1.Name = "undoItem1";
-            // 
-            // redoItem1
-            // 
-            this.redoItem1.Id = 1;
-            this.redoItem1.Name = "redoItem1";
-            // 
-            // fileNewItem1
-            // 
-            this.fileNewItem1.Id = 2;
-            this.fileNewItem1.Name = "fileNewItem1";
-            // 
-            // fileOpenItem1
-            // 
-            this.fileOpenItem1.Id = 3;
-            this.fileOpenItem1.Name = "fileOpenItem1";
-            // 
-            // fileSaveItem1
-            // 
-            this.fileSaveItem1.Id = 4;
-            this.fileSaveItem1.Name = "fileSaveItem1";
-            // 
-            // fileSaveAsItem1
-            // 
-            this.fileSaveAsItem1.Id = 5;
-            this.fileSaveAsItem1.Name = "fileSaveAsItem1";
-            // 
-            // quickPrintItem1
-            // 
-            this.quickPrintItem1.Id = 6;
-            this.quickPrintItem1.Name = "quickPrintItem1";
-            // 
-            // printItem1
-            // 
-            this.printItem1.Id = 7;
-            this.printItem1.Name = "printItem1";
-            // 
-            // printPreviewItem1
-            // 
-            this.printPreviewItem1.Id = 8;
-            this.printPreviewItem1.Name = "printPreviewItem1";
-            // 
-            // SendToCWBtn
-            // 
-            this.SendToCWBtn.Caption = "发送到Cargowise";
-            this.SendToCWBtn.CaptionAlignment = DevExpress.XtraBars.BarItemCaptionAlignment.Right;
-            this.SendToCWBtn.Id = 12;
-            this.SendToCWBtn.ImageUri.Uri = "Up";
-            this.SendToCWBtn.Name = "SendToCWBtn";
-            this.SendToCWBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1184, 47);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 562);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1184, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 515);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1184, 47);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 515);
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Id = 13;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barLargeButtonItem1
-            // 
-            this.barLargeButtonItem1.Id = 10;
-            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Id = 14;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // richEditBarController1
-            // 
-            this.richEditBarController1.BarItems.Add(this.undoItem1);
-            this.richEditBarController1.BarItems.Add(this.redoItem1);
-            this.richEditBarController1.BarItems.Add(this.fileNewItem1);
-            this.richEditBarController1.BarItems.Add(this.fileOpenItem1);
-            this.richEditBarController1.BarItems.Add(this.fileSaveItem1);
-            this.richEditBarController1.BarItems.Add(this.fileSaveAsItem1);
-            this.richEditBarController1.BarItems.Add(this.quickPrintItem1);
-            this.richEditBarController1.BarItems.Add(this.printItem1);
-            this.richEditBarController1.BarItems.Add(this.printPreviewItem1);
-            this.richEditBarController1.Control = this.editContentBox;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 47);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -255,8 +71,17 @@
             this.splitContainer1.Panel2.Controls.Add(this.CompressCheckBox);
             this.splitContainer1.Panel2.Controls.Add(this.responseTxt);
             this.splitContainer1.Size = new System.Drawing.Size(1184, 515);
-            this.splitContainer1.SplitterDistance = 668;
+            this.splitContainer1.SplitterDistance = 729;
             this.splitContainer1.TabIndex = 5;
+            // 
+            // editContentBox
+            // 
+            this.editContentBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editContentBox.Location = new System.Drawing.Point(0, 0);
+            this.editContentBox.Name = "editContentBox";
+            this.editContentBox.Size = new System.Drawing.Size(729, 515);
+            this.editContentBox.TabIndex = 0;
+            this.editContentBox.Text = "";
             // 
             // CompressCheckBox
             // 
@@ -266,7 +91,7 @@
             this.CompressCheckBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.CompressCheckBox.Location = new System.Drawing.Point(0, 0);
             this.CompressCheckBox.Name = "CompressCheckBox";
-            this.CompressCheckBox.Size = new System.Drawing.Size(512, 16);
+            this.CompressCheckBox.Size = new System.Drawing.Size(451, 16);
             this.CompressCheckBox.TabIndex = 1;
             this.CompressCheckBox.Text = "Compress Response";
             this.CompressCheckBox.UseVisualStyleBackColor = true;
@@ -278,62 +103,179 @@
             this.responseTxt.Multiline = true;
             this.responseTxt.Name = "responseTxt";
             this.responseTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.responseTxt.Size = new System.Drawing.Size(512, 515);
+            this.responseTxt.Size = new System.Drawing.Size(451, 515);
             this.responseTxt.TabIndex = 0;
             // 
-            // barEditItem1
+            // toolStrip1
             // 
-            this.barEditItem1.Caption = "barEditItem1";
-            this.barEditItem1.Edit = this.repositoryItemFontEdit1;
-            this.barEditItem1.EditWidth = 58;
-            this.barEditItem1.Id = 15;
-            this.barEditItem1.Name = "barEditItem1";
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.打开OToolStripButton,
+            this.保存SToolStripButton,
+            this.toolStripSeparator,
+            this.剪切UToolStripButton,
+            this.复制CToolStripButton,
+            this.粘贴PToolStripButton,
+            this.toolStripSeparator1,
+            this.帮助LToolStripButton,
+            this.SendToCWBtn,
+            this.toolStripSeparator2,
+            this.ResetBtn,
+            this.toolStripSeparator3,
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1184, 25);
+            this.toolStrip1.TabIndex = 10;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
-            // repositoryItemFontEdit1
+            // toolStripSeparator
             // 
-            this.repositoryItemFontEdit1.AutoHeight = false;
-            this.repositoryItemFontEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemFontEdit1.Name = "repositoryItemFontEdit1";
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
             // 
-            // barButtonItem3
+            // toolStripSeparator1
             // 
-            this.barButtonItem3.Caption = "Reset";
-            this.barButtonItem3.Id = 16;
-            this.barButtonItem3.ImageUri.Uri = "Refresh";
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // barLargeButtonItem2
+            // toolStripSeparator2
             // 
-            this.barLargeButtonItem2.Caption = "Reset";
-            this.barLargeButtonItem2.CaptionAlignment = DevExpress.XtraBars.BarItemCaptionAlignment.Right;
-            this.barLargeButtonItem2.Id = 17;
-            this.barLargeButtonItem2.ImageUri.Uri = "Refresh";
-            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
-            this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick_1);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::ReadXmlFromCargowiseForm.Properties.Resources.undo;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::ReadXmlFromCargowiseForm.Properties.Resources.redo;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // 打开OToolStripButton
+            // 
+            this.打开OToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.打开OToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("打开OToolStripButton.Image")));
+            this.打开OToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.打开OToolStripButton.Name = "打开OToolStripButton";
+            this.打开OToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.打开OToolStripButton.Text = "打开(&O)";
+            this.打开OToolStripButton.Click += new System.EventHandler(this.打开OToolStripButton_Click);
+            // 
+            // 保存SToolStripButton
+            // 
+            this.保存SToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.保存SToolStripButton.Image = global::ReadXmlFromCargowiseForm.PrintRibbonControllerResources.RibbonPrintPreview_Save;
+            this.保存SToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.保存SToolStripButton.Name = "保存SToolStripButton";
+            this.保存SToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.保存SToolStripButton.Text = "保存(&S)";
+            this.保存SToolStripButton.Click += new System.EventHandler(this.保存SToolStripButton_Click);
+            // 
+            // 剪切UToolStripButton
+            // 
+            this.剪切UToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.剪切UToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("剪切UToolStripButton.Image")));
+            this.剪切UToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.剪切UToolStripButton.Name = "剪切UToolStripButton";
+            this.剪切UToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.剪切UToolStripButton.Text = "剪切(&U)";
+            this.剪切UToolStripButton.Click += new System.EventHandler(this.剪切UToolStripButton_Click);
+            // 
+            // 复制CToolStripButton
+            // 
+            this.复制CToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.复制CToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("复制CToolStripButton.Image")));
+            this.复制CToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.复制CToolStripButton.Name = "复制CToolStripButton";
+            this.复制CToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.复制CToolStripButton.Text = "复制(&C)";
+            this.复制CToolStripButton.Click += new System.EventHandler(this.复制CToolStripButton_Click);
+            // 
+            // 粘贴PToolStripButton
+            // 
+            this.粘贴PToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.粘贴PToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("粘贴PToolStripButton.Image")));
+            this.粘贴PToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.粘贴PToolStripButton.Name = "粘贴PToolStripButton";
+            this.粘贴PToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.粘贴PToolStripButton.Text = "粘贴(&P)";
+            this.粘贴PToolStripButton.Click += new System.EventHandler(this.粘贴PToolStripButton_Click);
+            // 
+            // 帮助LToolStripButton
+            // 
+            this.帮助LToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.帮助LToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("帮助LToolStripButton.Image")));
+            this.帮助LToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.帮助LToolStripButton.Name = "帮助LToolStripButton";
+            this.帮助LToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.帮助LToolStripButton.Text = "帮助(&L)";
+            // 
+            // SendToCWBtn
+            // 
+            this.SendToCWBtn.Image = global::ReadXmlFromCargowiseForm.Properties.Resources.send;
+            this.SendToCWBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SendToCWBtn.Name = "SendToCWBtn";
+            this.SendToCWBtn.Size = new System.Drawing.Size(129, 22);
+            this.SendToCWBtn.Text = "发送到Cargo wise";
+            this.SendToCWBtn.Click += new System.EventHandler(this.SendToCWBtn_ClickHandler);
+            // 
+            // ResetBtn
+            // 
+            this.ResetBtn.Image = global::ReadXmlFromCargowiseForm.Properties.Resources.Reset;
+            this.ResetBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(52, 22);
+            this.ResetBtn.Text = "重置";
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_ClickHandler);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ReadXmlFromCargowiseForm.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // SendFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 562);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.barDockControlLeft);
-            this.Controls.Add(this.barDockControlRight);
-            this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
             this.MinimumSize = new System.Drawing.Size(1200, 600);
             this.Name = "SendFrm";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,33 +283,26 @@
 
         #endregion
 
-        private DevExpress.XtraRichEdit.RichEditControl editContentBox;
-        private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraRichEdit.UI.CommonBar commonBar1;
-        private DevExpress.XtraRichEdit.UI.UndoItem undoItem1;
-        private DevExpress.XtraRichEdit.UI.RedoItem redoItem1;
-        private DevExpress.XtraRichEdit.UI.FileNewItem fileNewItem1;
-        private DevExpress.XtraRichEdit.UI.FileOpenItem fileOpenItem1;
-        private DevExpress.XtraRichEdit.UI.FileSaveItem fileSaveItem1;
-        private DevExpress.XtraRichEdit.UI.FileSaveAsItem fileSaveAsItem1;
-        private DevExpress.XtraRichEdit.UI.QuickPrintItem quickPrintItem1;
-        private DevExpress.XtraRichEdit.UI.PrintItem printItem1;
-        private DevExpress.XtraRichEdit.UI.PrintPreviewItem printPreviewItem1;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
-        private DevExpress.XtraBars.BarLargeButtonItem SendToCWBtn;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox responseTxt;
         private System.Windows.Forms.CheckBox CompressCheckBox;
-        private DevExpress.XtraBars.BarEditItem barEditItem1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit1;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton 保存SToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripButton 剪切UToolStripButton;
+        private System.Windows.Forms.ToolStripButton 复制CToolStripButton;
+        private System.Windows.Forms.ToolStripButton 粘贴PToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton 帮助LToolStripButton;
+        private System.Windows.Forms.ToolStripButton SendToCWBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton ResetBtn;
+        private System.Windows.Forms.RichTextBox editContentBox;
+        private System.Windows.Forms.ToolStripButton 打开OToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }

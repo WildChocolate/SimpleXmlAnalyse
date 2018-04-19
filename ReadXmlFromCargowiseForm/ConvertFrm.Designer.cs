@@ -37,10 +37,10 @@
             this.FilenameTxt = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.FileContentTV = new System.Windows.Forms.TreeView();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.UploadBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.UploadBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -147,6 +147,17 @@
             this.splitContainer1.SplitterDistance = 82;
             this.splitContainer1.TabIndex = 8;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(761, 67);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(101, 12);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Open in sendForm";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -179,25 +190,14 @@
             this.FileContentTV.TabIndex = 0;
             this.FileContentTV.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.FileContentTV_AfterLabelEdit);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(761, 67);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(101, 12);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Open in sendForm";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // UploadBtn
             // 
-            this.UploadBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.UploadBtn.Location = new System.Drawing.Point(752, 20);
+            this.UploadBtn.Location = new System.Drawing.Point(753, 17);
             this.UploadBtn.Name = "UploadBtn";
-            this.UploadBtn.Size = new System.Drawing.Size(103, 23);
+            this.UploadBtn.Size = new System.Drawing.Size(75, 23);
             this.UploadBtn.TabIndex = 9;
             this.UploadBtn.Text = "选择文件";
+            this.UploadBtn.UseVisualStyleBackColor = true;
             this.UploadBtn.Click += new System.EventHandler(this.UploadBtn_Click);
             // 
             // ConvertFrm
@@ -236,7 +236,7 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TreeView FileContentTV;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private DevExpress.XtraEditors.SimpleButton UploadBtn;
+        private System.Windows.Forms.Button UploadBtn;
     }
 }
 
