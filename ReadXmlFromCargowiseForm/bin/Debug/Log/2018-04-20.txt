@@ -1,0 +1,8 @@
+消息：Non-ASCII character '\xe8' in file generateWord.py on line 10, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+时间：2018-04-20 13:26:17
+**************************************************
+
+消息：Non-ASCII character '\xe8' in file generateWord.py on line 10, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+时间：2018-04-20 13:27:45
+**************************************************
+

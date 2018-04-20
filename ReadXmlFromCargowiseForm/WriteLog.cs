@@ -9,6 +9,10 @@ namespace ReadXmlFromCargowiseForm
 {
     public static class WriteLog
     {
+        public static void Logging(Exception ex)
+        {
+            Logging(ex.Message);
+        }
         public static void Logging(string msg)
         {
             string filePath = AppDomain.CurrentDomain.BaseDirectory + "Log";

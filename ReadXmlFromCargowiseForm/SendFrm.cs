@@ -16,6 +16,14 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using iTextSharp;
+using Itext = iTextSharp.text;
+using iTextSharp.text.pdf;
+using Word=Xceed.Words.NET;
+using OfficeOpenXml;
+
+
+
 
 namespace ReadXmlFromCargowiseForm
 {
@@ -74,6 +82,7 @@ namespace ReadXmlFromCargowiseForm
 
         private void SendToCWBtn_ClickHandler(object sender, EventArgs e)
         {
+            responseTxt.Clear();
             var content = editContentBox.Text;
             if (content.Length > 0)
             {
@@ -104,14 +113,15 @@ namespace ReadXmlFromCargowiseForm
         }
         async void HTTPPostXMLMessageAsync()
         {
+            var sentMsg = editContentBox.Text;
             await Task.Run(() =>
             {
-                HTTPPostXMLMessage();
+                HTTPPostXMLMessage(sentMsg);
             });
             Log("HTTP POST Complete.");
             ChangeSendBtnStatus();
         }
-        void HTTPPostXMLMessage()
+        void HTTPPostXMLMessage(string sentMsg)
         {
             // It may be instructive to view the output of this sample in Microsoft Fiddler (http://www.fiddlertool.com).
             // This will allow you to see the raw POST and Reponse with all HTTP Headers and your XML body content.
@@ -119,11 +129,11 @@ namespace ReadXmlFromCargowiseForm
             var uri = new Uri(Url);
             var client = new HttpXmlClient(uri, CompressCheckBox.Checked, UserName, Passwd);
 
-            using (var sourceStream = new MemoryStream(Encoding.UTF8.GetBytes(editContentBox.Text)))
+            using (var sourceStream = new MemoryStream(Encoding.UTF8.GetBytes(sentMsg)))
             {
                 Log("Begin POST to " + uri);
                 Log("        <<<------------------------------------------------- Begin Message Body ------------------------------------------------->>>");
-                Log(editContentBox.Text);
+                Log(sentMsg);
                 Log("        <<<-------------------------------------------------- End Message Body -------------------------------------------------->>>");
                 Log("");
                 Log("Waiting Response...");
@@ -274,15 +284,15 @@ namespace ReadXmlFromCargowiseForm
                 case "txt":
                 case "xml":
                     string text = null;
-                    System.Drawing.Font printFont = new System.Drawing.Font
+                    Font printFont = new Font
                     ("Arial", 35, System.Drawing.FontStyle.Regular);
                     // Draw the content.  
-                    System.IO.StreamReader streamReader = new StreamReader(this.streamToPrint);
+                    StreamReader streamReader = new StreamReader(this.streamToPrint);
                     text = streamReader.ReadToEnd();
                     e.Graphics.DrawString(text, printFont, System.Drawing.Brushes.Black, e.MarginBounds.X, e.MarginBounds.Y);
                     break;
                 case "image":
-                    System.Drawing.Image image = System.Drawing.Image.FromStream(this.streamToPrint);
+                    Image image = Image.FromStream(this.streamToPrint);
                     int x = e.MarginBounds.X;
                     int y = e.MarginBounds.Y;
                     int width = image.Width;
@@ -313,6 +323,145 @@ namespace ReadXmlFromCargowiseForm
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             editContentBox.Redo();
-        }   
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            saveCWFileDialog.Filter = "pdf|*.pdf";  
+            CreatePdf();
+        }
+        void CreatePdf()
+        {
+            Itext.Document idoc = new Itext.Document(Itext.PageSize.A4);
+            try
+            {
+                if (saveCWFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var newfilePath = saveCWFileDialog.FileName;
+                    PdfWriter.GetInstance(idoc, new FileStream(newfilePath , FileMode.Create));
+                    #region 设置PDF的头信息，一些属性设置，在Document.Open 之前完成
+                    idoc.AddAuthor("");
+                    idoc.AddCreationDate();
+                    idoc.AddCreator("");
+                    idoc.AddSubject("");
+                    idoc.AddTitle("");
+                    idoc.AddKeywords("");
+                    idoc.AddHeader("cw", "export pdf");
+                    #endregion
+                    idoc.Open();
+                    //载入字体 
+                    idoc.Add(new Itext.Paragraph(editContentBox.Text, new Itext.Font(BaseFontAndSize(""))));
+                    idoc.Close();
+                    if (MessageBox.Show("是否打开文件?", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        Process.Start(newfilePath);
+                    }
+                }
+            }
+            catch (Itext.DocumentException de) { 
+                Console.WriteLine(de.Message); Console.ReadKey();
+                WriteLog.Logging(de.Message);
+            }
+            catch (IOException io) {
+                Console.WriteLine(io.Message); Console.ReadKey();
+                WriteLog.Logging(io.Message);
+            }
+            catch (Exception err)
+            {
+                WriteLog.Logging(err);
+            }
+        }
+        private BaseFont BaseFontAndSize(string font_name)
+        {
+            
+            //baseFont = BaseFont.CreateFont(FontFilePathForHeaderFooter, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);  
+            //BaseFont.AddToResourceSearch("iTextAsianCmaps.dll");
+            string file_name = "";
+            switch (font_name)
+            {
+                case "黑体":
+                    file_name = "SIMHEI.TTF";
+                    break;
+                case "华文中宋":
+                    file_name = "STZHONGS.TTF";
+                    break;
+                case "宋体":
+                    file_name = "SIMYOU.TTF";
+                    break;
+                default:
+                    file_name = "SIMYOU.TTF";
+                    break;
+            }
+            BaseFont baseFont = BaseFont.CreateFont(@"C:\Windows\Fonts\simsun.ttc,0", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            return baseFont;
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            saveCWFileDialog.Filter = "word|*.docx";
+            if (saveCWFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                SaveDocx(saveCWFileDialog.FileName);
+            }
+        }
+        void SaveDocx(string path)
+        {
+            try
+            {
+                if (path.EndsWith(".docx"))
+                {
+                    var doc = Word.DocX.Create(path);
+                    doc.InsertParagraph(editContentBox.Text);
+                    doc.Save();
+                    if (MessageBox.Show("文档创建成功!是否打开", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        Process.Start("WINWORD.EXE", path);
+                    }
+                }
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            saveCWFileDialog.Filter = "excel|*.xlsx";
+            if (saveCWFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                SaveExcel(saveCWFileDialog.FileName);
+            }
+        }
+        void SaveExcel(string path)
+        {
+            try
+            {
+                if (path.EndsWith(".xlsx"))
+                {
+                    using (var package = new ExcelPackage())
+                    {
+                        ExcelWorksheet sheet = package.Workbook.Worksheets.Add("Sheet1");
+                        var lines = Regex.Split(editContentBox.Text, @"\n");
+                        for (var i = 0; i < lines.Length; i++)
+                        {
+                            var cell = sheet.Cells[i+1 , 1];
+                            cell.Value = lines[i];
+                            cell.Style.WrapText = false;
+                            cell.Style.Font.Size = 12;
+                        }
+                        using (var stream = File.Create(path))
+                        {
+                            package.SaveAs(stream);
+                            package.Save();
+                        }
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
     }
 }

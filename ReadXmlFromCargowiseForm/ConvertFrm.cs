@@ -222,19 +222,26 @@ namespace ReadXmlFromCargowiseForm
 
         private void UploadBtn_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                FilenameTxt.Text = openFileDialog1.FileName;
-                if (File.Exists(openFileDialog1.FileName) && openFileDialog1.FileName.EndsWith(".xml"))
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    var xdoc = XDocument.Load(openFileDialog1.FileName);
-                    FileContentTV.Nodes.Clear();
-                    LoadDocIntoTreeview(FileContentTV, xdoc);
+                    FilenameTxt.Text = openFileDialog1.FileName;
+                    if (File.Exists(openFileDialog1.FileName) && openFileDialog1.FileName.EndsWith(".xml"))
+                    {
+                        var xdoc = XDocument.Load(openFileDialog1.FileName);
+                        FileContentTV.Nodes.Clear();
+                        LoadDocIntoTreeview(FileContentTV, xdoc);
+                    }
+                    else
+                    {
+                        MessageBox.Show("请选择XML文件");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("请选择XML文件");
-                }
+            }
+            catch(Exception err)
+            {
+                WriteLog.Logging(err.Message);
             }
         }
 
