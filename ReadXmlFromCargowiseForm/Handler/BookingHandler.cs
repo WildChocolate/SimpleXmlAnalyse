@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -11,44 +10,38 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using XmlRepository;
-using XmlRepository.ShipmentFolder;
+using XmlRepository.BookingFolder;
 
 namespace ReadXmlFromCargowiseForm
 {
-    public class ShipmentHandler:Handler<Shipment>
+    public class BookingHandler:Handler<UniversalShipment>
     {
-        /// <summary>
-        /// 如果有特殊集合 像 xxCollection, 子节点直接为值的，放在这里，ConvertInstanceToFile 生成文件的时候再处理
-        /// </summary>
-        private Dictionary<string, string> specialCollection = null;
-        public ShipmentHandler(){
-            specialCollection =new Dictionary<string, string>();
-            specialCollection.Add(typeof(TestCollection).Name, typeof(TestCollection).Name.Replace("Collection",""));
-        }
-        protected override Dictionary<string, string> SpecialCollection
-        {
-            get
-            {
-                return specialCollection;
-            }
-        }
+        
         /* 关于动态提取XML内容的通用部分，移动到---> ExtractXMLDynamic 
          *      SearchCollectionNew<T>() 和 SearchCollection<T>()由于使用了特定的类，就留下来，不过好像没什么地方用到了
          */
-        public override Shipment ReadFile(string content)
+        private Dictionary<string, string> specialCollection = null;
+        public BookingHandler() {
+            specialCollection = new Dictionary<string, string>();
+        }
+        protected override Dictionary<string, string> SpecialCollection
         {
+            get { return specialCollection; }
+        }
+        public override UniversalShipment ReadFile(string content)
+        {
+            
             //带命名空间时可以用XName取元素，也可以在用 var r = root.Element(xmlns + "元素名"),xmlns为XNamespace
             //XDocument xdoc = XDocument.Load(fs);
             //var Xname = XName.Get("Header", "http://www.cargowise.com/Schemas/Universal/2011/11");
             //var root = xdoc.Root;
             //XNamespace xmlns = "http://www.cargowise.com/Schemas/Universal/2011/11";
-            /*
-                *可以在这里加一些特定的操作
-                */
-            return GetShipmentByText(content);
-        }
 
-        public override string ConvertInstanceToFile(Shipment Instance)
+            
+            return GetShipmentByText(content);
+               
+        }
+        public override string ConvertInstanceToFile(UniversalShipment Instance)
         {
             var fPath = string.Empty;
             if (Instance == null)
@@ -57,44 +50,22 @@ namespace ReadXmlFromCargowiseForm
             }
             else
             {
-                var uShipment = new UniversalShipment();
-                uShipment.Shipment = Instance;
-                var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
-                xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s\w]*>", "<UniversalShipment>");
-                //以下为特殊节点进行特殊处理
-                if (SpecialCollection.Count > 0)
+                //var uShipment = new UniversalShipment();
+                //uShipment.Shipment = Instance;
+                var xShipmentString = XmlSerializeHelper.Serialize(Instance);//让它自己类型推断
+                xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s]*>", "<UniversalShipment>");
+                
+                using (StreamWriter tw = new StreamWriter(@"XML\BookingResult.xml", false))
                 {
-                    foreach (var coll in SpecialCollection)
-                    {
-                        var key = coll.Key;
-                        var patt = @"<?>[\s\S]+</?>";
-                        patt = patt.Replace("?", key);
-                        var reg = new Regex(patt, RegexOptions.IgnoreCase);
-                        var matches = reg.Matches(xShipmentString);
-                        foreach (Match m in matches)
-                        {
-                            var xcoll = XElement.Parse(m.Value);
-                            var replaceName = coll.Value;
-                            foreach (var ele in xcoll.Elements())
-                            {
-                                ele.Name = replaceName;
-                            }
-                            xShipmentString = xShipmentString.Remove(m.Index, m.Value.Length);
-                            xShipmentString = xShipmentString.Insert(m.Index, xcoll.ToString());
-                        }
-                    }
-                }
-                using (StreamWriter tw = new StreamWriter(@"XML\ShipmentResult.xml", false))
-                {
-                    tw.WriteLine(xShipmentString);
-                    fPath = Path.GetFullPath(@"XML\ShipmentResult.xml");
+                    tw.WriteLine(xShipmentString);                                                                          
+                    fPath = Path.GetFullPath(@"XML\BookingResult.xml");
                 }
             }
             return fPath;
         }
         #region 新的关于遍历节点的方法在 XmlRepository.ExtractXMLDynamic
         /// <summary>
-        /// 旧方法，根据T， 在element中查找所有的 T 类型的元素（并不一定是element的直接子元素），最后返回 T的列表
+        /// 旧方法，根据T， 在element中查找，T类型的节点，最后返回 T的列表
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="element"></param>
@@ -105,11 +76,11 @@ namespace ReadXmlFromCargowiseForm
             var tList = new List<T>();
             if (element.HasElements)
             {
-                foreach (var ele in element.Elements())
-                {
-                    if (ele.HasElements)
-                        tList.AddRange(SearchCollection<T>(ele));//递归遍历每个子节点
-                }
+                //foreach (var ele in element.Elements())
+                //{
+                //    tList.AddRange(SearchCollection<T>(ele));//递归遍历每个子节点
+                //}
+
                 dynamic t = CreateInstance(typeof(T));
                 var tName = t.GetType().Name;
                 var nName = element.Name.ToString();
@@ -153,7 +124,7 @@ namespace ReadXmlFromCargowiseForm
             return tList;
         }
         /// <summary>
-        /// 根据T， 在element中查找，T类型的节点，最后返回 T的列表，比如要返回   List<MileStone> 就传入 <MeilStoneColletion>...</MeilStoneColletion>元素
+        /// 根据T， 在element中查找，T类型的节点，最后返回 T的列表，
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="element"></param>
@@ -229,6 +200,8 @@ namespace ReadXmlFromCargowiseForm
             return tList;
         }
         
+
+       
         #region //与SearchCollectionNew<T>（）相关的方法
         public static void SetInstanceSubCollection(dynamic t, dynamic sourceList)
         {

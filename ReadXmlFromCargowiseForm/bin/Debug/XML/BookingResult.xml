@@ -1,4 +1,5 @@
-﻿<UniversalShipment>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UniversalShipment>
   <Shipment>
     <DataContext>
       <DataSourceCollection>
@@ -25,5 +26,1689 @@
         <Code>BRN</Code>
         <Name>Branch</Name>
       </EventDepartment>
-     </Shipment>
+      <EventType>
+        <Code />
+      </EventType>
+      <EventUser>
+        <Code>BN</Code>
+        <Name>Brian Ng</Name>
+      </EventUser>
+      <ServerID>TRN</ServerID>
+      <TriggerCount>1</TriggerCount>
+      <TriggerDate>2017-12-14T10:45:43.627</TriggerDate>
+      <TriggerDescription />
+      <TriggerType>Manual</TriggerType>
+      <RecipientRoleCollection>
+        <RecipientRole>
+          <Code>ORP</Code>
+          <Description>Organization Proxy</Description>
+        </RecipientRole>
+      </RecipientRoleCollection>
+    </DataContext>
+    <ActualChargeable>27.438</ActualChargeable>
+    <AdditionalTerms />
+    <AWBServiceLevel>
+      <Code>STD</Code>
+      <Description>Standard</Description>
+    </AWBServiceLevel>
+    <BookingConfirmationReference />
+    <CFSReference />
+    <ContainerCount>0</ContainerCount>
+    <ContainerMode>
+      <Code>FCL</Code>
+      <Description>Full Container Load</Description>
+    </ContainerMode>
+    <FreightRate>0.0000</FreightRate>
+    <FreightRateCurrency>
+      <Code />
+      <Description />
+    </FreightRateCurrency>
+    <GoodsDescription />
+    <GoodsValue>0.0000</GoodsValue>
+    <GoodsValueCurrency>
+      <Code>HKD</Code>
+      <Description>Hong Kong Dollar</Description>
+    </GoodsValueCurrency>
+    <HBLAWBChargesDisplay>
+      <Code>SHW</Code>
+      <Description>Show Collect Charges</Description>
+    </HBLAWBChargesDisplay>
+    <InsuranceValue>0.0000</InsuranceValue>
+    <InsuranceValueCurrency>
+      <Code>HKD</Code>
+      <Description>Hong Kong Dollar</Description>
+    </InsuranceValueCurrency>
+    <InterimReceiptNumber />
+    <IsCancelled>false</IsCancelled>
+    <IsDirectBooking>false</IsDirectBooking>
+    <IsForwardRegistered>false</IsForwardRegistered>
+    <OuterPacks>200</OuterPacks>
+    <OuterPacksPackageType>
+      <Code>UNT</Code>
+      <Description>Unit</Description>
+    </OuterPacksPackageType>
+    <PackingOrder>0</PackingOrder>
+    <PortOfDestination>
+      <Code>CAMTR</Code>
+      <Name>Montreal</Name>
+    </PortOfDestination>
+    <PortOfDischarge>
+      <Code />
+    </PortOfDischarge>
+    <PortOfLoading>
+      <Code />
+    </PortOfLoading>
+    <PortOfOrigin>
+      <Code>CNSHA</Code>
+      <Name>Shanghai Hongqiao International Apt</Name>
+    </PortOfOrigin>
+    <ReleaseType>
+      <Code />
+    </ReleaseType>
+    <ServiceLevel>
+      <Code>STD</Code>
+      <Description>Standard</Description>
+    </ServiceLevel>
+    <ShipmentIncoTerm>
+      <Code>FOB</Code>
+      <Description>Free On Board</Description>
+    </ShipmentIncoTerm>
+    <ShippedOnBoard>
+      <Code>SHP</Code>
+      <Description>Shipped</Description>
+    </ShippedOnBoard>
+    <TotalVolume>27.438</TotalVolume>
+    <TotalVolumeUnit>
+      <Code>M3</Code>
+      <Description>Cubic Meters</Description>
+    </TotalVolumeUnit>
+    <TotalWeight>3770.000</TotalWeight>
+    <TotalWeightUnit>
+      <Code>KG</Code>
+      <Description>Kilograms</Description>
+    </TotalWeightUnit>
+    <TransportMode>
+      <Code>SEA</Code>
+      <Description>Sea Freight</Description>
+    </TransportMode>
+    <WayBillNumber />
+    <WayBillType>
+      <Code>HWB</Code>
+      <Description>House Waybill</Description>
+    </WayBillType>
+    <LocalProcessing>
+      <DeliveryRequiredBy />
+      <EstimatedDelivery />
+      <EstimatedPickup />
+      <FCLDeliveryEquipmentNeeded>
+        <Code />
+      </FCLDeliveryEquipmentNeeded>
+      <FCLPickupEquipmentNeeded>
+        <Code />
+      </FCLPickupEquipmentNeeded>
+      <InsuranceRequired>false</InsuranceRequired>
+      <PickupRequiredBy />
+    </LocalProcessing>
+    <CustomizedFieldCollection>
+      <CustomizedField>
+        <Key>OEC Agent</Key>
+        <DataType>String</DataType>
+        <Value>23046</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Booking No</Key>
+        <DataType>String</DataType>
+        <Value>BK76721</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>OEC Cnee</Key>
+        <DataType>String</DataType>
+        <Value>35568</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>User E-mail</Key>
+        <DataType>String</DataType>
+        <Value>brian_ng@cohesionfreight.com.hk</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxFlag1</Key>
+        <DataType>Boolean</DataType>
+        <Value>false</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxText1</Key>
+        <DataType>String</DataType>
+        <Value />
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxxDate1</Key>
+        <DataType>DateTime</DataType>
+        <Value />
+      </CustomizedField>
+      <CustomizedField>
+        <Key>xxxDecimalNo1</Key>
+        <DataType>Decimal</DataType>
+        <Value>0</Value>
+      </CustomizedField>
+      <CustomizedField>
+        <Key>Telex Release</Key>
+        <DataType>Boolean</DataType>
+        <Value>false</Value>
+      </CustomizedField>
+    </CustomizedFieldCollection>
+    <DateCollection>
+      <Date>
+        <Type>BookingConfirmed</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value>2017-09-19T00:00:00</Value>
+      </Date>
+      <Date>
+        <Type>Received</Type>
+        <IsEstimate>false</IsEstimate>
+        <Value>2017-09-22T00:00:00</Value>
+      </Date>
+      <Date>
+        <Type>Departure</Type>
+        <IsEstimate>true</IsEstimate>
+        <Value>2017-09-27T00:00:00</Value>
+      </Date>
+      <Date>
+        <Type>Arrival</Type>
+        <IsEstimate>true</IsEstimate>
+        <Value>2017-10-16T00:00:00</Value>
+      </Date>
+      <Date>
+        <Type>ClientRequestedETA</Type>
+        <IsEstimate>true</IsEstimate>
+        <Value />
+      </Date>
+    </DateCollection>
+    <OrganizationAddressCollection>
+      <OrganizationAddress>
+        <AddressType>ConsignorDocumentaryAddress</AddressType>
+        <Address1>SUITE 1001-2 ALBION PLAZA 2-6</Address1>
+        <Address2>GRANVILLE ROAD,TSIM SHA TSUI</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>HONG KONG</City>
+        <CompanyName>GARLION TRADING LIMITED</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email>Peter_chan@Garlion.com</Email>
+        <Fax />
+        <OrganizationCode>GARTRAHKG</OrganizationCode>
+        <Phone>2777 1777</Phone>
+        <Port>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </Port>
+        <Postcode>NA</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>HK</State>
+        <RegistrationNumberCollection>
+          <RegistrationNumber>
+            <Type>
+              <Code>LSC</Code>
+              <Description>Legacy System Code</Description>
+            </Type>
+            <CountryOfIssue>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </CountryOfIssue>
+            <Value>OEC7777777</Value>
+          </RegistrationNumber>
+        </RegistrationNumberCollection>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsignorPickupDeliveryAddress</AddressType>
+        <Address1>SUITE 1001-2 ALBION PLAZA 2-6</Address1>
+        <Address2>GRANVILLE ROAD,TSIM SHA TSUI</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>HONG KONG</City>
+        <CompanyName>GARLION TRADING LIMITED</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email>Peter_chan@Garlion.com</Email>
+        <Fax />
+        <OrganizationCode>GARTRAHKG</OrganizationCode>
+        <Phone>2777 1777</Phone>
+        <Port>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </Port>
+        <Postcode>NA</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>HK</State>
+        <RegistrationNumberCollection>
+          <RegistrationNumber>
+            <Type>
+              <Code>LSC</Code>
+              <Description>Legacy System Code</Description>
+            </Type>
+            <CountryOfIssue>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </CountryOfIssue>
+            <Value>OEC7777777</Value>
+          </RegistrationNumber>
+        </RegistrationNumberCollection>
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsigneeDocumentaryAddress</AddressType>
+        <Address1>20 COTE DE LA FABRIQUE</Address1>
+        <Address2 />
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>QUEBEC</City>
+        <CompanyName>LA MAISON SIMONS</CompanyName>
+        <Country>
+          <Code>CA</Code>
+          <Name>Canada</Name>
+        </Country>
+        <Email>info@lamaison.com</Email>
+        <Fax />
+        <OrganizationCode>LAMAISYQB</OrganizationCode>
+        <Phone />
+        <Port>
+          <Code>CAQUE</Code>
+          <Name>Quebec</Name>
+        </Port>
+        <Postcode>G1R 3V9</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>QC</State>
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>ConsigneePickupDeliveryAddress</AddressType>
+        <Address1>20 COTE DE LA FABRIQUE</Address1>
+        <Address2 />
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>QUEBEC</City>
+        <CompanyName>LA MAISON SIMONS</CompanyName>
+        <Country>
+          <Code>CA</Code>
+          <Name>Canada</Name>
+        </Country>
+        <Email>info@lamaison.com</Email>
+        <Fax />
+        <OrganizationCode>LAMAISYQB</OrganizationCode>
+        <Phone />
+        <Port>
+          <Code>CAQUE</Code>
+          <Name>Quebec</Name>
+        </Port>
+        <Postcode>G1R 3V9</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>QC</State>
+        <RegistrationNumberCollection />
+      </OrganizationAddress>
+      <OrganizationAddress>
+        <AddressType>SendersLocalClient</AddressType>
+        <Address1>SUITE 1001-2 ALBION PLAZA 2-6</Address1>
+        <Address2>GRANVILLE ROAD,TSIM SHA TSUI</Address2>
+        <AddressOverride>false</AddressOverride>
+        <AddressShortCode>OECADDRESS</AddressShortCode>
+        <City>HONG KONG</City>
+        <CompanyName>GARLION TRADING LIMITED</CompanyName>
+        <Country>
+          <Code>CN</Code>
+          <Name>China</Name>
+        </Country>
+        <Email>Peter_chan@Garlion.com</Email>
+        <Fax />
+        <OrganizationCode>GARTRAHKG</OrganizationCode>
+        <Phone>2777 1777</Phone>
+        <Port>
+          <Code>HKHKG</Code>
+          <Name>Hong Kong</Name>
+        </Port>
+        <Postcode>NA</Postcode>
+        <ScreeningStatus>
+          <Code>UNK</Code>
+          <Description>Unknown</Description>
+        </ScreeningStatus>
+        <State>HK</State>
+        <RegistrationNumberCollection>
+          <RegistrationNumber>
+            <Type>
+              <Code>LSC</Code>
+              <Description>Legacy System Code</Description>
+            </Type>
+            <CountryOfIssue>
+              <Code>HK</Code>
+              <Name>Hong Kong</Name>
+            </CountryOfIssue>
+            <Value>OEC7777777</Value>
+          </RegistrationNumber>
+        </RegistrationNumberCollection>
+      </OrganizationAddress>
+    </OrganizationAddressCollection>
+    <PackingLineCollection>
+      <PackingLine>
+        <Commodity>
+          <Code>GEN</Code>
+          <Description>General</Description>
+        </Commodity>
+        <ContainerPackingOrder>0</ContainerPackingOrder>
+        <CountryOfOrigin>
+          <Code />
+        </CountryOfOrigin>
+        <DetailedDescription />
+        <EndItemNo>0</EndItemNo>
+        <ExportReferenceNumber />
+        <GoodsDescription />
+        <HarmonisedCode />
+        <Height>0.000</Height>
+        <ImportReferenceNumber />
+        <ItemNo>0</ItemNo>
+        <Length>0.000</Length>
+        <LengthUnit>
+          <Code>M</Code>
+          <Description>Meters</Description>
+        </LengthUnit>
+        <LinePrice>0.0000</LinePrice>
+        <LoadingMeters>0.000</LoadingMeters>
+        <MarksAndNos />
+        <OutturnComment />
+        <OutturnDamagedQty>0</OutturnDamagedQty>
+        <OutturnedHeight>0.000</OutturnedHeight>
+        <OutturnedLength>0.000</OutturnedLength>
+        <OutturnedVolume>0.000</OutturnedVolume>
+        <OutturnedWeight>0.000</OutturnedWeight>
+        <OutturnedWidth>0.000</OutturnedWidth>
+        <OutturnPillagedQty>0</OutturnPillagedQty>
+        <OutturnQty>0</OutturnQty>
+        <PackQty>10400</PackQty>
+        <PackType>
+          <Code>UNT</Code>
+          <Description>Unit</Description>
+        </PackType>
+        <ReferenceNumber />
+        <Volume>0.000</Volume>
+        <VolumeUnit>
+          <Code>M3</Code>
+        </VolumeUnit>
+        <Weight>0.000</Weight>
+        <WeightUnit>
+          <Code>KG</Code>
+        </WeightUnit>
+        <Width>0.000</Width>
+        <CustomizedFieldCollection>
+          <CustomizedField>
+            <Key>xxx</Key>
+            <DataType>String</DataType>
+            <Value />
+          </CustomizedField>
+          <CustomizedField>
+            <Key>yyy</Key>
+            <DataType>String</DataType>
+            <Value />
+          </CustomizedField>
+          <CustomizedField>
+            <Key>zzz</Key>
+            <DataType>DateTime</DataType>
+            <Value />
+          </CustomizedField>
+        </CustomizedFieldCollection>
+        <PackedItemCollection>
+          <PackedItem>
+            <OrderLineLink>1</OrderLineLink>
+            <PackedQuantity>1100.00000</PackedQuantity>
+            <Product>
+              <Code>660818</Code>
+            </Product>
+            <UnitOfQuantity>
+              <Code>UNT</Code>
+              <Description>Unit</Description>
+            </UnitOfQuantity>
+          </PackedItem>
+          <PackedItem>
+            <OrderLineLink>2</OrderLineLink>
+            <PackedQuantity>2100.00000</PackedQuantity>
+            <Product>
+              <Code>660818</Code>
+            </Product>
+            <UnitOfQuantity>
+              <Code>UNT</Code>
+              <Description>Unit</Description>
+            </UnitOfQuantity>
+          </PackedItem>
+          <PackedItem>
+            <OrderLineLink>3</OrderLineLink>
+            <PackedQuantity>3100.00000</PackedQuantity>
+            <Product>
+              <Code>660818</Code>
+            </Product>
+            <UnitOfQuantity>
+              <Code>UNT</Code>
+              <Description>Unit</Description>
+            </UnitOfQuantity>
+          </PackedItem>
+          <PackedItem>
+            <OrderLineLink>4</OrderLineLink>
+            <PackedQuantity>4100.00000</PackedQuantity>
+            <Product>
+              <Code>660818</Code>
+            </Product>
+            <UnitOfQuantity>
+              <Code>UNT</Code>
+              <Description>Unit</Description>
+            </UnitOfQuantity>
+          </PackedItem>
+        </PackedItemCollection>
+      </PackingLine>
+    </PackingLineCollection>
+    <RelatedShipmentCollection>
+      <RelatedShipment>
+        <DataContext>
+          <DataSourceCollection>
+            <DataSource>
+              <Type>OrderManagerOrder</Type>
+              <Key>OEC70011~0~LAMAISYQB</Key>
+            </DataSource>
+          </DataSourceCollection>
+        </DataContext>
+        <AdditionalTerms />
+        <BookingConfirmationReference />
+        <CommercialInfo>
+          <CommercialInvoiceCollection>
+            <CommercialInvoice>
+              <InvoiceNumber />
+              <InvoiceDate />
+            </CommercialInvoice>
+          </CommercialInvoiceCollection>
+        </CommercialInfo>
+        <ContainerMode>
+          <Code>FCL</Code>
+          <Description>Full Container Load</Description>
+        </ContainerMode>
+        <FirstBuyerContact />
+        <FreightRate>1.000000000</FreightRate>
+        <FreightRateCurrency>
+          <Code>HKD</Code>
+          <Description>Hong Kong Dollar</Description>
+        </FreightRateCurrency>
+        <GoodsDescription />
+        <OuterPacks>0</OuterPacks>
+        <OuterPacksPackageType>
+          <Code>PLT</Code>
+          <Description>Pallet</Description>
+        </OuterPacksPackageType>
+        <SecondBuyerContact />
+        <ServiceLevel>
+          <Code />
+        </ServiceLevel>
+        <ShipmentIncoTerm>
+          <Code>FOB</Code>
+          <Description>Free On Board</Description>
+        </ShipmentIncoTerm>
+        <TotalVolume>0.000</TotalVolume>
+        <TotalVolumeUnit>
+          <Code>M3</Code>
+          <Description>Cubic Meters</Description>
+        </TotalVolumeUnit>
+        <TotalWeight>0.000</TotalWeight>
+        <TotalWeightUnit>
+          <Code>KG</Code>
+          <Description>Kilograms</Description>
+        </TotalWeightUnit>
+        <TransportMode>
+          <Code />
+        </TransportMode>
+        <WayBillNumber />
+        <WayBillType>
+          <Code>HWB</Code>
+          <Description>House Waybill</Description>
+        </WayBillType>
+        <LocalProcessing>
+          <DeliveryRequiredBy />
+        </LocalProcessing>
+        <Order>
+          <OrderNumber>OEC70011</OrderNumber>
+          <ClientReference />
+          <OrderNumberSplit>0</OrderNumberSplit>
+          <Status>
+            <Code>INC</Code>
+            <Description>Order Incomplete</Description>
+          </Status>
+          <OrderLineCollection>
+            <OrderLine>
+              <AdditionalInformation />
+              <AdditionalTerms />
+              <CommercialInvoiceNumber />
+              <ConfirmationNumber />
+              <ContainerNumber />
+              <ContainerPackingOrder>0</ContainerPackingOrder>
+              <CustomsData />
+              <ExpectedQuantity>0.00000</ExpectedQuantity>
+              <ExtendedLinePrice>0.0000</ExtendedLinePrice>
+              <IncoTerm>
+                <Code />
+              </IncoTerm>
+              <InnerPacksQty>1100.000</InnerPacksQty>
+              <InnerPacksQtyUnit>
+                <Code />
+              </InnerPacksQtyUnit>
+              <LineNumber>1</LineNumber>
+              <LineSplitNumber>0</LineSplitNumber>
+              <Link>1</Link>
+              <OrderedQty>1100.00000</OrderedQty>
+              <OrderedQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </OrderedQtyUnit>
+              <PackageHeight>0.000</PackageHeight>
+              <PackageLength>0.000</PackageLength>
+              <PackageLengthUnit>
+                <Code />
+                <Description />
+              </PackageLengthUnit>
+              <PackageQty>1000.000</PackageQty>
+              <PackageQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </PackageQtyUnit>
+              <PackageWidth>0.000</PackageWidth>
+              <PartAttribute1 />
+              <PartAttribute2 />
+              <PartAttribute3 />
+              <Product>
+                <Code>660818</Code>
+                <Description />
+              </Product>
+              <QuantityMet>0.00000</QuantityMet>
+              <RequiredExWorks />
+              <RequiredInStore />
+              <SpecialInstructions />
+              <Status>
+                <Code>PLC</Code>
+                <Description>Order Placed / finalized</Description>
+              </Status>
+              <SubLineNumber>1</SubLineNumber>
+              <SupplierConfirmedAcceptance />
+              <UnitPriceRecommended>0.0000</UnitPriceRecommended>
+              <Volume>0.000</Volume>
+              <VolumeUnit>
+                <Code />
+              </VolumeUnit>
+              <Weight>0.000</Weight>
+              <WeightUnit>
+                <Code />
+              </WeightUnit>
+            </OrderLine>
+          </OrderLineCollection>
+        </Order>
+        <AdditionalBillCollection>
+          <AdditionalBill>
+            <BillNumber />
+            <BillType>
+              <Code>MWB</Code>
+              <Description>Master Waybill</Description>
+            </BillType>
+          </AdditionalBill>
+        </AdditionalBillCollection>
+        <DateCollection>
+          <Date>
+            <Type>BookingConfirmed</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>DepartureVesselCutoffDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>ExWorksRequiredBy</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-22T00:00:00</Value>
+          </Date>
+          <Date>
+            <Type>FollowUp</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>OrderDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-16T11:30:00</Value>
+          </Date>
+        </DateCollection>
+        <MilestoneCollection>
+          <Milestone>
+            <Description>Order Confirmed</Description>
+            <EventCode>OCF</EventCode>
+            <Sequence>1</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Ex Factory</Description>
+            <EventCode>EXW</EventCode>
+            <Sequence>2</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Origin Receival at Wharf / Depot</Description>
+            <EventCode>GIN</EventCode>
+            <Sequence>3</Sequence>
+            <ActualDate />
+            <ConditionReference>FAC=CTO</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Departure</Description>
+            <EventCode>DEP</EventCode>
+            <Sequence>4</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;FirstLeg.Origin&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Arrival</Description>
+            <EventCode>ARV</EventCode>
+            <Sequence>5</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;LastLeg.Destination&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Commenced</Description>
+            <EventCode>CCC</EventCode>
+            <Sequence>6</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Finalized</Description>
+            <EventCode>CLR</EventCode>
+            <Sequence>7</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Unpacked</Description>
+            <EventCode>CAV</EventCode>
+            <Sequence>8</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Estimated Pickup</Description>
+            <EventCode>DCA</EventCode>
+            <Sequence>9</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Order Delivered</Description>
+            <EventCode>DCF</EventCode>
+            <Sequence>10</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+        </MilestoneCollection>
+        <OrganizationAddressCollection>
+          <OrganizationAddress>
+            <AddressType>ConsigneeDocumentaryAddress</AddressType>
+            <Address1>20 COTE DE LA FABRIQUE</Address1>
+            <Address2 />
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>OECADDRESS</AddressShortCode>
+            <City>QUEBEC</City>
+            <CompanyName>LA MAISON SIMONS</CompanyName>
+            <Country>
+              <Code>CA</Code>
+              <Name>Canada</Name>
+            </Country>
+            <Email>info@lamaison.com</Email>
+            <Fax />
+            <OrganizationCode>LAMAISYQB</OrganizationCode>
+            <Phone />
+            <Port>
+              <Code>CAQUE</Code>
+              <Name>Quebec</Name>
+            </Port>
+            <Postcode>G1R 3V9</Postcode>
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State>QC</State>
+            <RegistrationNumberCollection />
+          </OrganizationAddress>
+        </OrganizationAddressCollection>
+      </RelatedShipment>
+      <RelatedShipment>
+        <DataContext>
+          <DataSourceCollection>
+            <DataSource>
+              <Type>OrderManagerOrder</Type>
+              <Key>OEC70012~0~LAMAISYQB</Key>
+            </DataSource>
+          </DataSourceCollection>
+        </DataContext>
+        <AdditionalTerms />
+        <BookingConfirmationReference />
+        <CommercialInfo>
+          <CommercialInvoiceCollection>
+            <CommercialInvoice>
+              <InvoiceNumber />
+              <InvoiceDate />
+            </CommercialInvoice>
+          </CommercialInvoiceCollection>
+        </CommercialInfo>
+        <ContainerMode>
+          <Code>FCL</Code>
+          <Description>Full Container Load</Description>
+        </ContainerMode>
+        <FirstBuyerContact />
+        <FreightRate>1.000000000</FreightRate>
+        <FreightRateCurrency>
+          <Code>HKD</Code>
+          <Description>Hong Kong Dollar</Description>
+        </FreightRateCurrency>
+        <GoodsDescription />
+        <OuterPacks>0</OuterPacks>
+        <OuterPacksPackageType>
+          <Code>PLT</Code>
+          <Description>Pallet</Description>
+        </OuterPacksPackageType>
+        <SecondBuyerContact />
+        <ServiceLevel>
+          <Code />
+        </ServiceLevel>
+        <ShipmentIncoTerm>
+          <Code>FOB</Code>
+          <Description>Free On Board</Description>
+        </ShipmentIncoTerm>
+        <TotalVolume>0.000</TotalVolume>
+        <TotalVolumeUnit>
+          <Code>M3</Code>
+          <Description>Cubic Meters</Description>
+        </TotalVolumeUnit>
+        <TotalWeight>0.000</TotalWeight>
+        <TotalWeightUnit>
+          <Code>KG</Code>
+          <Description>Kilograms</Description>
+        </TotalWeightUnit>
+        <TransportMode>
+          <Code />
+        </TransportMode>
+        <WayBillNumber />
+        <WayBillType>
+          <Code>HWB</Code>
+          <Description>House Waybill</Description>
+        </WayBillType>
+        <LocalProcessing>
+          <DeliveryRequiredBy />
+        </LocalProcessing>
+        <Order>
+          <OrderNumber>OEC70012</OrderNumber>
+          <ClientReference />
+          <OrderNumberSplit>0</OrderNumberSplit>
+          <Status>
+            <Code>INC</Code>
+            <Description>Order Incomplete</Description>
+          </Status>
+          <OrderLineCollection>
+            <OrderLine>
+              <AdditionalInformation />
+              <AdditionalTerms />
+              <CommercialInvoiceNumber />
+              <ConfirmationNumber />
+              <ContainerNumber />
+              <ContainerPackingOrder>0</ContainerPackingOrder>
+              <CustomsData />
+              <ExpectedQuantity>0.00000</ExpectedQuantity>
+              <ExtendedLinePrice>0.0000</ExtendedLinePrice>
+              <IncoTerm>
+                <Code />
+              </IncoTerm>
+              <InnerPacksQty>2100.000</InnerPacksQty>
+              <InnerPacksQtyUnit>
+                <Code />
+              </InnerPacksQtyUnit>
+              <LineNumber>1</LineNumber>
+              <LineSplitNumber>0</LineSplitNumber>
+              <Link>2</Link>
+              <OrderedQty>2100.00000</OrderedQty>
+              <OrderedQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </OrderedQtyUnit>
+              <PackageHeight>0.000</PackageHeight>
+              <PackageLength>0.000</PackageLength>
+              <PackageLengthUnit>
+                <Code />
+                <Description />
+              </PackageLengthUnit>
+              <PackageQty>2100.000</PackageQty>
+              <PackageQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </PackageQtyUnit>
+              <PackageWidth>0.000</PackageWidth>
+              <PartAttribute1 />
+              <PartAttribute2 />
+              <PartAttribute3 />
+              <Product>
+                <Code>660818</Code>
+                <Description />
+              </Product>
+              <QuantityMet>0.00000</QuantityMet>
+              <RequiredExWorks />
+              <RequiredInStore />
+              <SpecialInstructions />
+              <Status>
+                <Code>PLC</Code>
+                <Description>Order Placed / finalized</Description>
+              </Status>
+              <SubLineNumber>1</SubLineNumber>
+              <SupplierConfirmedAcceptance />
+              <UnitPriceRecommended>0.0000</UnitPriceRecommended>
+              <Volume>0.000</Volume>
+              <VolumeUnit>
+                <Code />
+              </VolumeUnit>
+              <Weight>0.000</Weight>
+              <WeightUnit>
+                <Code />
+              </WeightUnit>
+            </OrderLine>
+          </OrderLineCollection>
+        </Order>
+        <AdditionalBillCollection>
+          <AdditionalBill>
+            <BillNumber />
+            <BillType>
+              <Code>MWB</Code>
+              <Description>Master Waybill</Description>
+            </BillType>
+          </AdditionalBill>
+        </AdditionalBillCollection>
+        <DateCollection>
+          <Date>
+            <Type>BookingConfirmed</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>DepartureVesselCutoffDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>ExWorksRequiredBy</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-22T00:00:00</Value>
+          </Date>
+          <Date>
+            <Type>FollowUp</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>OrderDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-16T11:30:00</Value>
+          </Date>
+        </DateCollection>
+        <MilestoneCollection>
+          <Milestone>
+            <Description>Order Confirmed</Description>
+            <EventCode>OCF</EventCode>
+            <Sequence>1</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Ex Factory</Description>
+            <EventCode>EXW</EventCode>
+            <Sequence>2</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Origin Receival at Wharf / Depot</Description>
+            <EventCode>GIN</EventCode>
+            <Sequence>3</Sequence>
+            <ActualDate />
+            <ConditionReference>FAC=CTO</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Departure</Description>
+            <EventCode>DEP</EventCode>
+            <Sequence>4</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;FirstLeg.Origin&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Arrival</Description>
+            <EventCode>ARV</EventCode>
+            <Sequence>5</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;LastLeg.Destination&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Commenced</Description>
+            <EventCode>CCC</EventCode>
+            <Sequence>6</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Finalized</Description>
+            <EventCode>CLR</EventCode>
+            <Sequence>7</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Unpacked</Description>
+            <EventCode>CAV</EventCode>
+            <Sequence>8</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Estimated Pickup</Description>
+            <EventCode>DCA</EventCode>
+            <Sequence>9</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Order Delivered</Description>
+            <EventCode>DCF</EventCode>
+            <Sequence>10</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+        </MilestoneCollection>
+        <OrganizationAddressCollection>
+          <OrganizationAddress>
+            <AddressType>ConsigneeDocumentaryAddress</AddressType>
+            <Address1>20 COTE DE LA FABRIQUE</Address1>
+            <Address2 />
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>OECADDRESS</AddressShortCode>
+            <City>QUEBEC</City>
+            <CompanyName>LA MAISON SIMONS</CompanyName>
+            <Country>
+              <Code>CA</Code>
+              <Name>Canada</Name>
+            </Country>
+            <Email>info@lamaison.com</Email>
+            <Fax />
+            <OrganizationCode>LAMAISYQB</OrganizationCode>
+            <Phone />
+            <Port>
+              <Code>CAQUE</Code>
+              <Name>Quebec</Name>
+            </Port>
+            <Postcode>G1R 3V9</Postcode>
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State>QC</State>
+            <RegistrationNumberCollection />
+          </OrganizationAddress>
+        </OrganizationAddressCollection>
+      </RelatedShipment>
+      <RelatedShipment>
+        <DataContext>
+          <DataSourceCollection>
+            <DataSource>
+              <Type>OrderManagerOrder</Type>
+              <Key>OEC70013~0~LAMAISYQB</Key>
+            </DataSource>
+          </DataSourceCollection>
+        </DataContext>
+        <AdditionalTerms />
+        <BookingConfirmationReference />
+        <CommercialInfo>
+          <CommercialInvoiceCollection>
+            <CommercialInvoice>
+              <InvoiceNumber />
+              <InvoiceDate />
+            </CommercialInvoice>
+          </CommercialInvoiceCollection>
+        </CommercialInfo>
+        <ContainerMode>
+          <Code>FCL</Code>
+          <Description>Full Container Load</Description>
+        </ContainerMode>
+        <FirstBuyerContact />
+        <FreightRate>1.000000000</FreightRate>
+        <FreightRateCurrency>
+          <Code>HKD</Code>
+          <Description>Hong Kong Dollar</Description>
+        </FreightRateCurrency>
+        <GoodsDescription />
+        <OuterPacks>0</OuterPacks>
+        <OuterPacksPackageType>
+          <Code>PLT</Code>
+          <Description>Pallet</Description>
+        </OuterPacksPackageType>
+        <SecondBuyerContact />
+        <ServiceLevel>
+          <Code />
+        </ServiceLevel>
+        <ShipmentIncoTerm>
+          <Code>FOB</Code>
+          <Description>Free On Board</Description>
+        </ShipmentIncoTerm>
+        <TotalVolume>0.000</TotalVolume>
+        <TotalVolumeUnit>
+          <Code>M3</Code>
+          <Description>Cubic Meters</Description>
+        </TotalVolumeUnit>
+        <TotalWeight>0.000</TotalWeight>
+        <TotalWeightUnit>
+          <Code>KG</Code>
+          <Description>Kilograms</Description>
+        </TotalWeightUnit>
+        <TransportMode>
+          <Code />
+        </TransportMode>
+        <WayBillNumber />
+        <WayBillType>
+          <Code>HWB</Code>
+          <Description>House Waybill</Description>
+        </WayBillType>
+        <LocalProcessing>
+          <DeliveryRequiredBy />
+        </LocalProcessing>
+        <Order>
+          <OrderNumber>OEC70013</OrderNumber>
+          <ClientReference />
+          <OrderNumberSplit>0</OrderNumberSplit>
+          <Status>
+            <Code>INC</Code>
+            <Description>Order Incomplete</Description>
+          </Status>
+          <OrderLineCollection>
+            <OrderLine>
+              <AdditionalInformation />
+              <AdditionalTerms />
+              <CommercialInvoiceNumber />
+              <ConfirmationNumber />
+              <ContainerNumber />
+              <ContainerPackingOrder>0</ContainerPackingOrder>
+              <CustomsData />
+              <ExpectedQuantity>0.00000</ExpectedQuantity>
+              <ExtendedLinePrice>0.0000</ExtendedLinePrice>
+              <IncoTerm>
+                <Code />
+              </IncoTerm>
+              <InnerPacksQty>3100.000</InnerPacksQty>
+              <InnerPacksQtyUnit>
+                <Code />
+              </InnerPacksQtyUnit>
+              <LineNumber>1</LineNumber>
+              <LineSplitNumber>0</LineSplitNumber>
+              <Link>3</Link>
+              <OrderedQty>3100.00000</OrderedQty>
+              <OrderedQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </OrderedQtyUnit>
+              <PackageHeight>0.000</PackageHeight>
+              <PackageLength>0.000</PackageLength>
+              <PackageLengthUnit>
+                <Code />
+                <Description />
+              </PackageLengthUnit>
+              <PackageQty>3100.000</PackageQty>
+              <PackageQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </PackageQtyUnit>
+              <PackageWidth>0.000</PackageWidth>
+              <PartAttribute1 />
+              <PartAttribute2 />
+              <PartAttribute3 />
+              <Product>
+                <Code>660818</Code>
+                <Description />
+              </Product>
+              <QuantityMet>0.00000</QuantityMet>
+              <RequiredExWorks />
+              <RequiredInStore />
+              <SpecialInstructions />
+              <Status>
+                <Code>PLC</Code>
+                <Description>Order Placed / finalized</Description>
+              </Status>
+              <SubLineNumber>1</SubLineNumber>
+              <SupplierConfirmedAcceptance />
+              <UnitPriceRecommended>0.0000</UnitPriceRecommended>
+              <Volume>0.000</Volume>
+              <VolumeUnit>
+                <Code />
+              </VolumeUnit>
+              <Weight>0.000</Weight>
+              <WeightUnit>
+                <Code />
+              </WeightUnit>
+            </OrderLine>
+          </OrderLineCollection>
+        </Order>
+        <AdditionalBillCollection>
+          <AdditionalBill>
+            <BillNumber />
+            <BillType>
+              <Code>MWB</Code>
+              <Description>Master Waybill</Description>
+            </BillType>
+          </AdditionalBill>
+        </AdditionalBillCollection>
+        <DateCollection>
+          <Date>
+            <Type>BookingConfirmed</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>DepartureVesselCutoffDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>ExWorksRequiredBy</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-22T00:00:00</Value>
+          </Date>
+          <Date>
+            <Type>FollowUp</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>OrderDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-16T11:30:00</Value>
+          </Date>
+        </DateCollection>
+        <MilestoneCollection>
+          <Milestone>
+            <Description>Order Confirmed</Description>
+            <EventCode>OCF</EventCode>
+            <Sequence>1</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Ex Factory</Description>
+            <EventCode>EXW</EventCode>
+            <Sequence>2</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Origin Receival at Wharf / Depot</Description>
+            <EventCode>GIN</EventCode>
+            <Sequence>3</Sequence>
+            <ActualDate />
+            <ConditionReference>FAC=CTO</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Departure</Description>
+            <EventCode>DEP</EventCode>
+            <Sequence>4</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;FirstLeg.Origin&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Arrival</Description>
+            <EventCode>ARV</EventCode>
+            <Sequence>5</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;LastLeg.Destination&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Commenced</Description>
+            <EventCode>CCC</EventCode>
+            <Sequence>6</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Finalized</Description>
+            <EventCode>CLR</EventCode>
+            <Sequence>7</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Unpacked</Description>
+            <EventCode>CAV</EventCode>
+            <Sequence>8</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Estimated Pickup</Description>
+            <EventCode>DCA</EventCode>
+            <Sequence>9</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Order Delivered</Description>
+            <EventCode>DCF</EventCode>
+            <Sequence>10</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+        </MilestoneCollection>
+        <OrganizationAddressCollection>
+          <OrganizationAddress>
+            <AddressType>ConsigneeDocumentaryAddress</AddressType>
+            <Address1>20 COTE DE LA FABRIQUE</Address1>
+            <Address2 />
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>OECADDRESS</AddressShortCode>
+            <City>QUEBEC</City>
+            <CompanyName>LA MAISON SIMONS</CompanyName>
+            <Country>
+              <Code>CA</Code>
+              <Name>Canada</Name>
+            </Country>
+            <Email>info@lamaison.com</Email>
+            <Fax />
+            <OrganizationCode>LAMAISYQB</OrganizationCode>
+            <Phone />
+            <Port>
+              <Code>CAQUE</Code>
+              <Name>Quebec</Name>
+            </Port>
+            <Postcode>G1R 3V9</Postcode>
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State>QC</State>
+            <RegistrationNumberCollection />
+          </OrganizationAddress>
+        </OrganizationAddressCollection>
+      </RelatedShipment>
+      <RelatedShipment>
+        <DataContext>
+          <DataSourceCollection>
+            <DataSource>
+              <Type>OrderManagerOrder</Type>
+              <Key>OEC70014~0~LAMAISYQB</Key>
+            </DataSource>
+          </DataSourceCollection>
+        </DataContext>
+        <AdditionalTerms />
+        <BookingConfirmationReference />
+        <CommercialInfo>
+          <CommercialInvoiceCollection>
+            <CommercialInvoice>
+              <InvoiceNumber />
+              <InvoiceDate />
+            </CommercialInvoice>
+          </CommercialInvoiceCollection>
+        </CommercialInfo>
+        <ContainerMode>
+          <Code>FCL</Code>
+          <Description>Full Container Load</Description>
+        </ContainerMode>
+        <FirstBuyerContact />
+        <FreightRate>1.000000000</FreightRate>
+        <FreightRateCurrency>
+          <Code>HKD</Code>
+          <Description>Hong Kong Dollar</Description>
+        </FreightRateCurrency>
+        <GoodsDescription />
+        <OuterPacks>0</OuterPacks>
+        <OuterPacksPackageType>
+          <Code>PLT</Code>
+          <Description>Pallet</Description>
+        </OuterPacksPackageType>
+        <SecondBuyerContact />
+        <ServiceLevel>
+          <Code />
+        </ServiceLevel>
+        <ShipmentIncoTerm>
+          <Code>FOB</Code>
+          <Description>Free On Board</Description>
+        </ShipmentIncoTerm>
+        <TotalVolume>0.000</TotalVolume>
+        <TotalVolumeUnit>
+          <Code>M3</Code>
+          <Description>Cubic Meters</Description>
+        </TotalVolumeUnit>
+        <TotalWeight>0.000</TotalWeight>
+        <TotalWeightUnit>
+          <Code>KG</Code>
+          <Description>Kilograms</Description>
+        </TotalWeightUnit>
+        <TransportMode>
+          <Code />
+        </TransportMode>
+        <WayBillNumber />
+        <WayBillType>
+          <Code>HWB</Code>
+          <Description>House Waybill</Description>
+        </WayBillType>
+        <LocalProcessing>
+          <DeliveryRequiredBy />
+        </LocalProcessing>
+        <Order>
+          <OrderNumber>OEC70014</OrderNumber>
+          <ClientReference />
+          <OrderNumberSplit>0</OrderNumberSplit>
+          <Status>
+            <Code>INC</Code>
+            <Description>Order Incomplete</Description>
+          </Status>
+          <OrderLineCollection>
+            <OrderLine>
+              <AdditionalInformation />
+              <AdditionalTerms />
+              <CommercialInvoiceNumber />
+              <ConfirmationNumber />
+              <ContainerNumber />
+              <ContainerPackingOrder>0</ContainerPackingOrder>
+              <CustomsData />
+              <ExpectedQuantity>0.00000</ExpectedQuantity>
+              <ExtendedLinePrice>0.0000</ExtendedLinePrice>
+              <IncoTerm>
+                <Code />
+              </IncoTerm>
+              <InnerPacksQty>4100.000</InnerPacksQty>
+              <InnerPacksQtyUnit>
+                <Code />
+              </InnerPacksQtyUnit>
+              <LineNumber>1</LineNumber>
+              <LineSplitNumber>0</LineSplitNumber>
+              <Link>4</Link>
+              <OrderedQty>4100.00000</OrderedQty>
+              <OrderedQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </OrderedQtyUnit>
+              <PackageHeight>0.000</PackageHeight>
+              <PackageLength>0.000</PackageLength>
+              <PackageLengthUnit>
+                <Code />
+                <Description />
+              </PackageLengthUnit>
+              <PackageQty>4200.000</PackageQty>
+              <PackageQtyUnit>
+                <Code>UNT</Code>
+                <Description>Unit</Description>
+              </PackageQtyUnit>
+              <PackageWidth>0.000</PackageWidth>
+              <PartAttribute1 />
+              <PartAttribute2 />
+              <PartAttribute3 />
+              <Product>
+                <Code>660818</Code>
+                <Description />
+              </Product>
+              <QuantityMet>0.00000</QuantityMet>
+              <RequiredExWorks />
+              <RequiredInStore />
+              <SpecialInstructions />
+              <Status>
+                <Code>PLC</Code>
+                <Description>Order Placed / finalized</Description>
+              </Status>
+              <SubLineNumber>1</SubLineNumber>
+              <SupplierConfirmedAcceptance />
+              <UnitPriceRecommended>0.0000</UnitPriceRecommended>
+              <Volume>0.000</Volume>
+              <VolumeUnit>
+                <Code />
+              </VolumeUnit>
+              <Weight>0.000</Weight>
+              <WeightUnit>
+                <Code />
+              </WeightUnit>
+            </OrderLine>
+          </OrderLineCollection>
+        </Order>
+        <AdditionalBillCollection>
+          <AdditionalBill>
+            <BillNumber />
+            <BillType>
+              <Code>MWB</Code>
+              <Description>Master Waybill</Description>
+            </BillType>
+          </AdditionalBill>
+        </AdditionalBillCollection>
+        <DateCollection>
+          <Date>
+            <Type>BookingConfirmed</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>DepartureVesselCutoffDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>ExWorksRequiredBy</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-22T00:00:00</Value>
+          </Date>
+          <Date>
+            <Type>FollowUp</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value />
+          </Date>
+          <Date>
+            <Type>OrderDate</Type>
+            <IsEstimate>false</IsEstimate>
+            <Value>2017-11-16T11:30:00</Value>
+          </Date>
+        </DateCollection>
+        <MilestoneCollection>
+          <Milestone>
+            <Description>Order Confirmed</Description>
+            <EventCode>OCF</EventCode>
+            <Sequence>1</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Ex Factory</Description>
+            <EventCode>EXW</EventCode>
+            <Sequence>2</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Origin Receival at Wharf / Depot</Description>
+            <EventCode>GIN</EventCode>
+            <Sequence>3</Sequence>
+            <ActualDate />
+            <ConditionReference>FAC=CTO</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Departure</Description>
+            <EventCode>DEP</EventCode>
+            <Sequence>4</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;FirstLeg.Origin&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Arrival</Description>
+            <EventCode>ARV</EventCode>
+            <Sequence>5</Sequence>
+            <ActualDate />
+            <ConditionReference>LOC=&lt;LastLeg.Destination&gt;</ConditionReference>
+            <ConditionType>RFP</ConditionType>
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Commenced</Description>
+            <EventCode>CCC</EventCode>
+            <Sequence>6</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Clearance Finalized</Description>
+            <EventCode>CLR</EventCode>
+            <Sequence>7</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Unpacked</Description>
+            <EventCode>CAV</EventCode>
+            <Sequence>8</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Estimated Pickup</Description>
+            <EventCode>DCA</EventCode>
+            <Sequence>9</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+          <Milestone>
+            <Description>Order Delivered</Description>
+            <EventCode>DCF</EventCode>
+            <Sequence>10</Sequence>
+            <ActualDate />
+            <ConditionReference />
+            <ConditionType />
+            <EstimatedDate />
+          </Milestone>
+        </MilestoneCollection>
+        <OrganizationAddressCollection>
+          <OrganizationAddress>
+            <AddressType>ConsigneeDocumentaryAddress</AddressType>
+            <Address1>20 COTE DE LA FABRIQUE</Address1>
+            <Address2 />
+            <AddressOverride>false</AddressOverride>
+            <AddressShortCode>OECADDRESS</AddressShortCode>
+            <City>QUEBEC</City>
+            <CompanyName>LA MAISON SIMONS</CompanyName>
+            <Country>
+              <Code>CA</Code>
+              <Name>Canada</Name>
+            </Country>
+            <Email>info@lamaison.com</Email>
+            <Fax />
+            <OrganizationCode>LAMAISYQB</OrganizationCode>
+            <Phone />
+            <Port>
+              <Code>CAQUE</Code>
+              <Name>Quebec</Name>
+            </Port>
+            <Postcode>G1R 3V9</Postcode>
+            <ScreeningStatus>
+              <Code>UNK</Code>
+              <Description>Unknown</Description>
+            </ScreeningStatus>
+            <State>QC</State>
+            <RegistrationNumberCollection />
+          </OrganizationAddress>
+        </OrganizationAddressCollection>
+      </RelatedShipment>
+    </RelatedShipmentCollection>
+  </Shipment>
 </UniversalShipment>

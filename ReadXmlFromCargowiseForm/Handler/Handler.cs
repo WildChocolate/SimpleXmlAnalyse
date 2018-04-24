@@ -14,6 +14,10 @@ namespace ReadXmlFromCargowiseForm
     {
         public event EventHandler<ExtractCompletedEventArgs> ExtractCompleted;
         public event EventHandler<SaveFileCompletedEventArgs> SaveFileCompleled;
+        string Patt
+        {
+            get { return @"<(UniversalShipment)[^>]*>[\s\S]+</\1>"; }
+        }
         /// <summary>
         /// 如果有特殊集合 像 xxCollection, 子节点直接为值的，放在这里，ConvertInstanceToFile 生成文件的时候再处理
         /// </summary>
@@ -52,7 +56,20 @@ namespace ReadXmlFromCargowiseForm
             var newpath = CheckFilePath(filePath);
             if (newpath.Length > 0)
             {
-                return ReadFile(newpath);
+                using (var fs = File.OpenRead(filePath))
+                {
+                    var buffer = new byte[fs.Length];
+                    fs.Read(buffer, 0, buffer.Length);
+                    var content = Encoding.UTF8.GetString(buffer);
+                    if (Regex.IsMatch(content, Patt))
+                    {
+                        return ReadFile(content);
+                    }
+                    else
+                    {
+                        throw new FileFormatException("文件内容不符合：<UniversalShipment>...</UniversalShipment>");
+                    }
+                }
             }
             else {
                 throw new FileNotFoundException("不存在文件或文件路径不合法！！！");

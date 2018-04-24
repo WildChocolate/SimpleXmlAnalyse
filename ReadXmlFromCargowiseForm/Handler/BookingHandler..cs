@@ -28,22 +28,15 @@ namespace ReadXmlFromCargowiseForm
         {
             get { return specialCollection; }
         }
-        public override Shipment ReadFile(string filePath)
+        public override Shipment ReadFile(string content)
         {
-            using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read))
-            {
-                using (StreamReader sr = new StreamReader(fs))
-                {
-                    //带命名空间时可以用XName取元素，也可以在用 var r = root.Element(xmlns + "元素名"),xmlns为XNamespace
-                    //XDocument xdoc = XDocument.Load(fs);
-                    //var Xname = XName.Get("Header", "http://www.cargowise.com/Schemas/Universal/2011/11");
-                    //var root = xdoc.Root;
-                    //XNamespace xmlns = "http://www.cargowise.com/Schemas/Universal/2011/11";
-
-                    string text = sr.ReadToEnd();
-                    return GetShipmentByText(text);
-                }
-            }
+           
+            //带命名空间时可以用XName取元素，也可以在用 var r = root.Element(xmlns + "元素名"),xmlns为XNamespace
+            //XDocument xdoc = XDocument.Load(fs);
+            //var Xname = XName.Get("Header", "http://www.cargowise.com/Schemas/Universal/2011/11");
+            //var root = xdoc.Root;
+            //XNamespace xmlns = "http://www.cargowise.com/Schemas/Universal/2011/11";
+            return GetShipmentByText(content);
         }
         public override string ConvertInstanceToFile(Shipment Instance)
         {
@@ -58,7 +51,6 @@ namespace ReadXmlFromCargowiseForm
                 uShipment.Shipment = Instance;
                 var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
                 xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s]*>", "<UniversalShipment>");
-                
                 using (StreamWriter tw = new StreamWriter(@"XML\BookingResult.xml", false))
                 {
                     tw.WriteLine(xShipmentString);                                                                          
