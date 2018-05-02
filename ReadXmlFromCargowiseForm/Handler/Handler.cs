@@ -54,25 +54,19 @@ namespace ReadXmlFromCargowiseForm
         public abstract string ConvertInstanceToFile(T Instance);
         public virtual T GetShipment(string filePath) {
             var newpath = CheckFilePath(filePath);
-            if (newpath.Length > 0)
+            using (var fs = File.OpenRead(filePath))
             {
-                using (var fs = File.OpenRead(filePath))
+                var buffer = new byte[fs.Length];
+                fs.Read(buffer, 0, buffer.Length);
+                var content = Encoding.UTF8.GetString(buffer);
+                if (Regex.IsMatch(content, Patt))
                 {
-                    var buffer = new byte[fs.Length];
-                    fs.Read(buffer, 0, buffer.Length);
-                    var content = Encoding.UTF8.GetString(buffer);
-                    if (Regex.IsMatch(content, Patt))
-                    {
-                        return ReadFile(content);
-                    }
-                    else
-                    {
-                        throw new FileFormatException("文件内容不符合：<UniversalShipment>...</UniversalShipment>");
-                    }
+                    return ReadFile(content);
                 }
-            }
-            else {
-                throw new FileNotFoundException("不存在文件或文件路径不合法！！！");
+                else
+                {
+                    throw new FileFormatException("文件内容不符合：<UniversalShipment>...</UniversalShipment>");
+                }
             }
         }
         

@@ -34,13 +34,17 @@
             this.ConsolBtn = new System.Windows.Forms.Button();
             this.ConsolFileBtn = new System.Windows.Forms.Button();
             this.BookingFileBtn = new System.Windows.Forms.Button();
-            this.FilenameTxt = new System.Windows.Forms.TextBox();
+            this.FileTxt = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.UploadBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.FileContentTV = new System.Windows.Forms.TreeView();
-            this.UploadBtn = new System.Windows.Forms.Button();
+            this.FileContentTv = new System.Windows.Forms.TreeView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabOrigin = new System.Windows.Forms.TabPage();
+            this.tabResult = new System.Windows.Forms.TabPage();
+            this.ResultTv = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -49,6 +53,9 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabOrigin.SuspendLayout();
+            this.tabResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // ShipmentBtn
@@ -111,15 +118,15 @@
             this.BookingFileBtn.UseVisualStyleBackColor = true;
             this.BookingFileBtn.Click += new System.EventHandler(this.button6_Click);
             // 
-            // FilenameTxt
+            // FileTxt
             // 
-            this.FilenameTxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FilenameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FilenameTxt.Location = new System.Drawing.Point(13, 20);
-            this.FilenameTxt.Name = "FilenameTxt";
-            this.FilenameTxt.ReadOnly = true;
-            this.FilenameTxt.Size = new System.Drawing.Size(733, 21);
-            this.FilenameTxt.TabIndex = 7;
+            this.FileTxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FileTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FileTxt.Location = new System.Drawing.Point(13, 20);
+            this.FileTxt.Name = "FileTxt";
+            this.FileTxt.ReadOnly = true;
+            this.FileTxt.Size = new System.Drawing.Size(733, 21);
+            this.FileTxt.TabIndex = 7;
             // 
             // openFileDialog1
             // 
@@ -138,7 +145,7 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.UploadBtn);
             this.splitContainer1.Panel1.Controls.Add(this.linkLabel1);
-            this.splitContainer1.Panel1.Controls.Add(this.FilenameTxt);
+            this.splitContainer1.Panel1.Controls.Add(this.FileTxt);
             // 
             // splitContainer1.Panel2
             // 
@@ -146,6 +153,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(867, 578);
             this.splitContainer1.SplitterDistance = 82;
             this.splitContainer1.TabIndex = 8;
+            // 
+            // UploadBtn
+            // 
+            this.UploadBtn.Location = new System.Drawing.Point(753, 17);
+            this.UploadBtn.Name = "UploadBtn";
+            this.UploadBtn.Size = new System.Drawing.Size(75, 23);
+            this.UploadBtn.TabIndex = 9;
+            this.UploadBtn.Text = "选择文件";
+            this.UploadBtn.UseVisualStyleBackColor = true;
+            this.UploadBtn.Click += new System.EventHandler(this.UploadBtn_Click);
             // 
             // linkLabel1
             // 
@@ -175,30 +192,62 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.FileContentTV);
+            this.splitContainer2.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer2.Size = new System.Drawing.Size(867, 492);
             this.splitContainer2.SplitterDistance = 209;
             this.splitContainer2.TabIndex = 0;
             // 
-            // FileContentTV
+            // FileContentTv
             // 
-            this.FileContentTV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FileContentTV.LabelEdit = true;
-            this.FileContentTV.Location = new System.Drawing.Point(0, 0);
-            this.FileContentTV.Name = "FileContentTV";
-            this.FileContentTV.Size = new System.Drawing.Size(654, 492);
-            this.FileContentTV.TabIndex = 0;
-            this.FileContentTV.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.FileContentTV_AfterLabelEdit);
+            this.FileContentTv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileContentTv.LabelEdit = true;
+            this.FileContentTv.Location = new System.Drawing.Point(3, 3);
+            this.FileContentTv.Name = "FileContentTv";
+            this.FileContentTv.Size = new System.Drawing.Size(640, 460);
+            this.FileContentTv.TabIndex = 0;
+            this.FileContentTv.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.FileContentTV_AfterLabelEdit);
             // 
-            // UploadBtn
+            // tabControl1
             // 
-            this.UploadBtn.Location = new System.Drawing.Point(753, 17);
-            this.UploadBtn.Name = "UploadBtn";
-            this.UploadBtn.Size = new System.Drawing.Size(75, 23);
-            this.UploadBtn.TabIndex = 9;
-            this.UploadBtn.Text = "选择文件";
-            this.UploadBtn.UseVisualStyleBackColor = true;
-            this.UploadBtn.Click += new System.EventHandler(this.UploadBtn_Click);
+            this.tabControl1.Controls.Add(this.tabOrigin);
+            this.tabControl1.Controls.Add(this.tabResult);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(654, 492);
+            this.tabControl1.TabIndex = 1;
+            // 
+            // tabOrigin
+            // 
+            this.tabOrigin.Controls.Add(this.FileContentTv);
+            this.tabOrigin.Location = new System.Drawing.Point(4, 22);
+            this.tabOrigin.Name = "tabOrigin";
+            this.tabOrigin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabOrigin.Size = new System.Drawing.Size(646, 466);
+            this.tabOrigin.TabIndex = 0;
+            this.tabOrigin.Text = "TabOrigin";
+            this.tabOrigin.UseVisualStyleBackColor = true;
+            // 
+            // tabResult
+            // 
+            this.tabResult.Controls.Add(this.ResultTv);
+            this.tabResult.Location = new System.Drawing.Point(4, 22);
+            this.tabResult.Name = "tabResult";
+            this.tabResult.Padding = new System.Windows.Forms.Padding(3);
+            this.tabResult.Size = new System.Drawing.Size(646, 466);
+            this.tabResult.TabIndex = 1;
+            this.tabResult.Text = "TabResult";
+            this.tabResult.UseVisualStyleBackColor = true;
+            // 
+            // ResultTv
+            // 
+            this.ResultTv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ResultTv.LabelEdit = true;
+            this.ResultTv.Location = new System.Drawing.Point(3, 3);
+            this.ResultTv.Name = "ResultTv";
+            this.ResultTv.Size = new System.Drawing.Size(640, 460);
+            this.ResultTv.TabIndex = 1;
             // 
             // ConvertFrm
             // 
@@ -209,6 +258,7 @@
             this.Name = "ConvertFrm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ConvertFrm_Paint);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -218,6 +268,9 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabOrigin.ResumeLayout(false);
+            this.tabResult.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -230,13 +283,17 @@
         private System.Windows.Forms.Button ConsolBtn;
         private System.Windows.Forms.Button ConsolFileBtn;
         private System.Windows.Forms.Button BookingFileBtn;
-        private System.Windows.Forms.TextBox FilenameTxt;
+        private System.Windows.Forms.TextBox FileTxt;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TreeView FileContentTV;
+        private System.Windows.Forms.TreeView FileContentTv;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button UploadBtn;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabOrigin;
+        private System.Windows.Forms.TabPage tabResult;
+        private System.Windows.Forms.TreeView ResultTv;
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
@@ -64,7 +65,7 @@ namespace XmlRepository
                 if (obj == null)
                     throw new ArgumentNullException("obj");
 
-                var ser = new XmlSerializer(obj.GetType());
+                var ser = new XmlSerializer(typeof(T));
                 using (var ms = new MemoryStream())
                 {
                     using (var writer = new XmlTextWriter(ms, encoding))
@@ -73,8 +74,9 @@ namespace XmlRepository
                         ser.Serialize(writer, obj);
                     }
                     var xml = encoding.GetString(ms.ToArray());
-                    xml = xml.Replace("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
-                    xml = xml.Replace("xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"", "");
+                    //xml = xml.Replace("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
+                    //xml = xml.Replace("xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"", "");
+                    xml = Regex.Replace(xml, @"<UniversalShipment[^>]*>", "<UniversalShipment>");
                     return xml;
                 }
             }

@@ -17,3 +17,4 @@ C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConso
 C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\Microsoft.Dynamic.xml
 C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\Microsoft.Scripting.xml
 C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\XmlRepository\obj\Debug\XmlRepository.csprojResolveAssemblyReference.cache

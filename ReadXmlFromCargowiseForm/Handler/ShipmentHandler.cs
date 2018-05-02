@@ -60,7 +60,7 @@ namespace ReadXmlFromCargowiseForm
                 var uShipment = new UniversalShipment();
                 uShipment.Shipment = Instance;
                 var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
-                xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s\w]*>", "<UniversalShipment>");
+                
                 //以下为特殊节点进行特殊处理
                 if (SpecialCollection.Count > 0)
                 {

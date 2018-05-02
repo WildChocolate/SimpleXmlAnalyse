@@ -43,7 +43,7 @@ namespace ReadXmlFromCargowiseForm
                 var uShipment = new UniversalShipment();
                 uShipment.Shipment = Instance;
                 var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
-                xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s]*>", "<UniversalShipment>");
+                //xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s]*>", "<UniversalShipment>");
                 using (StreamWriter tw = new StreamWriter(@"XML\ConsolResult.xml", false))
                 {
                     tw.WriteLine(xShipmentString);

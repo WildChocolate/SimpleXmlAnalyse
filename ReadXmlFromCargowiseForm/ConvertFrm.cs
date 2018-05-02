@@ -45,6 +45,21 @@ namespace ReadXmlFromCargowiseForm
             bookingHandler.SaveFileCompleled += bookingHandler_SaveFileCompleled;
             consolHandler.SaveFileCompleled += consolHandler_SaveFileCompleled;
         }
+        string FilePath
+        {
+            get
+            {
+                if (FileTxt.Text.EndsWith(".xml"))
+                {
+                    return FileTxt.Text;
+                }
+                else
+                {
+                    MessageBox.Show("请上传XML文件");
+                    return "";
+                }
+            }
+        }
         private void showPathMsg(string path)
         {
             MessageBox.Show("保存成功，文件路径为--> "+path);
@@ -52,17 +67,36 @@ namespace ReadXmlFromCargowiseForm
         void consolHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
             showPathMsg(e.FilePath);
+            using (var fs = File.OpenRead(e.FilePath))
+            {
+                var doc = XDocument.Load(fs);
+                LoadDocIntoTreeview(ResultTv, doc);
+
+            }
+            ExpandShipmentNode(ResultTv.TopNode, "Shipment");
         }
 
 
         void bookingHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
             showPathMsg(e.FilePath);
+            using (var fs = File.OpenRead(e.FilePath))
+            {
+                var doc = XDocument.Load(fs);
+                LoadDocIntoTreeview(ResultTv, doc);
+            }
+            ExpandShipmentNode(ResultTv.TopNode, "Shipment");
         }
 
         void shipmentHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
             showPathMsg(e.FilePath);
+            using (var fs = File.OpenRead(e.FilePath))
+            {
+                var doc = XDocument.Load(fs);
+                LoadDocIntoTreeview(ResultTv, doc);
+            };
+            ExpandShipmentNode(ResultTv.TopNode, "Shipment");
         }
 
         void consolHandler_ExtractCompleted(object sender, ExtractCompletedEventArgs e)
@@ -82,11 +116,13 @@ namespace ReadXmlFromCargowiseForm
         
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(FilePath))
+                return;
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             try
             {
-                var task = shipmentHandler.GetShipmentAsync(@"XML\Message04" + ".xml");//获取Shipment
+                var task = shipmentHandler.GetShipmentAsync(FilePath);//获取Shipment
                 task.ContinueWith(t =>
                 {
                     shipment = t.Result;
@@ -109,11 +145,13 @@ namespace ReadXmlFromCargowiseForm
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(FilePath))
+                return;
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             try
             {
-                var task = bookingHandler.GetShipmentAsync(@"XML\Booking2" + ".xml");//获取Shipment
+                var task = bookingHandler.GetShipmentAsync(FilePath);//获取Shipment
                 task.ContinueWith(t => {
                     Booking = t.Result;
                     stopwatch.Stop();
@@ -144,12 +182,14 @@ namespace ReadXmlFromCargowiseForm
         
         private void button4_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(FilePath))
+                return;
             try
             {
                 //由于Consol的处理时间比较长，所以用异步方法
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
-                var task = consolHandler.GetShipmentAsync(@"XML\Consol01.xml");//获取Shipment
+                var task = consolHandler.GetShipmentAsync(FilePath);//获取Shipment
                 ConsolBtn.Text = "Process waiting....";
                 task.ContinueWith((t) =>
                 {
@@ -226,12 +266,12 @@ namespace ReadXmlFromCargowiseForm
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    FilenameTxt.Text = openFileDialog1.FileName;
+                    FileTxt.Text = openFileDialog1.FileName;
                     if (File.Exists(openFileDialog1.FileName) && openFileDialog1.FileName.EndsWith(".xml"))
                     {
                         var xdoc = XDocument.Load(openFileDialog1.FileName);
-                        FileContentTV.Nodes.Clear();
-                        LoadDocIntoTreeview(FileContentTV, xdoc);
+                        FileContentTv.Nodes.Clear();
+                        LoadDocIntoTreeview(FileContentTv, xdoc);
                     }
                     else
                     {
@@ -357,8 +397,13 @@ namespace ReadXmlFromCargowiseForm
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            sendFrm.FilePath = FilenameTxt.Text;
+            sendFrm.FilePath = FileTxt.Text;
             sendFrm.ShowDialog();
+        }
+
+        private void ConvertFrm_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
 
         //private void FileContentTV_BeforeLabelEdit(object sender, NodeLabelEditEventArgs e)
