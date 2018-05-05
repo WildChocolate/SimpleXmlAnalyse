@@ -67,38 +67,31 @@ namespace ReadXmlFromCargowiseForm
         void consolHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
             showPathMsg(e.FilePath);
-            using (var fs = File.OpenRead(e.FilePath))
-            {
-                var doc = XDocument.Load(fs);
-                LoadDocIntoTreeview(ResultTv, doc);
-
-            }
-            ExpandShipmentNode(ResultTv.TopNode, "Shipment");
+            ShowInResult(e.FilePath);
         }
 
 
         void bookingHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
             showPathMsg(e.FilePath);
-            using (var fs = File.OpenRead(e.FilePath))
-            {
-                var doc = XDocument.Load(fs);
-                LoadDocIntoTreeview(ResultTv, doc);
-            }
-            ExpandShipmentNode(ResultTv.TopNode, "Shipment");
+            ShowInResult(e.FilePath);
         }
 
         void shipmentHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
             showPathMsg(e.FilePath);
-            using (var fs = File.OpenRead(e.FilePath))
+            ShowInResult(e.FilePath);
+        }
+        void ShowInResult(string FilePath)
+        {
+            using (var fs = File.OpenRead(FilePath))
             {
+                ResultTv.Nodes.Clear();
                 var doc = XDocument.Load(fs);
                 LoadDocIntoTreeview(ResultTv, doc);
-            };
+            }
             ExpandShipmentNode(ResultTv.TopNode, "Shipment");
         }
-
         void consolHandler_ExtractCompleted(object sender, ExtractCompletedEventArgs e)
         {
             //consol转换完成后的后续操作
