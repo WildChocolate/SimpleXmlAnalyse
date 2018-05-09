@@ -30,6 +30,9 @@ namespace ReadXmlFromCargowiseForm
         static string Bracket = " => ";
         SendFrm sendFrm;
 
+        /// <summary>
+        /// 批量转换处理类型
+        /// </summary>
         enum ConvertType
         {
             Shipment,
@@ -45,12 +48,14 @@ namespace ReadXmlFromCargowiseForm
             shipmentHandler = new ShipmentHandler();
             bookingHandler = new BookingHandler();
             consolHandler = new ConsolHandler();
+            // 为各个事件添加处理程序
             shipmentHandler.ExtractCompleted += shipmentHandler_ExtractCompleted;
             bookingHandler.ExtractCompleted += bookingHandler_ExtractCompleted;
             consolHandler.ExtractCompleted += consolHandler_ExtractCompleted;
             shipmentHandler.SaveFileCompleled += shipmentHandler_SaveFileCompleled;
             bookingHandler.SaveFileCompleled += bookingHandler_SaveFileCompleled;
             consolHandler.SaveFileCompleled += consolHandler_SaveFileCompleled;
+            // 初始化选项，并调整位置
             foreach (ConvertType item in Enum.GetValues(typeof(ConvertType)))
             {
                 typeComBo.Items.Add(item.ToString());
@@ -81,26 +86,23 @@ namespace ReadXmlFromCargowiseForm
         }
         void consolHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
-            this.Invoke(new Action(()=>{
                 SaveFileCompletedHandler(e.FilePath);
-            }));
-            
         }
 
 
         void bookingHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
-            
                 SaveFileCompletedHandler(e.FilePath);
-            
         }
 
         void shipmentHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
-            
                 SaveFileCompletedHandler(e.FilePath);
-            
         }
+        /// <summary>
+        /// 文件保存成功后的处理方法
+        /// </summary>
+        /// <param name="FilePath"></param>
         void SaveFileCompletedHandler(string FilePath)
         {
             this.Invoke(new Action(()=>{
@@ -161,6 +163,7 @@ namespace ReadXmlFromCargowiseForm
                     string elapsedTime = String.Format("Shipment 提取完成，用时 {0}.{1:000}秒",
                     ts.Seconds, ts.Milliseconds);
                     MessageBox.Show(elapsedTime);
+                    //触发事件
                     shipmentHandler.RaiseExtractCompleted(shipment.BookingConfirmationReference, shipment.WayBillNumber);
                 });
             }
@@ -189,6 +192,7 @@ namespace ReadXmlFromCargowiseForm
                     string elapsedTime = String.Format("Shipment 提取完成，用时 {0}.{1}秒",
                     ts.Seconds, ts.Milliseconds);
                     MessageBox.Show(elapsedTime);
+                    //触发事件
                     bookingHandler.RaiseExtractCompleted(Booking.BookingConfirmationReference, Booking.WayBillNumber);
                 });
             }
@@ -238,6 +242,7 @@ namespace ReadXmlFromCargowiseForm
                     {
                         this.Invoke(fun, str);
                     }
+                    //触发事件
                     consolHandler.RaiseExtractCompleted(Consol.BookingConfirmationReference, Consol.WayBillNumber);
                 });
                 float second = 0f;
@@ -294,10 +299,16 @@ namespace ReadXmlFromCargowiseForm
             }
         }
 
+        /// <summary>
+        /// 文件上传按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UploadBtn_Click(object sender, EventArgs e)
         {
             try
             {
+                //显示文件选择框，分单文件和多文件
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     if (mutipleChkBox.Checked)
@@ -317,6 +328,10 @@ namespace ReadXmlFromCargowiseForm
                 WriteLog.Logging(err.Message);
             }
         }
+        /// <summary>
+        /// 选择文件后把xml文件内容填到 FileContentTv
+        /// </summary>
+        /// <param name="fileNames"></param>
         void LoadMutiFileToTv(params string[] fileNames)
         {
             FileContentTv.Nodes.Clear();
@@ -351,6 +366,11 @@ namespace ReadXmlFromCargowiseForm
                 }
             }
         }
+        /// <summary>
+        /// 展开到指定的层级
+        /// </summary>
+        /// <param name="tnode"></param>
+        /// <param name="level"></param>
         void ExpandShipmentNode(TreeNode tnode, string level) {
             tnode.Expand();
             if (tnode.FullPath.Contains(level))
@@ -391,7 +411,11 @@ namespace ReadXmlFromCargowiseForm
                 treeview.Nodes.Add(rootnode);
             }));
         }
-
+        /// <summary>
+        /// 构造树的内容节点
+        /// </summary>
+        /// <param name="Treenode"></param>
+        /// <param name="elements"></param>
         private void FillTnode(TreeNode Treenode, IEnumerable<XElement> elements)
         {
             foreach (var element in elements)
@@ -489,30 +513,37 @@ namespace ReadXmlFromCargowiseForm
 
         private void mutiConvertBtn_Click(object sender, EventArgs e)
         {
+            //转换多个文件开始
             if (openFileDialog1.FileNames.Length > 0)
             {
+                tabControl1.TabPages[1].Focus();
                 var conversion = (ConvertType)Enum.Parse(typeof(ConvertType),typeComBo.Text+string.Empty) ;
                 var files = openFileDialog1.FileNames;
                 var actions = new Action[files.Length];
                 this.mutiConvertBtn.Enabled = !this.mutiConvertBtn.Enabled;
-                
+                //根据不同的选择类型进行不同的处理
                 switch (conversion)
                 {
+                    //Booking，Consol 流程与shipment 一样，不加注释
                     case ConvertType.Shipment:
                         for (var i = 0; i < files.Length; i++)
                         {
                             var fn = files[i];
+                            //如果不加入idx变量，等到运行的时候，后缀会全部变量 i的最大值
                             var idx = i + 1;
-                            actions[i] = new Action(async () =>
+                            actions[i] = new Action( () =>
                             {
-                                NsShipment.Shipment newshipment= await shipmentHandler.GetShipmentAsync(fn);
-                                //var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_")+idx;
-                                var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx;
-                                var newf = shipmentHandler.ConvertInstanceToFile(newshipment, @"XML\Shipment" + tick + ".xml");
+                                NsShipment.Shipment newshipment=  shipmentHandler.GetShipment(fn);
+                                //构造文件名
+                                var fName = @"XML\Shipment" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx + ".xml";
+                                var newf = shipmentHandler.ConvertInstanceToFile(newshipment, fName);
                                 Console.WriteLine(string.Format("任务{0}完成：{1}", idx, newf));
-                                this.Invoke(new Action(() => { 
+                                
+                                this.Invoke(new Action(() => {
+                                    //单个任务完成后在ResultTv 添加提示信息 
                                     ResultTv.Nodes.Add(new TreeNode(string.Format("任务{0}完成：{1}", idx, newf)));
                                 }));
+                                //触发文件保存完成事件
                                 shipmentHandler.RaiseSaveFileCompleled(newf);
                             });
                         }
@@ -525,8 +556,8 @@ namespace ReadXmlFromCargowiseForm
                             actions[i] = new Action( () =>
                             {
                                 NsBooking.Shipment newshipment =  bookingHandler.GetShipment(fn);
-                                var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx;
-                                var newf = bookingHandler.ConvertInstanceToFile(newshipment, @"XML\Booking" + tick + ".xml");
+                                var fName = @"XML\Booking" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx + ".xml";
+                                var newf = bookingHandler.ConvertInstanceToFile(newshipment, fName);
                                 Console.WriteLine(string.Format("任务{0}完成：{1}", idx, newf));
                                 this.Invoke(new Action(() =>
                                 {
@@ -544,8 +575,8 @@ namespace ReadXmlFromCargowiseForm
                             actions[i] = new Action( () =>
                             {
                                 NsConsol.Shipment newshipment =  consolHandler.GetShipment(fn);
-                                var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx;
-                                var newf = consolHandler.ConvertInstanceToFile(newshipment, @"XML\Consol" + tick + ".xml");
+                                var fName = @"XML\Consol" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx + ".xml";
+                                var newf = consolHandler.ConvertInstanceToFile(newshipment, @"XML\Consol" + fName + ".xml");
                                 Console.WriteLine(string.Format("任务{0}完成：{1}", idx, newf));
                                 this.Invoke(new Action(() =>
                                 {
