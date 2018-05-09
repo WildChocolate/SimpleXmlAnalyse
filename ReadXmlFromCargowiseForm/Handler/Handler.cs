@@ -51,7 +51,7 @@ namespace ReadXmlFromCargowiseForm
         }
         public abstract T ReadFile(string filePath);
 
-        public abstract string ConvertInstanceToFile(T Instance);
+        public abstract string ConvertInstanceToFile(T Instance,string newFilePath);
         public virtual T GetShipment(string filePath) {
             var newpath = CheckFilePath(filePath);
             using (var fs = File.OpenRead(filePath))

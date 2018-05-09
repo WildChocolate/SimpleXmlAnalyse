@@ -40,11 +40,15 @@
             this.UploadBtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.FileContentTv = new System.Windows.Forms.TreeView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabOrigin = new System.Windows.Forms.TabPage();
+            this.FileContentTv = new System.Windows.Forms.TreeView();
             this.tabResult = new System.Windows.Forms.TabPage();
             this.ResultTv = new System.Windows.Forms.TreeView();
+            this.mutipleChkBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.mutiConvertBtn = new System.Windows.Forms.Button();
+            this.typeComBo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -122,7 +126,7 @@
             // 
             this.FileTxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FileTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FileTxt.Location = new System.Drawing.Point(13, 20);
+            this.FileTxt.Location = new System.Drawing.Point(102, 22);
             this.FileTxt.Name = "FileTxt";
             this.FileTxt.ReadOnly = true;
             this.FileTxt.Size = new System.Drawing.Size(733, 21);
@@ -143,6 +147,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.mutipleChkBox);
             this.splitContainer1.Panel1.Controls.Add(this.UploadBtn);
             this.splitContainer1.Panel1.Controls.Add(this.linkLabel1);
             this.splitContainer1.Panel1.Controls.Add(this.FileTxt);
@@ -150,13 +156,13 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(867, 578);
+            this.splitContainer1.Size = new System.Drawing.Size(972, 578);
             this.splitContainer1.SplitterDistance = 82;
             this.splitContainer1.TabIndex = 8;
             // 
             // UploadBtn
             // 
-            this.UploadBtn.Location = new System.Drawing.Point(753, 17);
+            this.UploadBtn.Location = new System.Drawing.Point(841, 22);
             this.UploadBtn.Name = "UploadBtn";
             this.UploadBtn.Size = new System.Drawing.Size(75, 23);
             this.UploadBtn.TabIndex = 9;
@@ -183,6 +189,8 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.mutiConvertBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.typeComBo);
             this.splitContainer2.Panel1.Controls.Add(this.BookingFileBtn);
             this.splitContainer2.Panel1.Controls.Add(this.ShipmentBtn);
             this.splitContainer2.Panel1.Controls.Add(this.ConsolBtn);
@@ -193,19 +201,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer2.Size = new System.Drawing.Size(867, 492);
-            this.splitContainer2.SplitterDistance = 209;
+            this.splitContainer2.Size = new System.Drawing.Size(972, 492);
+            this.splitContainer2.SplitterDistance = 234;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // FileContentTv
-            // 
-            this.FileContentTv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FileContentTv.LabelEdit = true;
-            this.FileContentTv.Location = new System.Drawing.Point(3, 3);
-            this.FileContentTv.Name = "FileContentTv";
-            this.FileContentTv.Size = new System.Drawing.Size(640, 460);
-            this.FileContentTv.TabIndex = 0;
-            this.FileContentTv.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.FileContentTV_AfterLabelEdit);
             // 
             // tabControl1
             // 
@@ -215,7 +213,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(654, 492);
+            this.tabControl1.Size = new System.Drawing.Size(734, 492);
             this.tabControl1.TabIndex = 1;
             // 
             // tabOrigin
@@ -224,10 +222,20 @@
             this.tabOrigin.Location = new System.Drawing.Point(4, 22);
             this.tabOrigin.Name = "tabOrigin";
             this.tabOrigin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOrigin.Size = new System.Drawing.Size(646, 466);
+            this.tabOrigin.Size = new System.Drawing.Size(726, 466);
             this.tabOrigin.TabIndex = 0;
             this.tabOrigin.Text = "TabOrigin";
             this.tabOrigin.UseVisualStyleBackColor = true;
+            // 
+            // FileContentTv
+            // 
+            this.FileContentTv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileContentTv.LabelEdit = true;
+            this.FileContentTv.Location = new System.Drawing.Point(3, 3);
+            this.FileContentTv.Name = "FileContentTv";
+            this.FileContentTv.Size = new System.Drawing.Size(720, 460);
+            this.FileContentTv.TabIndex = 0;
+            this.FileContentTv.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.FileContentTV_AfterLabelEdit);
             // 
             // tabResult
             // 
@@ -235,7 +243,7 @@
             this.tabResult.Location = new System.Drawing.Point(4, 22);
             this.tabResult.Name = "tabResult";
             this.tabResult.Padding = new System.Windows.Forms.Padding(3);
-            this.tabResult.Size = new System.Drawing.Size(646, 466);
+            this.tabResult.Size = new System.Drawing.Size(726, 466);
             this.tabResult.TabIndex = 1;
             this.tabResult.Text = "TabResult";
             this.tabResult.UseVisualStyleBackColor = true;
@@ -246,14 +254,54 @@
             this.ResultTv.LabelEdit = true;
             this.ResultTv.Location = new System.Drawing.Point(3, 3);
             this.ResultTv.Name = "ResultTv";
-            this.ResultTv.Size = new System.Drawing.Size(640, 460);
+            this.ResultTv.Size = new System.Drawing.Size(720, 460);
             this.ResultTv.TabIndex = 1;
+            // 
+            // mutipleChkBox
+            // 
+            this.mutipleChkBox.AutoSize = true;
+            this.mutipleChkBox.Location = new System.Drawing.Point(12, 27);
+            this.mutipleChkBox.Name = "mutipleChkBox";
+            this.mutipleChkBox.Size = new System.Drawing.Size(84, 16);
+            this.mutipleChkBox.TabIndex = 10;
+            this.mutipleChkBox.Text = "多文件上传";
+            this.mutipleChkBox.UseVisualStyleBackColor = true;
+            this.mutipleChkBox.CheckedChanged += new System.EventHandler(this.mutipleChkBox_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(102, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // mutiConvertBtn
+            // 
+            this.mutiConvertBtn.Location = new System.Drawing.Point(3, 294);
+            this.mutiConvertBtn.Name = "mutiConvertBtn";
+            this.mutiConvertBtn.Size = new System.Drawing.Size(180, 23);
+            this.mutiConvertBtn.TabIndex = 1;
+            this.mutiConvertBtn.Text = "开始转换";
+            this.mutiConvertBtn.UseVisualStyleBackColor = true;
+            this.mutiConvertBtn.Click += new System.EventHandler(this.mutiConvertBtn_Click);
+            // 
+            // typeComBo
+            // 
+            this.typeComBo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.typeComBo.FormattingEnabled = true;
+            this.typeComBo.Location = new System.Drawing.Point(3, 257);
+            this.typeComBo.Name = "typeComBo";
+            this.typeComBo.Size = new System.Drawing.Size(180, 20);
+            this.typeComBo.TabIndex = 2;
             // 
             // ConvertFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 578);
+            this.ClientSize = new System.Drawing.Size(972, 578);
             this.Controls.Add(this.splitContainer1);
             this.Name = "ConvertFrm";
             this.Text = "Form1";
@@ -294,6 +342,10 @@
         private System.Windows.Forms.TabPage tabOrigin;
         private System.Windows.Forms.TabPage tabResult;
         private System.Windows.Forms.TreeView ResultTv;
+        private System.Windows.Forms.CheckBox mutipleChkBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button mutiConvertBtn;
+        private System.Windows.Forms.ComboBox typeComBo;
     }
 }
 

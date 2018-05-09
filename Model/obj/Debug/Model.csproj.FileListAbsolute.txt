@@ -2,3 +2,4 @@ C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConso
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\Model\bin\Debug\Model.pdb
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\Model\obj\Debug\Model.dll
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\Model\obj\Debug\Model.pdb
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

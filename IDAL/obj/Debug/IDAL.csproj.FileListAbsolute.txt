@@ -2,3 +2,4 @@ C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConso
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\IDAL\bin\Debug\IDAL.pdb
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\IDAL\obj\Debug\IDAL.dll
 C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConsole\IDAL\obj\Debug\IDAL.pdb
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache

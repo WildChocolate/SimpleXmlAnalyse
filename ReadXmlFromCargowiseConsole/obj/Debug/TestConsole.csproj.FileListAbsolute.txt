@@ -20,3 +20,5 @@ C:\Users\ekko.xu\documents\visual studio 2013\Projects\ReadXmlFromCargowiseConso
 C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\ReadXmlFromCargowiseForm.pdb
 C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\itextsharp.dll
 C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\Xceed.Words.NET.dll
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\EPPlus.dll
+C:\Users\ekko.xu\Documents\Visual Studio 2013\Projects\ReadXmlFromCargowiseConsole\ReadXmlFromCargowiseConsole\bin\Debug\EPPlus.xml

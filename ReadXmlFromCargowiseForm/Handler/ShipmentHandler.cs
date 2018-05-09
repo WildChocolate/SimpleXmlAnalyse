@@ -48,7 +48,7 @@ namespace ReadXmlFromCargowiseForm
             return GetShipmentByText(content);
         }
 
-        public override string ConvertInstanceToFile(Shipment Instance)
+        public override string ConvertInstanceToFile(Shipment Instance,string newFilePath=@"XML\ShipmentResult.xml")
         {
             var fPath = string.Empty;
             if (Instance == null)
@@ -84,14 +84,21 @@ namespace ReadXmlFromCargowiseForm
                         }
                     }
                 }
-                using (StreamWriter tw = new StreamWriter(@"XML\ShipmentResult.xml", false))
+                if (!File.Exists(newFilePath))
                 {
-                    tw.WriteLine(xShipmentString);
-                    fPath = Path.GetFullPath(@"XML\ShipmentResult.xml");
+                    var myFile = File.Create(newFilePath);
+                    myFile.Dispose();
+                    myFile.Close();
                 }
+                using (var sw = new StreamWriter(newFilePath))
+                {
+                    sw.Write(xShipmentString);
+                }
+                fPath = Path.GetFullPath(newFilePath);
             }
             return fPath;
         }
+        
         #region 新的关于遍历节点的方法在 XmlRepository.ExtractXMLDynamic
         /// <summary>
         /// 旧方法，根据T， 在element中查找所有的 T 类型的元素（并不一定是element的直接子元素），最后返回 T的列表

@@ -38,7 +38,8 @@ namespace ReadXmlFromCargowiseForm
             //XNamespace xmlns = "http://www.cargowise.com/Schemas/Universal/2011/11";
             return GetShipmentByText(content);
         }
-        public override string ConvertInstanceToFile(Shipment Instance)
+        
+        public override string ConvertInstanceToFile(Shipment Instance, string newFilePath = @"XML\BookingResult.xml")
         {
             var fPath = string.Empty;
             if (Instance == null)
@@ -51,10 +52,10 @@ namespace ReadXmlFromCargowiseForm
                 uShipment.Shipment = Instance;
                 var xShipmentString = XmlSerializeHelper.Serialize(uShipment);//让它自己类型推断
                 //xShipmentString = Regex.Replace(xShipmentString, @"<UniversalShipment[\s]*>", "<UniversalShipment>");
-                using (StreamWriter tw = new StreamWriter(@"XML\BookingResult.xml", false))
+                using (StreamWriter tw = new StreamWriter(newFilePath, false))
                 {
-                    tw.WriteLine(xShipmentString);                                                                          
-                    fPath = Path.GetFullPath(@"XML\BookingResult.xml");
+                    tw.WriteLine(xShipmentString);
+                    fPath = Path.GetFullPath(newFilePath);
                 }
             }
             return fPath;

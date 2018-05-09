@@ -29,6 +29,13 @@ namespace ReadXmlFromCargowiseForm
         ConsolHandler consolHandler = null;
         static string Bracket = " => ";
         SendFrm sendFrm;
+
+        enum ConvertType
+        {
+            Shipment,
+            Booking,
+            Consol
+        }
         public ConvertFrm()
         {
             InitializeComponent();
@@ -44,6 +51,14 @@ namespace ReadXmlFromCargowiseForm
             shipmentHandler.SaveFileCompleled += shipmentHandler_SaveFileCompleled;
             bookingHandler.SaveFileCompleled += bookingHandler_SaveFileCompleled;
             consolHandler.SaveFileCompleled += consolHandler_SaveFileCompleled;
+            foreach (ConvertType item in Enum.GetValues(typeof(ConvertType)))
+            {
+                typeComBo.Items.Add(item.ToString());
+            }
+            typeComBo.SelectedIndex = 0;
+            typeComBo.Location = new Point(10, 50);
+            typeComBo.DropDownStyle = ComboBoxStyle.DropDownList;
+            mutiConvertBtn.Location = new Point(typeComBo.Location.X, typeComBo.Location.Y + 30);
         }
         string FilePath
         {
@@ -66,21 +81,43 @@ namespace ReadXmlFromCargowiseForm
         }
         void consolHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
-            showPathMsg(e.FilePath);
-            ShowInResult(e.FilePath);
+            this.Invoke(new Action(()=>{
+                SaveFileCompletedHandler(e.FilePath);
+            }));
+            
         }
 
 
         void bookingHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
-            showPathMsg(e.FilePath);
-            ShowInResult(e.FilePath);
+            
+                SaveFileCompletedHandler(e.FilePath);
+            
         }
 
         void shipmentHandler_SaveFileCompleled(object sender, SaveFileCompletedEventArgs e)
         {
-            showPathMsg(e.FilePath);
-            ShowInResult(e.FilePath);
+            
+                SaveFileCompletedHandler(e.FilePath);
+            
+        }
+        void SaveFileCompletedHandler(string FilePath)
+        {
+            this.Invoke(new Action(()=>{
+                if (mutipleChkBox.Checked)
+                {
+                    using (var fs = File.OpenRead(FilePath))
+                    {
+                        var doc = XDocument.Load(fs);
+                        LoadDocIntoTreeview(ResultTv, doc);
+                    }
+                }
+                else
+                {
+                    showPathMsg(FilePath);
+                    ShowInResult(FilePath);
+                }
+            }));
         }
         void ShowInResult(string FilePath)
         {
@@ -250,7 +287,11 @@ namespace ReadXmlFromCargowiseForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            if (!mutipleChkBox.Checked)
+            {
+                typeComBo.Hide();
+                mutiConvertBtn.Hide();
+            }
         }
 
         private void UploadBtn_Click(object sender, EventArgs e)
@@ -259,16 +300,15 @@ namespace ReadXmlFromCargowiseForm
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    FileTxt.Text = openFileDialog1.FileName;
-                    if (File.Exists(openFileDialog1.FileName) && openFileDialog1.FileName.EndsWith(".xml"))
+                    if (mutipleChkBox.Checked)
                     {
-                        var xdoc = XDocument.Load(openFileDialog1.FileName);
-                        FileContentTv.Nodes.Clear();
-                        LoadDocIntoTreeview(FileContentTv, xdoc);
+                        FileTxt.Text = string.Join("|", openFileDialog1.FileNames);
+                        LoadMutiFileToTv(openFileDialog1.FileNames);
                     }
                     else
                     {
-                        MessageBox.Show("请选择XML文件");
+                        FileTxt.Text = openFileDialog1.FileName;
+                        LoadMutiFileToTv(FileTxt.Text);
                     }
                 }
             }
@@ -277,7 +317,22 @@ namespace ReadXmlFromCargowiseForm
                 WriteLog.Logging(err.Message);
             }
         }
-
+        void LoadMutiFileToTv(params string[] fileNames)
+        {
+            FileContentTv.Nodes.Clear();
+            foreach (var filename in fileNames)
+            {
+                if (File.Exists(filename) && filename.EndsWith(".xml"))
+                {
+                    var xdoc = XDocument.Load(filename);
+                    LoadDocIntoTreeview(FileContentTv, xdoc);
+                }
+                else
+                {
+                    MessageBox.Show(filename+"不是XML文件");
+                }
+            }
+        }
         private void LoadDocIntoTreeview(TreeView treeview, XDocument xdoc)
         {
             var root = xdoc.Root;
@@ -332,7 +387,9 @@ namespace ReadXmlFromCargowiseForm
                 if (!string.IsNullOrWhiteSpace(root.Name + string.Empty))
                     rootnode.Text = root.Value;
             }
-            treeview.Nodes.Add(rootnode);
+            this.Invoke(new Action(() => { 
+                treeview.Nodes.Add(rootnode);
+            }));
         }
 
         private void FillTnode(TreeNode Treenode, IEnumerable<XElement> elements)
@@ -390,7 +447,7 @@ namespace ReadXmlFromCargowiseForm
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            sendFrm.FilePath = FileTxt.Text;
+            sendFrm.FilePath = openFileDialog1.FileName;
             sendFrm.ShowDialog();
         }
 
@@ -399,6 +456,139 @@ namespace ReadXmlFromCargowiseForm
             
         }
 
+        private void mutipleChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            openFileDialog1.Multiselect = mutipleChkBox.Checked;
+            var ctrls = splitContainer2.Panel1.Controls;
+            foreach (Control control in ctrls)
+            {
+                control.Visible = !control.Visible;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var dlgReslt= openFileDialog1.ShowDialog();
+            if (dlgReslt == DialogResult.OK)
+            {
+                var files = openFileDialog1.FileNames;
+                var actions = new Action[files.Length];
+                for (var i = 0; i < files.Length; i++)
+                {
+                    var fn = files[i];
+                    actions[i] = new Action(async() =>
+                    {
+                        Consol = await consolHandler.GetShipmentAsync(fn);
+                        var newf = consolHandler.ConvertInstanceToFile(Consol, @"XML\Consol" + DateTime.Now.Ticks + ".xml");
+                        Console.WriteLine("任务完成："+newf);
+                    });
+                }
+                Parallel.Invoke(actions);
+            }
+        }
+
+        private void mutiConvertBtn_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.FileNames.Length > 0)
+            {
+                var conversion = (ConvertType)Enum.Parse(typeof(ConvertType),typeComBo.Text+string.Empty) ;
+                var files = openFileDialog1.FileNames;
+                var actions = new Action[files.Length];
+                this.mutiConvertBtn.Enabled = !this.mutiConvertBtn.Enabled;
+                
+                switch (conversion)
+                {
+                    case ConvertType.Shipment:
+                        for (var i = 0; i < files.Length; i++)
+                        {
+                            var fn = files[i];
+                            var idx = i + 1;
+                            actions[i] = new Action(async () =>
+                            {
+                                NsShipment.Shipment newshipment= await shipmentHandler.GetShipmentAsync(fn);
+                                //var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_")+idx;
+                                var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx;
+                                var newf = shipmentHandler.ConvertInstanceToFile(newshipment, @"XML\Shipment" + tick + ".xml");
+                                Console.WriteLine(string.Format("任务{0}完成：{1}", idx, newf));
+                                this.Invoke(new Action(() => { 
+                                    ResultTv.Nodes.Add(new TreeNode(string.Format("任务{0}完成：{1}", idx, newf)));
+                                }));
+                                shipmentHandler.RaiseSaveFileCompleled(newf);
+                            });
+                        }
+                        break;
+                    case ConvertType.Booking:
+                        for (var i = 0; i < files.Length; i++)
+                        {
+                            var fn = files[i];
+                            var idx = i + 1;
+                            actions[i] = new Action( () =>
+                            {
+                                NsBooking.Shipment newshipment =  bookingHandler.GetShipment(fn);
+                                var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx;
+                                var newf = bookingHandler.ConvertInstanceToFile(newshipment, @"XML\Booking" + tick + ".xml");
+                                Console.WriteLine(string.Format("任务{0}完成：{1}", idx, newf));
+                                this.Invoke(new Action(() =>
+                                {
+                                    ResultTv.Nodes.Add(new TreeNode(string.Format("任务{0}完成：{1}", idx, newf)));
+                                }));
+                                bookingHandler.RaiseSaveFileCompleled(newf);
+                            });
+                        }
+                        break;
+                    case ConvertType.Consol:
+                        for (var i = 0; i < files.Length; i++)
+                        {
+                            var fn = files[i];
+                            var idx = i+1;
+                            actions[i] = new Action( () =>
+                            {
+                                NsConsol.Shipment newshipment =  consolHandler.GetShipment(fn);
+                                var tick = DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss_") + idx;
+                                var newf = consolHandler.ConvertInstanceToFile(newshipment, @"XML\Consol" + tick + ".xml");
+                                Console.WriteLine(string.Format("任务{0}完成：{1}", idx, newf));
+                                this.Invoke(new Action(() =>
+                                {
+                                    ResultTv.Nodes.Add(new TreeNode(string.Format("任务{0}完成：{1}", idx, newf)));
+                                }));
+                                consolHandler.RaiseSaveFileCompleled(newf);
+                            });
+                        }
+                        break;
+                    default:
+                        MessageBox.Show("请选择正确的转换类型");
+                        break;
+                }
+                ResultTv.Nodes.Clear();
+                mutiConvertBtn.Text = "请等待...";
+                Stopwatch sw = new Stopwatch();
+                sw.Start();
+                Parallel.Invoke(async() => {
+                    var tlist = new List<Task>();
+                    foreach (var a in actions)
+                    {
+                         tlist.Add(Task.Run(a));
+                    }
+                    await Task.WhenAll(tlist.ToArray());
+                    this.Invoke(new Action(() =>
+                    {
+                        sw.Stop();
+                        MessageBox.Show("全部任务完成，总耗时："+sw.Elapsed.TotalSeconds+"秒");
+                        mutiConvertBtn.Text = "开始转换";
+                        this.mutiConvertBtn.Enabled = !this.mutiConvertBtn.Enabled;
+                    }));
+                });
+            }
+            else
+            {
+                MessageBox.Show("请选择文件");
+            }
+        }
+        //string GenFileName(string prefix, int idx)
+        //{
+        //    var tick = DateTime.Now.ToString("yyyy-MM-dd-hh:mm:ss_") + idx;
+        //    return @"XML\" + prefix + tick + ".xml";
+        //}
         //private void FileContentTV_BeforeLabelEdit(object sender, NodeLabelEditEventArgs e)
         //{
         //    var newnode = new TreeNode();
